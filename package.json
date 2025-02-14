@@ -1,0 +1,39 @@
+{
+  "name": "oil-company",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "mainPage-2xl": "node-sass -w scss/main-page/01-xxl/01-xxl.scss -o css/main-page/Media/ --recursive --output-style compressed",
+    "mainPage-xl": "node-sass -w scss/main-page/02-xl/02-xl.scss -o css/main-page/Media/ --recursive --output-style compressed",
+    "mainPage-lg": "node-sass -w scss/main-page/03-lg/03-lg.scss -o css/main-page/Media/ --recursive --output-style compressed",
+    "mainPage-md": "node-sass -w scss/main-page/04-md/04-md.scss -o css/main-page/Media/ --recursive --output-style compressed",
+    "mainPage-sm": "node-sass -w scss/main-page/05-sm/05-sm.scss -o css/main-page/Media/ --recursive --output-style compressed",
+    "mainPage-xs": "node-sass -w scss/main-page/06-xs/06-xs.scss -o css/main-page/Media/ --recursive --output-style compressed",
+    "productPage-2xl": "node-sass -w scss/product-page/01-xxl/01-xxl.scss -o css/products/Media/ --recursive --output-style compressed",
+    "productPage-xl": "node-sass -w scss/product-page/02-xl/02-xl.scss -o css/products/Media/ --recursive --output-style compressed",
+    "productPage-lg": "node-sass -w scss/product-page/03-lg/03-lg.scss -o css/products/Media/ --recursive --output-style compressed",
+    "productPage-md": "node-sass -w scss/product-page/04-md/04-md.scss -o css/products/Media/ --recursive --output-style compressed",
+    "productPage-sm": "node-sass -w scss/product-page/05-sm/05-sm.scss -o css/products/Media/ --recursive --output-style compressed",
+    "productPage-xs": "node-sass -w scss/product-page/06-xs/06-xs.scss -o css/products/Media/ --recursive --output-style compressed",
+    "partnerCompaniesPage-2xl": "node-sass -w scss/partner-companies-page/01-xxl/01-xxl.scss -o css/partner-companies/Media/ --recursive --output-style compressed",
+    "partnerCompaniesPage-xl": "node-sass -w scss/partner-companies-page/02-xl/02-xl.scss -o css/partner-companies/Media/ --recursive --output-style compressed",
+    "partnerCompaniesPage-lg": "node-sass -w scss/partner-companies-page/03-lg/03-lg.scss -o css/partner-companies/Media/ --recursive --output-style compressed",
+    "partnerCompaniesPage-md": "node-sass -w scss/partner-companies-page/04-md/04-md.scss -o css/partner-companies/Media/ --recursive --output-style compressed",
+    "partnerCompaniesPage-sm": "node-sass -w scss/partner-companies-page/05-sm/05-sm.scss -o css/partner-companies/Media/ --recursive --output-style compressed",
+    "partnerCompaniesPage-xs": "node-sass -w scss/partner-companies-page/06-xs/06-xs.scss -o css/partner-companies/Media/ --recursive --output-style compressed",
+    "contactUsPage-2xl": "node-sass -w scss/contact-us-page/01-xxl/01-xxl.scss -o css/contact-us/Media/ --recursive --output-style compressed",
+    "contactUsPage-xl": "node-sass -w scss/contact-us-page/02-xl/02-xl.scss -o css/contact-us/Media/ --recursive --output-style compressed",
+    "contactUsPage-lg": "node-sass -w scss/contact-us-page/03-lg/03-lg.scss -o css/contact-us/Media/ --recursive --output-style compressed",
+    "contactUsPage-md": "node-sass -w scss/contact-us-page/04-md/04-md.scss -o css/contact-us/Media/ --recursive --output-style compressed",
+    "contactUsPage-sm": "node-sass -w scss/contact-us-page/05-sm/05-sm.scss -o css/contact-us/Media/ --recursive --output-style compressed",
+    "contactUsPage-xs": "node-sass -w scss/contact-us-page/06-xs/06-xs.scss -o css/contact-us/Media/ --recursive --output-style compressed"
+  },
+  "author": "Amirmohammad Akbarloo",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "node-sass": "^9.0.0",
+    "swiper": "^11.2.1"
+  }
+}
