@@ -1,0 +1,394 @@
+body {
+  > .main {
+    > .swiper {
+      width: 100%;
+      height: 100vh;
+      >.swiper-pagination{
+        top: 40%;
+        >.swiper-pagination-bullet{
+          width: 15px;
+          height: 15px;
+          background-color: var(--text-color4);
+        }
+      }
+      > .swiper-wrapper {
+        > .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        > .droneShot {
+          position: relative;
+          background-color: var(--background-color1);
+          user-select: none;
+          > .shade {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #11111120;
+            z-index: 10;
+          }
+          > .container {
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            left: 50%;
+            top: 250px;
+            transform: translate(-50%, -50%);
+            z-index: 15;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+            > .logo {
+              width: 150px;
+              margin-bottom: 20px;
+            }
+            > .respect {
+              font-family: YekanBakh-Bold;
+              font-size: 18px;
+              color: var(--text-color2);
+              word-spacing: 3px;
+            }
+            > .fa {
+              font-size: 35px;
+              font-weight: bold;
+              color: var(--text-color4);
+            }
+            > .vText {
+              font-size: 18px;
+              word-spacing: 3px;
+              font-family: YekanBakh-Bold;
+              color: var(--text-color2);
+            }
+          }
+        }
+        > .ourClients {
+          background-image: url(../../../images/clients-sm.jpg);
+          background-color: #222222;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          > .clients {
+            width: 90%;
+            padding: 25px;
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            color: var(--text-color2);
+            row-gap: 15px;
+            background-color: #22222282;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            > .hText {
+              font-family: YekanBakh-Regular;
+              font-size: 20px;
+            }
+            > .aboutClients {
+              font-family: YekanBakh-Regular;
+              text-align: justify;
+              font-size: 14px;
+              word-spacing: 1px;
+            }
+            > .swiper {
+              width: 100%;
+              height: 50px;
+              > .swiper-wrapper {
+                > .swiper-slide {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  > img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+              }
+            }
+          }
+        }
+        > .aboutUs {
+          background-image: url(../../../images/about-us-sm.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          > .aboutText {
+            align-items: center;
+            margin-top: 80px;
+            > .hText {
+              font-size: 18px;
+            }
+            > .knowMore {
+              font-family: YekanBakh-Bold;
+              font-size: 16px;
+              word-spacing: 3px;
+              display: flex;
+              column-gap: 10px;
+              transition: 300ms;
+              color: var(--text-color4);
+              > .fa {
+                font-size: 24px;
+              }
+              &:hover {
+                color: var(--text-color3);
+                padding-bottom: 3px;
+                border-bottom: 1px solid var(--text-color3);
+              }
+            }
+          }
+        }
+        > .ourProducts {
+          background-image: url(../../../images/product-bg-sm.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: bottom;
+          flex-direction: column;
+          align-items: center;
+          justify-content: start;
+
+          > .aboutText {
+            z-index: 1000;
+            padding: 20px;
+            width: 90%;
+            align-items: center;
+            margin-top: 50px;
+            > .hText {
+              font-size: 28px;
+            }
+            > .aboutProducts {
+              font-size: 18px;
+            }
+            > .knowMore {
+              font-family: YekanBakh-Bold;
+              font-size: 18px;
+              word-spacing: 3px;
+              display: flex;
+              column-gap: 10px;
+              transition: 300ms;
+              color: var(--text-color4);
+              > .fa {
+                font-size: 24px;
+              }
+              &:hover {
+                color: var(--text-color3);
+                padding-bottom: 3px;
+                border-bottom: 1px solid var(--text-color3);
+              }
+            }
+          }
+          > .mainProducts {
+            width: 90%;
+            height: auto;
+            background-color: #22222282;
+            backdrop-filter: blur(5px);
+            position: relative;
+            top: 50px;
+            padding: 20px;
+            border-radius: 20px;
+            > .swiper {
+              width: 100%;
+              height: 100%;
+              > .swiper-wrapper {
+                > .swiper-slide {
+                  position: relative;
+                  .productLink {
+                    display: flex;
+                    justify-content: center;
+                    > .productImage {
+                      width: 280px;
+                      height: 280px;
+                      border-radius: 20px;
+                    }
+                    &::before {
+                      content: "جهت کسب اطلاعات بیشتر کلیک کنید";
+                      width: 280px;
+                      height: 280px;
+                      padding: 20px;
+                      box-sizing: border-box;
+                      position: absolute;
+                      top: 0;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-family: YekanBakh-Bold;
+                      font-size: 24px;
+                      word-spacing: 3px;
+                      transition: 300ms;
+                      backdrop-filter: blur(3px);
+                      transform: scale(0);
+                      border-radius: 20px;
+                    }
+                    &:hover {
+                      &::before {
+                        transform: scale(1);
+                      }
+                    }
+                  }
+                  > img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+              }
+              > .swiper-button-next,
+              .swiper-button-prev {
+                &::after {
+                  color: var(--text-color4);
+                }
+              }
+              >.swiper-button-next{
+                position: absolute;
+                left: 0;
+              }
+              >.swiper-button-prev{
+                position: absolute;
+                right: 0;
+              }
+            }
+          }
+        }
+        > .footer {
+          width: 100%;
+          background-image: url(../../../images/footer.png);
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: start;
+          > .top {
+            margin: 30px auto;
+            width: 88%;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid lightgray;
+            > .right {
+              > .imgLink {
+                float: left;
+                > .imgLogo {
+                  width: 80px;
+                }
+              }
+            }
+            > .left {
+              display: flex;
+              flex-direction: row-reverse;
+              align-items: center;
+              column-gap: 20px;
+              > .iconLink {
+                color: var(--text-color2);
+                transition: 300ms;
+                > .fa {
+                  transition: 300ms;
+                }
+                &:hover > .fa-instagram {
+                  color: red;
+                }
+                &:hover > .fa-linkedin {
+                  color: blue;
+                }
+                &:hover > .fa-telegram {
+                  color: skyblue;
+                }
+                &:hover > .fa-whatsapp {
+                  color: green;
+                }
+                > .fa {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+          > .bottom {
+            width: 88%;
+            margin: 15px auto;
+            color: var(--text-color2);
+            font-family: YekanBakh-Regular;
+            display: flex;
+            row-gap: 35px;
+            flex-direction: column-reverse;
+            > .contactUs {
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              > .contactInfo {
+                font-size: 18px;
+                word-spacing: 3px;
+                margin-bottom: 10px;
+                color: var(--text-color4);
+              }
+              > .set {
+                display: flex;
+                align-items: center;
+                column-gap: 15px;
+                margin-bottom: 5px;
+                font-size: 16px;
+                > .setIcon {
+                  color: var(--text-color1);
+                  font-size: 18px;
+                }
+                > .setData {
+                  position: relative;
+                  top: 3px;
+                }
+                > .address {
+                  text-align: start;
+                }
+              }
+              >.mashhadAddress{
+                height: auto;
+              }
+            }
+            > .navigation {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              row-gap: 20px;
+              > .col {
+                > .headingNav {
+                  font-size: 18px;
+                  margin-bottom: 5px;
+                  text-align: center;
+                  color: var(--text-color4);
+                }
+                > .items {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  row-gap: 4px;
+                  font-size: 16px;
+                  > .item {
+                    > .itemLink {
+                      transition: 300ms;
+                    }
+                    &:hover > .itemLink {
+                      color: var(--text-color3);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

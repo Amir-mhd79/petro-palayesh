@@ -1,0 +1,109 @@
+body {
+  > .footer {
+    width: 100%;
+    padding-bottom: 30px;
+    background-image: url(../../../images/footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    > .top {
+      padding: 50px 0 25px 0;
+      margin: 0 auto;
+      width: 900px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid lightgray;
+      > .right {
+        > .imgLink {
+          float: left;
+          > .imgLogo {
+            width: 150px;
+          }
+        }
+      }
+      > .left {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        column-gap: 20px;
+        padding-top: 40px;
+        > .iconLink {
+          color: var(--text-color2);
+          >.fa{
+            transition: 300ms;
+          }
+          &:hover > .fa-instagram {
+            color: red;
+          }
+          &:hover > .fa-linkedin {
+            color: blue;
+          }
+          &:hover > .fa-telegram {
+            color: skyblue;
+          }
+          &:hover > .fa-whatsapp {
+            color: green;
+          }
+          > .fa {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    > .bottom {
+      width: 900px;
+      margin: 25px auto 0;
+      color: var(--text-color2);
+      font-family: YekanBakh-Regular;
+      display: flex;
+      column-gap: 60px;
+      > .contactUs {
+        width: 400px;
+        > .contactInfo {
+          font-size: 18px;
+          word-spacing: 3px;
+          margin-bottom: 15px;
+          color: var(--text-color4);
+        }
+        > .set {
+          display: flex;
+          height: 30px;
+          align-items: center;
+          column-gap: 15px;
+          > .setIcon {
+            color: var(--text-color1);
+            font-size: 18px;
+          }
+        }
+      >.mashhadAddress{
+        height: auto;
+      }
+      }
+      > .navigation {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 30px;
+        flex-grow: 2;
+        > .col {
+          > .headingNav {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-color4);
+          }
+          > .items {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            > .item {
+              > .itemLink {
+                transition: 300ms;
+              }
+              &:hover > .itemLink {
+                color: var(--text-color3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+body {
+  .main {
+    height: 700px;
+    background-image: url(../../../images/contact-us-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > .containerUs {
+      width: 80%;
+      background-color: #22222282;
+      backdrop-filter: blur(8px);
+      padding: 20px 30px;
+      border-radius: 15px;
+      color: var(--text-color2);
+      display: flex;
+      flex-direction: column;
+      font-family: YekanBakh-Regular;
+      word-spacing: 1px;
+      text-align: justify;
+      > .HeadingContactUs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--text-color4);
+        > .headContact {
+          font-size: 24px;
+          font-family: YekanBakh-Bold;
+        }
+        > .aboutHeadContact {
+          font-size: 14px;
+        }
+      }
+      > .howToContact {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        > .telContact {
+          display: flex;
+          justify-content: space-between;
+          > .telSection {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            > .fa-phone {
+              font-size: 20px;
+              position: relative;
+              top: -2px;
+            }
+            > .phoneNumber {
+              font-size: 16px;
+            }
+          }
+          > .hoursWork {
+            font-size: 16px;
+          }
+        }
+        > .addressContact {
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+          > .fa-map-marker {
+            font-size: 20px;
+            position: relative;
+            top: -3px;
+          }
+          > .petroAddress {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
