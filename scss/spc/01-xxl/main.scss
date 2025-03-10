@@ -1,0 +1,174 @@
+body {
+  > .main {
+    > .productsBackground {
+      width: 100%;
+      height: 500px;
+      background-image: url(../../../images/productPage-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      > .ContainerShadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 500px;
+        background-color: #11111148;
+        z-index: 10;
+      }
+      > .aboutProducts {
+        position: absolute;
+        top: 35%;
+        right: 10%;
+        z-index: 15;
+        > .productsHeading {
+          width: 600px;
+          font-family: YekanBakh-Bold;
+          color: var(--text-color2);
+          font-size: 40px;
+          border-right: 10px solid var(--text-color4);
+          padding-right: 20px;
+          white-space: pre-wrap;
+        }
+      }
+    }
+    > .productsTitle {
+      width: 100%;
+      height: 150px;
+      background-color: var(--background-color1);
+      border-bottom: 1px solid lightgray;
+      box-shadow: 5px 5px 25px rgba(54, 53, 53, 0.811);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      > .productsText {
+        font-family: YekanBakh-Bold;
+        color: var(--text-color2);
+        font-size: 32px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+      }
+      > .productsText2 {
+        font-size: 22px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        text-decoration: underline;
+      }
+    }
+    > .productsContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      > .productInfo {
+        width: 850px;
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > .tableStructure {
+          border: 2px solid black;
+          direction: ltr;
+          font-family: YekanBakh-Regular;
+          text-transform: capitalize;
+          background-color: white;
+          border-collapse: collapse;
+          user-select: none;
+          background-image: url(../../../images/logo.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          > .productCaption {
+            background-color: var(--text-color4);
+            height: 70px;
+            font-family: YekanBakh-Bold;
+            border: 2px solid black;
+            border-bottom: none;
+            font-size: 30px;
+            text-transform: none;
+            word-spacing: 5px;
+            padding: 10px;
+            padding-top: 15px;
+          }
+          > .tableBody {
+            > .tableRow {
+              justify-content: space-between;
+              > .tableHeading {
+                font-family: YekanBakh-Bold;
+                text-transform: uppercase;
+                width: 212px;
+                border: 2px solid black;
+                font-size: 20px;
+                padding-top: 8px;
+              }
+              > .distillation {
+                background-color: var(--text-color4);
+                font-family: YekanBakh-Bold;
+                font-size: 24px;
+                text-align: center;
+                padding-top: 4px;
+                border: 2px solid black;
+                word-spacing: 5px;
+              }
+              > .tableCell {
+                text-align: center;
+                border: 2px solid black;
+                padding-top: 5px;
+                font-size: 18px;
+                text-transform: uppercase;
+              }
+              > .cellEdit {
+                text-transform: capitalize;
+              }
+              > .cellEdit2 {
+                text-transform: lowercase;
+              }
+              > .cellEdit3 {
+                white-space: pre-line;
+              }
+              > .cellEdit4 {
+                text-transform: capitalize;
+              }
+              > .cellEdit5 {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+        > .errorRate {
+          padding-top: 40px;
+          text-align: center;
+          font-size: 32px;
+          font-family: YekanBakh-Bold;
+          color: var(--text-color2);
+          word-spacing: 5px;
+          user-select: none;
+          > .errorRateNumber {
+            text-decoration: underline;
+          }
+        }
+        > .pdfDownloadButton {
+          width: 200px;
+          height: 45px;
+          background-color: var(--text-color4);
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: black;
+          font-family: YekanBakh-Bold;
+          padding-top: 5px;
+          font-size: 20px;
+          margin-top: 20px;
+          transition: 300ms;
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 3px 3px 10px rgba(255, 217, 0, 0.538);
+          }
+        }
+      }
+    }
+  }
+}

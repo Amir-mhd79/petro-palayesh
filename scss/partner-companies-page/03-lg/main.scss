@@ -1,0 +1,104 @@
+body {
+  > .main {
+    > .partnerCompanies {
+      width: 100%;
+      height: 500px;
+      background-image: url(../../../images/colleagues-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      > .ContainerShadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 500px;
+        background-color: #11111132;
+        z-index: 10;
+      }
+      > .aboutPartners {
+        position: absolute;
+        top: 30%;
+        right: 5%;
+        z-index: 15;
+        > .partnersHeading {
+          font-family: YekanBakh-Bold;
+          color: var(--text-color2);
+          font-size: 48px;
+          border-right: 10px solid var(--text-color4);
+          padding-right: 20px;
+        }
+      }
+    }
+    > .partnerCompaniesTitle {
+      width: 100%;
+      height: 150px;
+      background-color: var(--background-color1);
+      border-bottom: 1px solid lightgray;
+      box-shadow: 5px 5px 25px rgba(54, 53, 53, 0.811);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > .partnerCompaniesText {
+        font-family: YekanBakh-Bold;
+        color: var(--text-color2);
+        font-size: 32px;
+      }
+    }
+    > .colleaguesContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      > .colleagueCompanies {
+        width: inherit;
+        padding: 80px 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px 20px;
+        > .colleagueCompany {
+          background-color: whitesmoke;
+          width: 220px;
+          padding: 10px;
+          border-radius: 8px;
+          border: 1px solid lightgrey;
+          display: flex;
+          flex-direction: column;
+          transition: 300ms;
+          color: black;
+          cursor: pointer;
+          > .colleagueLogo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
+            > .colleagueImgLogo {
+              width: inherit;
+              height: inherit;
+            }
+          }
+          > .colleagueName {
+            margin-bottom: 10px;
+            font-family: YekanBakh-Bold;
+            font-size: 22px;
+          }
+          > .colleagueAddress {
+            margin-bottom: 15px;
+            font-family: YekanBakh-Regular;
+            color: var(--text-color5);
+            > .colleagueLocation {
+              color: var(--text-color6);
+            }
+          }
+          > .colleagueAbout {
+            font-family: YekanBakh-Regular;
+            text-align: justify;
+          }
+          &:hover {
+            box-shadow: 3px 3px 15px rgb(83, 81, 81);
+            transform: translateY(-20px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+body {
+  > .header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    background-color: #222222;
+    font-family: YekanBakh-Regular;
+    top: 0;
+    z-index: 1000;
+    > .iconSm {
+      display: none;
+    }
+    > .logo {
+      height: inherit;
+      display: flex;
+      align-items: center;
+      > .logoLink {
+        display: inline-block;
+        > .logoImg {
+          width: 80px;
+          height: inherit;
+          float: left;
+        }
+      }
+    }
+    > .navigation {
+      width: 450px;
+      > .items {
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+        > .item {
+          height: 40px;
+          position: relative;
+          > .linkItem {
+            word-spacing: 3px;
+            height: inherit;
+            float: left;
+            line-height: 48px;
+            color: var(--text-color1);
+            font-family: YekanBakh-Regular;
+            transition: 300ms;
+            position: relative;
+            &::before {
+              content: "";
+              width: 8px;
+              height: 8px;
+              border-radius: 100%;
+              background-color: var(--text-color4);
+              position: absolute;
+              top: -10px;
+              left: calc(50% - 5px);
+              transform: scale(0);
+              transition: all 300ms;
+            }
+            &:hover {
+              color: var(--text-color2);
+              &::before {
+                transform: scale(1);
+              }
+            }
+          }
+          > .toggleList {
+            width: 205px;
+            position: absolute;
+            top: 40px;
+            right: -10px;
+            background-color: #222222;
+            padding: 15px;
+            display: none;
+            flex-direction: column;
+            row-gap: 10px;
+            > .toggleItem {
+              transition: 300ms;
+              position: relative;
+              right: 10px;
+              &::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                background-color: var(--text-color4);
+                position: absolute;
+                right: -15px;
+                transform: scale(0);
+                transition: all 300ms;
+                margin-top: 6px;
+              }
+              &:hover {
+                &::before {
+                  transform: scale(1);
+                }
+              }
+              > .listAncher {
+                color: var(--text-color1);
+                transition: 300ms;
+                display: flex;
+                column-gap: 5px;
+                &:hover {
+                  color: var(--text-color2);
+                }
+                > .fa {
+                  font-size: 20px;
+                }
+              }
+              > .heavyList {
+                width: 80px;
+                position: absolute;
+                top: -13px;
+                left: -80px;
+                background-color: #222222;
+                padding: 15px;
+                display: none;
+                flex-direction: column;
+                row-gap: 10px;
+                > .heavyItem {
+                  text-align: center;
+                  &::before {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100%;
+                    background-color: var(--text-color4);
+                    position: absolute;
+                    right: 3px;
+                    transform: scale(0);
+                    transition: all 300ms;
+                    margin-top: 6px;
+                  }
+                  &:hover {
+                    &::before {
+                      transform: scale(1);
+                    }
+                  }
+                  > .heavyLink {
+                    color: var(--text-color1);
+                    transition: 300ms;
+                    &:hover {
+                      color: var(--text-color2);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    > .icons {
+      display: flex;
+      width: 150px;
+      justify-content: space-between;
+      color: var(--text-color1);
+      > .logIn {
+        width: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 300ms;
+        > .fa {
+          font-size: 23px;
+        }
+        > .LogInText {
+          font-size: 20px;
+        }
+        &:hover {
+          color: var(--text-color2);
+        }
+      }
+      > .icon {
+        cursor: pointer;
+      }
+      > .icon2 {
+        position: relative;
+        top: 1px;
+        > path {
+          transition: 300ms;
+        }
+        &:hover > path {
+          stroke: var(--text-color2);
+        }
+      }
+      > .canvasBtn {
+        display: none;
+      }
+    }
+    > .offcanvas {
+      display: none;
+    }
+    > .leftBlurCanvas {
+      display: none;
+    }
+    .bright {
+      color: white !important;
+    }
+    .show {
+      display: flex !important;
+    }
+  }
+}

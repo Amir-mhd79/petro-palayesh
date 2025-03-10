@@ -1,0 +1,100 @@
+body {
+  > .main {
+    > .productsBackground {
+      width: 100%;
+      height: 500px;
+      background-image: url(../../../images/productPage-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      > .ContainerShadow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 500px;
+        background-color: #11111148;
+        z-index: 10;
+      }
+      > .aboutProducts {
+        position: absolute;
+        top: 30%;
+        right: 8%;
+        z-index: 15;
+        > .productsHeading {
+          width: 450px;
+          font-family: YekanBakh-Bold;
+          color: var(--text-color2);
+          font-size: 56px;
+          border-right: 10px solid var(--text-color4);
+          padding-right: 20px;
+        }
+      }
+    }
+    > .productsTitle {
+      width: 100%;
+      height: 150px;
+      background-color: var(--background-color1);
+      border-bottom: 1px solid lightgray;
+      box-shadow: 5px 5px 25px rgba(54, 53, 53, 0.811);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > .productsText {
+        font-family: YekanBakh-Bold;
+        color: var(--text-color2);
+        font-size: 30px;
+      }
+    }
+    > .productsContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      > .mahsoolat {
+        width: 950px;
+        padding: 80px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 35px;
+        > .petroProduct {
+          background-color: whitesmoke;
+          width: 250px;
+          padding: 10px;
+          border: 1px solid lightgrey;
+          display: flex;
+          flex-direction: column;
+          transition: 300ms;
+          color: black;
+          cursor: pointer;
+          > .productLogo {
+            width: 100%;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            > .productImgLogo {
+              width: inherit;
+              height: inherit;
+            }
+          }
+          > .productName {
+            margin-bottom: 10px;
+            font-family: YekanBakh-Bold;
+            font-size: 22px;
+            color: var(--text-color5);
+            text-align: center;
+          }
+          > .productAbout {
+            font-family: YekanBakh-Bold;
+            text-transform: capitalize;
+            text-align: center;
+          }
+          &:hover {
+            box-shadow: 3px 3px 15px rgb(83, 81, 81);
+            transform: translateY(-20px);
+          }
+        }
+      }
+    }
+  }
+}
