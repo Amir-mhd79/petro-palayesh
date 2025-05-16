@@ -4,7 +4,6 @@ body {
     background-image: url(../../../images/footer.png);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 30px;
     > .top {
       padding: 50px 0 25px 0;
       margin: 0 auto;
@@ -28,7 +27,7 @@ body {
         padding-top: 40px;
         > .iconLink {
           color: var(--text-color2);
-          >.fa{
+          > .fa {
             transition: 300ms;
           }
           &:hover > .fa-instagram {
@@ -51,7 +50,7 @@ body {
     }
     > .bottom {
       width: 1100px;
-      margin: 25px auto 0;
+      margin: 25px auto;
       color: var(--text-color2);
       font-family: YekanBakh-Regular;
       display: flex;
@@ -73,8 +72,14 @@ body {
             color: var(--text-color1);
             font-size: 18px;
           }
+          > .setData {
+            transition: 300ms;
+            &:hover {
+              color: var(--text-color3);
+            }
+          }
         }
-        >.mashhadAddress{
+        > .mashhadAddress {
           height: auto;
         }
       }
@@ -103,6 +108,23 @@ body {
             }
           }
         }
+      }
+    }
+    > .container_wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid lightgray;
+      padding: 10px 0;
+      > .develop {
+        color: var(--text-color2);
+        font-family: YekanBakh-Regular;
+        word-spacing: 2px;
+        white-space: pre-line;
+        text-align: center;
+        font-size: 15px;
       }
     }
   }

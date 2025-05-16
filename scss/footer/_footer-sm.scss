@@ -5,10 +5,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: start;
     > .top {
-      margin: 30px auto 60px;
+      margin: 30px auto;
       width: 88%;
       display: flex;
       justify-content: space-between;
@@ -52,7 +52,7 @@ body {
     }
     > .bottom {
       width: 88%;
-      margin: 20px auto 0;
+      margin: 0 auto;
       color: var(--text-color2);
       font-family: YekanBakh-Regular;
       display: flex;
@@ -73,7 +73,6 @@ body {
           height: 30px;
           align-items: center;
           column-gap: 15px;
-          margin-bottom: 5px;
           font-size: 16px;
           > .setIcon {
             color: var(--text-color1);
@@ -82,12 +81,16 @@ body {
           > .setData {
             position: relative;
             top: 3px;
+            transition: 300ms;
+            &:hover {
+              color: var(--text-color3);
+            }
           }
           > .address {
-            text-align: start;
+            text-align: justify;
           }
         }
-        >.mashhadAddress{
+        > .mashhadAddress {
           height: auto;
         }
       }
@@ -95,7 +98,6 @@ body {
         display: flex;
         justify-content: space-between;
         column-gap: 30px;
-        flex-grow: 2;
         > .col {
           > .headingNav {
             font-size: 18px;
@@ -119,6 +121,23 @@ body {
             }
           }
         }
+      }
+    }
+    > .container_wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88%;
+      margin: 20px auto 0;
+      border-top: 1px solid lightgray;
+      > .develop {
+        color: var(--text-color2);
+        font-family: YekanBakh-Regular;
+        word-spacing: 2px;
+        white-space: pre-line;
+        text-align: center;
+        font-size: 12px;
+        padding: 10px 0;
       }
     }
   }

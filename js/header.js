@@ -92,5 +92,10 @@ function header() {
   heavyyItemsSubmenu.addEventListener("mouseleave",()=>{
     heavyyItem.classList.remove("bright")
   })
+
+  let preventLink=document.querySelector("a.preventLink")
+  preventLink.addEventListener("click",(e)=>{
+    e.preventDefault()
+  })
 }
 export default header;
