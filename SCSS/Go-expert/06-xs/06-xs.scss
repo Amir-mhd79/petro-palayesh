@@ -55,6 +55,16 @@ html {
             border: unset;
             cursor: pointer;
           }
+          > .timeInput {
+            border: unset;
+            border-radius: 5px;
+            height: 30px;
+            padding: 0 5px;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 16x;
+            cursor: pointer;
+          }
           > .uploadFileInput {
             cursor: pointer;
           }

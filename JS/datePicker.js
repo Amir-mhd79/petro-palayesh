@@ -1,11 +1,10 @@
 function datePicker() {
   $(function () {
     $("#datePicker").mpdatepicker({
-      timePicker: true,
+      timePicker: false,
       timeChangeSensitivity: 5,
       gSpliter: "/",
       modal_bg: "rgba(0,0,0,0.3)",
-      parentEl: document.body,
     });
   });
 }

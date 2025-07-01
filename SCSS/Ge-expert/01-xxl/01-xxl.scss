@@ -105,6 +105,15 @@ body {
           border: unset;
           cursor: pointer;
         }
+        >.timeInput{
+          border: unset;
+          border-radius: 5px;
+          height: 38px;
+          padding: 0 5px;
+          font-family: sans-serif;
+          font-weight: bold;
+          cursor: pointer;
+        }
         > .uploadFileInput {
           cursor: pointer;
         }
