@@ -1,0 +1,40 @@
+html,
+body {
+  scroll-behavior: smooth;
+  position: relative;
+  background-color: #222222;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  color: white;
+}
+@font-face {
+  font-family: YekanBakh-Regular;
+  src: url(../fonts/YekanBakh-Regular/YekanBakh-Regular.eot);
+  src: url(../fonts/YekanBakh-Regular/YekanBakh-Regular.ttf);
+  src: url(../fonts/YekanBakh-Regular/YekanBakh-Regular.woff);
+  src: url(../fonts/YekanBakh-Regular/YekanBakh-Regular.woff2);
+}
+@font-face {
+  font-family: YekanBakh-Bold;
+  src: url(../fonts/YekanBakh-Bold/YekanBakh-Bold.eot);
+  src: url(../fonts/YekanBakh-Bold/YekanBakh-Bold.ttf);
+  src: url(../fonts/YekanBakh-Bold/YekanBakh-Bold.woff);
+  src: url(../fonts/YekanBakh-Bold/YekanBakh-Bold.woff2);
+}
+:root {
+  --text-color1: #8e8e8e;
+  --text-color2: white;
+  --text-color3: #df2424;
+  --text-color4: #fac94d;
+  --text-color5: #800080;
+  --text-color6: #808000;
+  --background-color1: #222222;
+  --background-color2: #1da86a;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "petro-palayesh-samaneh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "login-2xl": "node-sass -w SCSS/Login/01-xxl/01-xxl.scss -o CSS/Login/Media/ --recursive --output-style compressed",
+    "login-xl": "node-sass -w SCSS/Login/02-xl/02-xl.scss -o CSS/Login/Media/ --recursive --output-style compressed",
+    "login-lg": "node-sass -w SCSS/Login/03-lg/03-lg.scss -o CSS/Login/Media/ --recursive --output-style compressed",
+    "login-md": "node-sass -w SCSS/Login/04-md/04-md.scss -o CSS/Login/Media/ --recursive --output-style compressed",
+    "login-sm": "node-sass -w SCSS/Login/05-sm/05-sm.scss -o CSS/Login/Media/ --recursive --output-style compressed",
+    "login-xs": "node-sass -w SCSS/Login/06-xs/06-xs.scss -o CSS/Login/Media/ --recursive --output-style compressed",
+
+    "ge-expert-2xl": "node-sass -w SCSS/Ge-expert/01-xxl/01-xxl.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
+    "ge-expert-xl": "node-sass -w SCSS/Ge-expert/02-xl/02-xl.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
+    "ge-expert-lg": "node-sass -w SCSS/Ge-expert/03-lg/03-lg.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
+    "ge-expert-md": "node-sass -w SCSS/Ge-expert/04-md/04-md.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
+    "ge-expert-sm": "node-sass -w SCSS/Ge-expert/05-sm/05-sm.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
+    "ge-expert-xs": "node-sass -w SCSS/Ge-expert/06-xs/06-xs.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
+    
+    "go-expert-2xl": "node-sass -w SCSS/Go-expert/01-xxl/01-xxl.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
+    "go-expert-xl": "node-sass -w SCSS/Go-expert/02-xl/02-xl.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
+    "go-expert-lg": "node-sass -w SCSS/Go-expert/03-lg/03-lg.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
+    "go-expert-md": "node-sass -w SCSS/Go-expert/04-md/04-md.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
+    "go-expert-sm": "node-sass -w SCSS/Go-expert/05-sm/05-sm.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
+    "go-expert-xs": "node-sass -w SCSS/Go-expert/06-xs/06-xs.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed"
+  },
+  "author": "Amirmohammad Akbarloo",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "mpdatepicker": "^2.0.1",
+    "node-sass": "^9.0.0",
+    "swiper": "^11.2.9"
+  }
+}
