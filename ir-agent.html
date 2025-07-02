@@ -19,16 +19,16 @@
         <!--Start Form Section-->
         <form action="#" method="post" enctype="multipart/form-data" class="form">
             <div class="driverNameInfo inputSetup">
-                <label for="driverName" class="driverName labelSetup">ترانشیپ:</label> 
-                <input id="driverName" type="text" name="Driver Name" class="driverInfoInput inputValueSetup" required>
+                <label for="tranship" class="transhipLable labelSetup">ترانشیپ:</label> 
+                <input id="tranship" type="text" name="ترانشیپ" class="transhipInput inputValueSetup" required>
             </div>
             <div class="carLoadWeightInfo inputSetup">
                 <label for="carWeight" class="carLoadWeight labelSetup">تناژ بار تخلیه شده از خودرو اول:</label>
-                <input id="carWeight" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="Car Load Weight" class="loadWeight inputValueSetup" placeholder="- - - -" required>
+                <input id="carWeight" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="تناژ بار تخلیه شده از خودرو اول" class="loadWeight inputValueSetup" placeholder="- - - -" required>
             </div>
-            <div class="driverNameInfo inputSetup">
-                <label for="driverName" class="driverName labelSetup">ارجاع به آزمایشگاه:</label> 
-                <input id="driverName" type="text" name="Driver Name" class="driverInfoInput inputValueSetup" required>
+            <div class="labratory inputSetup">
+                <label for="labratory" class="labratoryLable labelSetup">ارجاع به آزمایشگاه:</label> 
+                <input id="labratory" type="text" name="ارجاع به آزمایشگاه" class="labratoryInput inputValueSetup" required>
             </div>
             <div class="firstCarInfoContainer carInfoWrapper">
               <h1 class="carInfoTitle">مشخصات راننده و خودرو اول</h1>
@@ -100,19 +100,19 @@
             </div>
             <div class="secondCarInfoContainer carInfoWrapper">
                 <h1 class="carInfoTitle">مشخصات راننده و خودرو دوم</h1>
-                <div class="carLoadWeightInfo inputSetup">
-                <label for="carWeight" class="carLoadWeight labelSetup">تناژ بار (بارگیری شده) در خودرو دوم:</label>
-                <input id="carWeight" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="Car Load Weight" class="loadWeight inputValueSetup" placeholder="- - - -" required>
+                <div class="secondCarLoadWeightInfo inputSetup">
+                <label for="secondCarWeight" class="secondCarLoadWeight labelSetup">تناژ بار (بارگیری شده) در خودرو دوم:</label>
+                <input id="secondCarWeight" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="تناژ بار (بارگیری شده) در خودرو دوم" class="loadWeight inputValueSetup" placeholder="- - - -" required>
                 </div>
-                <div class="driverNameInfo inputSetup">
-                <label for="driverName" class="driverName labelSetup">نام و نام خانوادگی راننده دوم:</label> 
-                <input id="driverName" type="text" name="Driver Name" class="driverInfoInput inputValueSetup" required>
+                <div class="secondDriverNameInfo inputSetup">
+                <label for="secondDriverName" class="secondDriverName labelSetup">نام و نام خانوادگی راننده دوم:</label> 
+                <input id="secondDriverName" type="text" name="نام و نام خانوادگی راننده دوم" class="secondDriverInfoInput inputValueSetup" required>
                 </div>
-                <div div class="driverNationalIdInfo inputSetup">
-                <label for="driverNationalId" class="driverNationalId labelSetup">کد ملی راننده دوم:</label> 
-                <input id="driverNationalId" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="Driver National Id" class="driverNationalIdInput inputValueSetup" maxlength="10" required>
+                <div div class="secondDriverNationalIdInfo inputSetup">
+                <label for="secondDriverNationalId" class="secondDriverNationalId labelSetup">کد ملی راننده دوم:</label> 
+                <input id="secondDriverNationalId" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="کد ملی راننده دوم" class="driverNationalIdInput inputValueSetup" maxlength="10" required>
                 </div>
-                <div class="carPlateNumberInfo inputSetup">
+                <div class="secondCarPlateNumberInfo inputSetup">
                 <label class="licensePlate labelSetup">شماره پلاک خودرو دوم:</label> 
                 <!--شروع قالب پلاک-->
                 <div class="licenseFullContainer">
@@ -161,9 +161,9 @@
                 </div>
                 <!--پایان قالب پلاک-->
                 </div>
-                <div class="carModelInfo inputSetup">
-                <label for="carInfo" class="carModelLabel labelSetup">مشخصات خودرو دوم:</label> 
-                <input id="carInfo" type="text" name="Car Model" class="carModelInput inputValueSetup" required>
+                <div class="secondCarModelInfo inputSetup">
+                <label for="secondCarInfo" class="secondCarModelLabel labelSetup">مشخصات خودرو دوم:</label> 
+                <input id="secondCarInfo" type="text" name="Car Model" class="secondCarModelInput inputValueSetup" required>
                 </div>
                 <div class="exitDate inputSetup">
                 <label for="datePicker" class="exitDateLable labelSetup" >تاریخ خروج:</label> 

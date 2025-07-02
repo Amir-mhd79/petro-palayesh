@@ -43,14 +43,14 @@ html {
             height: 32px;
             border: unset;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 12px;
             padding-right: 10px;
             font-family: YekanBakh-Bold;
             padding-top: 6px;
           }
           > .loadWeight {
             width: 100px;
-            font-size: 18px;
+            font-size: 14px;
           }
         }
         > .carInfoWrapper {
@@ -76,7 +76,7 @@ html {
               height: 32px;
               border: unset;
               border-radius: 5px;
-              font-size: 16px;
+              font-size: 12px;
               padding-right: 10px;
               font-family: YekanBakh-Bold;
               padding-top: 6px;
@@ -94,7 +94,7 @@ html {
                 flex-direction: row-reverse;
                 border-right: 1px solid lightgray;
                 > .carLicensePlate {
-                  width: 34px;
+                  width: 35px;
                   height: 32px;
                   border: unset;
                   border-radius: 5px;
@@ -142,7 +142,7 @@ html {
           > .inputSetup {
             > .loadWeight {
               width: 100px;
-              font-size: 18px;
+              font-size: 14px;
             }
             > .form-control {
               width: 160px;
@@ -164,7 +164,7 @@ html {
 
             > .uploadFileInput {
               cursor: pointer;
-              width: 220px;
+              width: 180px;
             }
           }
         }
@@ -229,6 +229,8 @@ html {
     }
     [id="mpdatepicker-block"] {
       border-radius: 5px !important;
+      width: 300px !important;
+      padding: 5px !important;
     }
     .mp-clear,
     .mp-close {

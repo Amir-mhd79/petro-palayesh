@@ -22,7 +22,8 @@ html {
         }
         > .title {
           font-family: YekanBakh-Bold;
-          font-size: 14px;
+          font-size: 16px;
+          word-spacing: 2px;
         }
       }
       > .form {
@@ -35,11 +36,11 @@ html {
           justify-content: space-between;
           > .labelSetup {
             font-family: YekanBakh-Regular;
-            font-size: 12px;
+            font-size: 14px;
             cursor: pointer;
           }
           > .inputValueSetup {
-            width: 180px;
+            width: 240px;
             height: 32px;
             border: unset;
             border-radius: 5px;
@@ -50,7 +51,7 @@ html {
           }
           > .loadWeight {
             width: 100px;
-            font-size: 18px;
+            font-size: 16px;
           }
         }
         > .carInfoWrapper {
@@ -59,8 +60,9 @@ html {
           row-gap: 20px;
           > .carInfoTitle {
             font-family: YekanBakh-Bold;
-            font-size: 14px;
+            font-size: 16px;
             text-align: center;
+            word-spacing: 2px;
           }
           > .inputSetup {
             display: flex;
@@ -68,11 +70,11 @@ html {
             justify-content: space-between;
             > .labelSetup {
               font-family: YekanBakh-Regular;
-              font-size: 12px;
+              font-size: 14px;
               cursor: pointer;
             }
             > .inputValueSetup {
-              width: 180px;
+              width: 240px;
               height: 32px;
               border: unset;
               border-radius: 5px;
