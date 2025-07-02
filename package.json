@@ -22,7 +22,14 @@
     "go-expert-lg": "node-sass -w SCSS/Go-expert/03-lg/03-lg.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
     "go-expert-md": "node-sass -w SCSS/Go-expert/04-md/04-md.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
     "go-expert-sm": "node-sass -w SCSS/Go-expert/05-sm/05-sm.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
-    "go-expert-xs": "node-sass -w SCSS/Go-expert/06-xs/06-xs.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed"
+    "go-expert-xs": "node-sass -w SCSS/Go-expert/06-xs/06-xs.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
+
+    "ir-agent-2xl": "node-sass -w SCSS/ir-agent/01-xxl/01-xxl.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
+    "ir-agent-xl": "node-sass -w SCSS/ir-agent/02-xl/02-xl.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
+    "ir-agent-lg": "node-sass -w SCSS/ir-agent/03-lg/03-lg.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
+    "ir-agent-md": "node-sass -w SCSS/ir-agent/04-md/04-md.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
+    "ir-agent-sm": "node-sass -w SCSS/ir-agent/05-sm/05-sm.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
+    "ir-agent-xs": "node-sass -w SCSS/ir-agent/06-xs/06-xs.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed"
   },
   "author": "Amirmohammad Akbarloo",
   "license": "ISC",

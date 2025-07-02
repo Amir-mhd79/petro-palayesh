@@ -1,0 +1,244 @@
+body {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  > .container {
+    width: 700px;
+    background-color: #e5e7eb;
+    border-radius: 6px;
+    padding: 30px 50px;
+    > .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid lightgray;
+      word-spacing: 2px;
+      > .logo {
+        width: 110px;
+      }
+      > .title {
+        font-family: YekanBakh-Bold;
+        font-size: 18px;
+      }
+    }
+    > .form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      > .inputSetup {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > .labelSetup {
+          font-family: YekanBakh-Regular;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        > .inputValueSetup {
+          width: 250px;
+          height: 38px;
+          border: unset;
+          border-radius: 5px;
+          font-size: 16px;
+          padding-right: 10px;
+          font-family: YekanBakh-Bold;
+          padding-top: 6px;
+        }
+        > .loadWeight {
+          width: 100px;
+          font-size: 18px;
+        }
+      }
+      > .carInfoWrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        > .carInfoTitle {
+          font-family: YekanBakh-Bold;
+          font-size: 16px;
+          text-align: center;
+        }
+        > .inputSetup {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          > .labelSetup {
+            font-family: YekanBakh-Regular;
+            font-size: 16px;
+            cursor: pointer;
+          }
+          > .inputValueSetup {
+            width: 250px;
+            height: 38px;
+            border: unset;
+            border-radius: 5px;
+            font-size: 16px;
+            padding-right: 10px;
+            font-family: YekanBakh-Bold;
+            padding-top: 6px;
+          }
+          > .licenseFullContainer {
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: white;
+            border-radius: 5px;
+            align-items: end;
+            padding: 5px;
+            > .licensePlateLeftContainer {
+              display: flex;
+              align-items: center;
+              flex-direction: row-reverse;
+              border-right: 1px solid lightgray;
+              > .carLicensePlate {
+                width: 50px;
+                height: 38px;
+                border: unset;
+                border-radius: 5px;
+                font-size: 22px;
+                text-align: center;
+                outline: unset;
+              }
+              > .licenseAlphabetSelect {
+                height: 38px;
+                font-family: YekanBakh-Regular;
+                border: unset;
+                border-radius: 5px;
+                font-size: 22px;
+              }
+            }
+            > .provincialLicensePlateNumber {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              > .iran {
+                font-size: 10px;
+                font-family: YekanBakh-Regular;
+              }
+              > .provincialNumber {
+                width: 50px;
+                height: 38px;
+                border: unset;
+                border-radius: 5px;
+                font-size: 22px;
+                text-align: center;
+                outline: unset;
+              }
+            }
+          }
+        }
+      }
+      > .firstCarInfoContainer {
+        margin-top: 10px;
+        padding: 30px 0;
+        border-top: 2px solid lightgray;
+        border-bottom: 2px solid lightgray;
+      }
+      > .secondCarInfoContainer {
+        margin-bottom: 30px;
+        > .inputSetup {
+          > .loadWeight {
+            width: 100px;
+            font-size: 18px;
+          }
+          > .form-control {
+            background-color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            border: unset;
+            cursor: pointer;
+          }
+          > .timeInput {
+            border: unset;
+            border-radius: 5px;
+            height: 38px;
+            padding: 0 5px;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          > .uploadFileInput {
+            cursor: pointer;
+          }
+        }
+      }
+      > .submitContainer {
+        display: flex;
+        justify-content: center;
+        > .submitForm {
+          width: 120px;
+          height: 40px;
+          border: unset;
+          border-radius: 5px;
+          cursor: pointer;
+          font-family: YekanBakh-Regular;
+          background-color: var(--background-color2);
+          color: white;
+          font-size: 16px;
+          transition: 300ms;
+          &:hover {
+            background-color: green;
+            box-shadow: 1px 1px 5px black;
+          }
+        }
+      }
+    }
+    > .buttons {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      margin-top: 100px;
+      padding-top: 30px;
+      border-top: 2px solid gray;
+      > .btTitle {
+        font-family: YekanBakh-Regular;
+        font-size: 16px;
+        text-align: center;
+        color: darkred;
+        margin-bottom: 10px;
+      }
+      > .btnContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        > .btnLink {
+          width: 100px;
+          background-color: gray;
+          padding: 10px;
+          font-family: YekanBakh-Regular;
+          font-size: 16px;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          transition: 300ms;
+          &:hover {
+            background-color: rgb(46, 46, 46);
+          }
+        }
+      }
+    }
+  }
+  [id="mpdatepicker-block"] {
+    border-radius: 5px !important;
+  }
+  .mp-clear,
+  .mp-close {
+    color: black;
+    font-family: YekanBakh-Bold !important;
+  }
+  .mp-today {
+    font-family: YekanBakh-Bold !important;
+  }
+  .mpheader {
+    font-family: YekanBakh-Regular;
+  }
+  table {
+    font-family: YekanBakh-Regular;
+  }
+}
