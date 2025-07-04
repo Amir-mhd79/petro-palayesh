@@ -58,7 +58,8 @@ body {
             align-items: center;
             flex-direction: row-reverse;
             border-right: 1px solid lightgray;
-            > .carLicensePlate {
+            > .twoLeftDigitsInput,
+            > .threeRightDigitsInput {
               width: 50px;
               height: 38px;
               border: unset;
@@ -105,7 +106,7 @@ body {
           border: unset;
           cursor: pointer;
         }
-        >.timeInput{
+        > .timeInput {
           border: unset;
           border-radius: 5px;
           height: 38px;

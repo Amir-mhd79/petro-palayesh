@@ -59,21 +59,22 @@ html {
               align-items: center;
               flex-direction: row-reverse;
               border-right: 1px solid lightgray;
-              > .carLicensePlate {
+              > .twoLeftDigitsInput,
+              > .threeRightDigitsInput {
                 width: 50px;
                 height: 32px;
                 border: unset;
                 border-radius: 5px;
-                font-size: 18px;
+                font-size: 16px;
                 text-align: center;
                 outline: unset;
               }
               > .licenseAlphabetSelect {
-                height: 38px;
+                height: 32px;
                 font-family: YekanBakh-Regular;
                 border: unset;
                 border-radius: 5px;
-                font-size: 18px;
+                font-size: 16px;
               }
             }
             > .provincialLicensePlateNumber {
@@ -86,10 +87,10 @@ html {
               }
               > .provincialNumber {
                 width: 50px;
-                height: 38px;
+                height: 32px;
                 border: unset;
                 border-radius: 5px;
-                font-size: 18px;
+                font-size: 16px;
                 text-align: center;
                 outline: unset;
               }
