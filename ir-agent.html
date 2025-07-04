@@ -8,195 +8,411 @@
     <link rel="stylesheet" href="./CSS/ir-agent/ir-agent.css" />
   </head>
   <body>
-  <!--Start making petro palayesh jemizdar project-->
+    <!--Start making petro palayesh jemizdar project-->
     <main class="container">
-        <!--Start header of form-->
-        <div class="header">
-          <img src="./Images/logo.png" alt="petro palayesh jemizdar logo" class="logo">
-          <h1 class="title">ترخیص کار ایران</h1>
+      <!--Start header of form-->
+      <div class="header">
+        <img
+          class="logo"
+          src="./Images/logo.png"
+          alt="لوگو شرکت پترو پالایش جمیزدر"
+        />
+        <h1 class="title">ترخیص کار ایران</h1>
+      </div>
+      <!--End header of form-->
+      <!--Start Form Section-->
+      <form class="form" action="#" method="post" enctype="multipart/form-data">
+        <div class="transhipmentSection inputSetup">
+          <label class="transhipmentLable labelSetup" for="transhipment"
+            >ترانشیپ:</label
+          >
+          <input
+            class="transhipmentInput inputValueSetup"
+            id="transhipment"
+            type="text"
+            name="transhipment"
+            required
+          />
         </div>
-        <!--End header of form-->
-        <!--Start Form Section-->
-        <form action="#" method="post" enctype="multipart/form-data" class="form">
-            <div class="driverNameInfo inputSetup">
-                <label for="tranship" class="transhipLable labelSetup">ترانشیپ:</label> 
-                <input id="tranship" type="text" name="ترانشیپ" class="transhipInput inputValueSetup" required>
+        <div class="tonnageCargoUnloaded inputSetup">
+          <label class="tonnageCargoUnloadedLabel labelSetup" for="tonnageCargo"
+            >تناژ بار تخلیه شده از خودرو اول:</label
+          >
+          <input
+            class="tonnageCargoUnloadedInput inputValueSetup"
+            id="tonnageCargo"
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            name="tonnage_cargo_unloaded"
+            placeholder="- - - -"
+            required
+          />
+        </div>
+        <div class="labratorySection inputSetup">
+          <label class="labratoryLable labelSetup" for="labratory"
+            >ارجاع به آزمایشگاه:</label
+          >
+          <input
+            class="labratoryInput inputValueSetup"
+            id="labratory"
+            type="text"
+            name="referral_to_laboratory"
+            required
+          />
+        </div>
+        <div class="firstCarInfoContainer carInfoWrapper">
+          <h1 class="carInfoTitle">مشخصات راننده و خودرو اول</h1>
+          <div class="firstDriverNameInfo inputSetup">
+            <label class="firstDriverNameInfoLable labelSetup" for="driverName"
+              >نام و نام خانوادگی راننده اول:</label
+            >
+            <input
+              class="firstDriverInfoInput inputValueSetup"
+              id="driverName"
+              type="text"
+              name="first_driver_fullname"
+              required
+            />
+          </div>
+          <div class="firstDriverNationalIdInfo inputSetup">
+            <label
+              class="firstDriverNationalIdLable labelSetup"
+              for="driverNationalId"
+              >کد ملی راننده اول:</label
+            >
+            <input
+              class="firstDriverNationalIdInput inputValueSetup"
+              id="driverNationalId"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="first_driver_national_id"
+              maxlength="10"
+              required
+            />
+          </div>
+          <div div class="firstDriverPhoneNumberInfo inputSetup">
+            <label
+              class="firstDriverPhoneNumberLable labelSetup"
+              for="firstDriverPhoneNumber"
+              >شماره تماس راننده اول:</label
+            >
+            <input
+              class="firstDriverPhoneNumberInput inputValueSetup"
+              id="firstDriverPhoneNumber"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="first_driver_phoneNumber"
+              required
+            />
+          </div>
+          <div class="irCarPlateNumberInfo inputSetup">
+            <label class="licensePlateLable labelSetup"
+              >شماره پلاک خودرو اول:</label
+            >
+            <!--شروع قالب پلاک-->
+            <div class="licenseFullContainer">
+              <div class="licensePlateLeftContainer">
+                <!--شروع دو رقم سمت چپ پلاک-->
+                <input
+                  class="twoLeftDigitsInput"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  name="two_left_digits_irLicencePlate"
+                  placeholder="- -"
+                  maxlength="2"
+                  required
+                />
+                <!--پایان دو رقم سمت چپ پلاک-->
+                <!--شروع حرف پلاک-->
+                <select
+                  class="licenseAlphabetSelect"
+                  name="license_plate-letter"
+                >
+                  <option value="alef">الف</option>
+                  <option value="be">ب</option>
+                  <option value="pe">پ</option>
+                  <option value="te">ت</option>
+                  <option value="se">ث</option>
+                  <option value="jim">ج</option>
+                  <option value="dal">د</option>
+                  <option value="ze">ز</option>
+                  <option value="zhe">ژ</option>
+                  <option value="sin">س</option>
+                  <option value="shin">ش</option>
+                  <option value="sad">ص</option>
+                  <option value="ta">ط</option>
+                  <option value="ain">ع</option>
+                  <option value="fe">ف</option>
+                  <option value="ghaf">ق</option>
+                  <option value="kaf">ک</option>
+                  <option value="gaf">گ</option>
+                  <option value="lam">ل</option>
+                  <option value="mim">م</option>
+                  <option value="noon">ن</option>
+                  <option value="vav">و</option>
+                  <option value="he">ه</option>
+                  <option value="ye">ی</option>
+                </select>
+                <!--پایان حرف پلاک-->
+                <!--شروع 3 عدد بعد از حرف پلاک-->
+                <input
+                  class="threeRightDigitsInput"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  name="three_right_digits_irLicencePlate"
+                  placeholder="- - -"
+                  maxlength="3"
+                  required
+                />
+                <!--پایان 3 عدد بعد از حرف پلاک-->
+              </div>
+              <!--شروع دو رقم استانی پلاک-->
+              <div class="provincialLicensePlateNumber">
+                <span class="iran">ایران</span>
+                <input
+                  class="provincialNumber"
+                  type="text"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  name="provincial_licensePlate_number"
+                  placeholder="- -"
+                  maxlength="2"
+                  required
+                />
+              </div>
+              <!--پایان دو رقم استانی پلاک-->
             </div>
-            <div class="carLoadWeightInfo inputSetup">
-                <label for="carWeight" class="carLoadWeight labelSetup">تناژ بار تخلیه شده از خودرو اول:</label>
-                <input id="carWeight" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="تناژ بار تخلیه شده از خودرو اول" class="loadWeight inputValueSetup" placeholder="- - - -" required>
-            </div>
-            <div class="labratory inputSetup">
-                <label for="labratory" class="labratoryLable labelSetup">ارجاع به آزمایشگاه:</label> 
-                <input id="labratory" type="text" name="ارجاع به آزمایشگاه" class="labratoryInput inputValueSetup" required>
-            </div>
-            <div class="firstCarInfoContainer carInfoWrapper">
-              <h1 class="carInfoTitle">مشخصات راننده و خودرو اول</h1>
-                <div class="driverNameInfo inputSetup">
-                  <label for="driverName" class="driverName labelSetup">نام و نام خانوادگی راننده اول:</label> 
-                  <input id="driverName" type="text" name="Driver Name" class="driverInfoInput inputValueSetup" required>
-                </div>
-                <div class="driverNationalIdInfo inputSetup">
-                <label for="driverNationalId" class="driverNationalId labelSetup">کد ملی راننده اول:</label> 
-                <input id="driverNationalId" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="Driver National Id" class="driverNationalIdInput inputValueSetup" maxlength="10" required>
-                </div>
-                <div class="carPlateNumberInfo inputSetup">
-                <label class="licensePlate labelSetup">شماره پلاک خودرو اول:</label> 
-                <!--شروع قالب پلاک-->
-                <div class="licenseFullContainer">
-                  <div class="licensePlateLeftContainer">
-                    <!--شروع دو رقم سمت چپ پلاک-->
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate First Number" class="carLicensePlate" placeholder="- -" maxlength="2" required>
-                    <!--پایان دو رقم سمت چپ پلاک-->
-                    <!--شروع حرف پلاک-->
-                    <select name="حرف پلاک" class="licenseAlphabetSelect">
-                      <option value="ب">ب</option>
-                      <option value="ج">ج</option>
-                      <option value="د">د</option>
-                      <option value="س">س</option>
-                      <option value="ص">ص</option>
-                      <option value="ط">ط</option>
-                      <option value="ق">ق</option>
-                      <option value="ل">ل</option>
-                      <option value="م">م</option>
-                      <option value="ن">ن</option>
-                      <option value="و">و</option>
-                      <option value="ه">ه</option>
-                      <option value="ی">ی</option>
-                      <option value="الف">الف</option>
-                      <option value="پ">پ</option>
-                      <option value="ت">ت</option>
-                      <option value="ث">ث</option>
-                      <option value="ز">ز</option>
-                      <option value="ژ">ژ</option>
-                      <option value="ش">ش</option>
-                      <option value="ع">ع</option>
-                      <option value="ف">ف</option>
-                      <option value="ک">ک</option>
-                      <option value="گ">گ</option>
-                    </select>
-                    <!--پایان حرف پلاک-->
-                    <!--شروع 3 عدد بعد از حرف پلاک-->
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate Second Number" class="carLicensePlate" placeholder="- - -" maxlength="3" required>
-                    <!--پایان 3 عدد بعد از حرف پلاک-->
-                  </div>
-                  <!--شروع دو رقم استانی پلاک-->
-                  <div class="provincialLicensePlateNumber">
-                    <span class="iran">ایران</span>
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate Third Number" class="provincialNumber" placeholder="- -" maxlength="2" required>
-                  </div>
-                  <!--پایان دو رقم استانی پلاک-->
-                </div>
-                <!--پایان قالب پلاک-->
-                </div>
-                <div class="carModelInfo inputSetup">
-                <label for="carInfo" class="carModelLabel labelSetup">مشخصات خودرو اول:</label> 
-                <input id="carInfo" type="text" name="Car Model" class="carModelInput inputValueSetup" required>
-                </div>
-                <div class="carLoadTypeInfo inputSetup">
-                <label for="loadType" class="carLoadWeightType labelSetup">نوع بار:</label> 
-                <input id="loadType" type="text" name="Car Model" class="loadWeightType inputValueSetup" required>
-                </div>
-            </div>
-            <div class="secondCarInfoContainer carInfoWrapper">
-                <h1 class="carInfoTitle">مشخصات راننده و خودرو دوم</h1>
-                <div class="secondCarLoadWeightInfo inputSetup">
-                <label for="secondCarWeight" class="secondCarLoadWeight labelSetup">تناژ بار (بارگیری شده) در خودرو دوم:</label>
-                <input id="secondCarWeight" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="تناژ بار (بارگیری شده) در خودرو دوم" class="loadWeight inputValueSetup" placeholder="- - - -" required>
-                </div>
-                <div class="secondDriverNameInfo inputSetup">
-                <label for="secondDriverName" class="secondDriverName labelSetup">نام و نام خانوادگی راننده دوم:</label> 
-                <input id="secondDriverName" type="text" name="نام و نام خانوادگی راننده دوم" class="secondDriverInfoInput inputValueSetup" required>
-                </div>
-                <div div class="secondDriverNationalIdInfo inputSetup">
-                <label for="secondDriverNationalId" class="secondDriverNationalId labelSetup">کد ملی راننده دوم:</label> 
-                <input id="secondDriverNationalId" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="کد ملی راننده دوم" class="driverNationalIdInput inputValueSetup" maxlength="10" required>
-                </div>
-                <div class="secondCarPlateNumberInfo inputSetup">
-                <label class="licensePlate labelSetup">شماره پلاک خودرو دوم:</label> 
-                <!--شروع قالب پلاک-->
-                <div class="licenseFullContainer">
-                  <div class="licensePlateLeftContainer">
-                    <!--شروع دو رقم سمت چپ پلاک-->
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate First Number" class="carLicensePlate" placeholder="- -" maxlength="2" required>
-                    <!--پایان دو رقم سمت چپ پلاک-->
-                    <!--شروع حرف پلاک-->
-                    <select name="حرف پلاک" class="licenseAlphabetSelect">
-                      <option value="ب">ب</option>
-                      <option value="ج">ج</option>
-                      <option value="د">د</option>
-                      <option value="س">س</option>
-                      <option value="ص">ص</option>
-                      <option value="ط">ط</option>
-                      <option value="ق">ق</option>
-                      <option value="ل">ل</option>
-                      <option value="م">م</option>
-                      <option value="ن">ن</option>
-                      <option value="و">و</option>
-                      <option value="ه">ه</option>
-                      <option value="ی">ی</option>
-                      <option value="الف">الف</option>
-                      <option value="پ">پ</option>
-                      <option value="ت">ت</option>
-                      <option value="ث">ث</option>
-                      <option value="ز">ز</option>
-                      <option value="ژ">ژ</option>
-                      <option value="ش">ش</option>
-                      <option value="ع">ع</option>
-                      <option value="ف">ف</option>
-                      <option value="ک">ک</option>
-                      <option value="گ">گ</option>
-                    </select>
-                    <!--پایان حرف پلاک-->
-                    <!--شروع 3 عدد بعد از حرف پلاک-->
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate Second Number" class="carLicensePlate" placeholder="- - -" maxlength="3" required>
-                    <!--پایان 3 عدد بعد از حرف پلاک-->
-                  </div>
-                  <!--شروع دو رقم استانی پلاک-->
-                  <div class="provincialLicensePlateNumber">
-                    <span class="iran">ایران</span>
-                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate Third Number" class="provincialNumber" placeholder="- -" maxlength="2" required>
-                  </div>
-                  <!--پایان دو رقم استانی پلاک-->
-                </div>
-                <!--پایان قالب پلاک-->
-                </div>
-                <div class="secondCarModelInfo inputSetup">
-                <label for="secondCarInfo" class="secondCarModelLabel labelSetup">مشخصات خودرو دوم:</label> 
-                <input id="secondCarInfo" type="text" name="Car Model" class="secondCarModelInput inputValueSetup" required>
-                </div>
-                <div class="exitDate inputSetup">
-                <label for="datePicker" class="exitDateLable labelSetup" >تاریخ خروج:</label> 
-                <input id="datePicker" type="text" name="تاریخ خروج" class="dateInput form-control" readonly required>
-                </div>
-                <div class="exitTime inputSetup">
-                <label for="exitTime" class="exitTimeLable labelSetup">ساعت خروج:</label> 
-                <input id="exitTime" type="time" name="ساعت خروج" class="timeInput" required>
-                </div>
-                <div class="uploadFile inputSetup">
-                <label for="uploadFile" class="uploadFileLable labelSetup">بارگذاری بارنامه:</label> 
-                <input id="uploadFile" type="file" name="Upload File" class="uploadFileInput inputValueSetup" multiple required>
-                </div>
-            </div>
-            <div class="submitContainer">
-              <input type="submit" value="ارسال" class="submitForm">
-            </div>
-        </form>
-        <!--End Form Section-->
-        <div class="buttons">
-          <h1 class="btTitle"><span class="fa fa-angle-down"></span>این قسمت موقتی است<span class="fa fa-angle-down"></span></h1>
-          <div class="btnContainer">
-            <a href="./index.html" class="btnLink">لاگین</a>
-            <a href="./ge-expert.html" class="btnLink">کارشناس جمیزدر</a>
-            <a href="./go-expert.html" class="btnLink">کارشناس گمرک</a>
-            <a href="./ir-agent.html" class="btnLink">ترخیص کار ایران</a>
-            <a href="./af-agent.html" class="btnLink">ترخیص کار افغانستان</a>
-            <a href="./af-expert.html" class="btnLink">کارشناس افغانستان</a>
-            <a href="./dashboard.html" class="btnLink">پنل داشبورد ادمین</a>
+            <!--پایان قالب پلاک-->
+          </div>
+          <div class="uploadFirstCarLicensePlate inputSetup">
+            <label
+              class="uploadFirstCarLicensePlateLable labelSetup"
+              for="uploadFirstCarLicensePlate"
+              >بارگذاری عکس پلاک خودرو:</label
+            >
+            <input
+              class="uploadFirstCarLicensePlateInput inputValueSetup"
+              id="uploadFirstCarLicensePlate"
+              type="file"
+              name="upload_firstCar_licensePlate"
+              multiple
+              required
+            />
+          </div>
+          <div class="carModelInfo inputSetup">
+            <label class="carModelLabel labelSetup" for="carInfo"
+              >مشخصات خودرو اول:</label
+            >
+            <input
+              class="carModelInput inputValueSetup"
+              id="carInfo"
+              type="text"
+              name="first_car_model_information"
+              required
+            />
+          </div>
+          <div class="carLoadTypeInfo inputSetup">
+            <label class="carLoadWeightType labelSetup" for="cargoType"
+              >نوع بار:</label
+            >
+            <input
+              class="loadWeightType inputValueSetup"
+              id="cargoType"
+              type="text"
+              name="cargo_type"
+              required
+            />
           </div>
         </div>
+        <div class="secondCarInfoContainer carInfoWrapper">
+          <h1 class="carInfoTitle">مشخصات راننده و خودرو دوم</h1>
+          <div class="tonnageCargoLoaded inputSetup">
+            <label
+              class="tonnageCargoLoadedLable labelSetup"
+              for="tonnageCargoLoaded"
+              >تناژ بار (بارگیری شده) در خودرو دوم:</label
+            >
+            <input
+              class="tonnageCargoLoadedInput inputValueSetup"
+              id="tonnageCargoLoaded"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="tonnage_cargo_loaded"
+              placeholder="- - - -"
+              required
+            />
+          </div>
+          <div class="secondDriverNameInfo inputSetup">
+            <label
+              class="secondDriverNameLable labelSetup"
+              for="secondDriverName"
+              >نام و نام خانوادگی راننده دوم:</label
+            >
+            <input
+              class="secondDriverInfoInput inputValueSetup"
+              id="secondDriverName"
+              type="text"
+              name="second_driver_fullname"
+              required
+            />
+          </div>
+          <div div class="secondDriverNationalIdInfo inputSetup">
+            <label
+              class="secondDriverNationalIdLable labelSetup"
+              for="secondDriverNationalId"
+              >کد ملی راننده دوم:</label
+            >
+            <input
+              class="driverNationalIdInput inputValueSetup"
+              id="secondDriverNationalId"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="second_driver_national_id"
+              maxlength="10"
+              required
+            />
+          </div>
+          <div div class="secondDriverPhoneNumberInfo inputSetup">
+            <label
+              class="secondDriverPhoneNumberLable labelSetup"
+              for="secondDriverPhoneNumber"
+              >شماره تماس راننده دوم:</label
+            >
+            <input
+              class="secondDriverPhoneNumberInput inputValueSetup"
+              id="secondDriverPhoneNumber"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="second_driver_phoneNumber"
+              required
+            />
+          </div>
+          <div class="secondCarPlateNumberInfo inputSetup">
+            <label class="licensePlate labelSetup">شماره پلاک خودرو دوم:</label>
+            <!--شروع قالب پلاک-->
+            <div class="licenseFullContainer">
+              <!-- ولایت -->
+              <select class="velayat" name="AF_province" required>
+                <option value="">انتخاب ولایت</option>
+                <option value="kabul">کابل</option>
+                <option value="herat">هرات</option>
+                <option value="mazar">بلخ</option>
+                <option value="kandahar">قندهار</option>
+                <option value="jalalabad">ننگرهار</option>
+                <option value="ghazni">غزنی</option>
+                <option value="bamyan">بامیان</option>
+                <option value="kunduz">کندز</option>
+                <option value="baghlan">بغلان</option>
+                <option value="badakhshan">بدخشان</option>
+              </select>
+              <!--رقم اضافی-->
+              <input
+                class="extraDigit"
+                type="text"
+                name="AF_extraDigit_licensePlate"
+                placeholder="رقم اضافی"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                maxlength="1"
+              />
+              <!-- شماره سریال -->
+              <input
+                class="serialLicense"
+                type="text"
+                name="AF_serial_licensePlate"
+                placeholder="۱۲۳۴۵"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                maxlength="5"
+                required
+              />
+              <!-- نوع خودرو -->
+              <select class="vehicleType" name="AF_vehicle_type" required>
+                <option value="">نوع خودرو</option>
+                <option value="private">خصوصی</option>
+                <option value="taxi">تاکسی</option>
+                <option value="police">پولیس</option>
+                <option value="gov">دولتی</option>
+                <option value="military">نظامی</option>
+                <option value="ngo">موسسه</option>
+                <option value="diplomatic">دیپلماتیک</option>
+              </select>
+            </div>
+            <!--پایان قالب پلاک-->
+          </div>
+          <div class="uploadSecondCarLicensePlate inputSetup">
+            <label
+              class="uploadSecondCarLicensePlateLable labelSetup"
+              for="uploadSecondCarLicensePlate"
+              >بارگذاری عکس پلاک خودرو:</label
+            >
+            <input
+              class="uploadSecondCarLicensePlateInput inputValueSetup"
+              id="uploadSecondCarLicensePlate"
+              type="file"
+              name="upload_secondCar_licensePlate"
+              multiple
+              required
+            />
+          </div>
+          <div class="secondCarModelInfo inputSetup">
+            <label class="secondCarModelLabel labelSetup" for="secondCarInfo"
+              >مشخصات خودرو دوم:</label
+            >
+            <input
+              class="secondCarModelInput inputValueSetup"
+              id="secondCarInfo"
+              type="text"
+              name="second_car_model_information"
+              required
+            />
+          </div>
+          <div class="exitDate inputSetup">
+            <label class="exitDateLable labelSetup" for="datePicker"
+              >تاریخ خروج:</label
+            >
+            <input
+              class="dateInput form-control"
+              id="datePicker"
+              type="text"
+              name="exit_date_secondCar"
+              readonly
+              required
+            />
+          </div>
+          <div class="exitTime inputSetup">
+            <label class="exitTimeLable labelSetup" for="exitTime"
+              >ساعت خروج:</label
+            >
+            <input
+              class="timeInput"
+              id="exitTime"
+              type="time"
+              name="exit_time_secondCar"
+              required
+            />
+          </div>
+        </div>
+        <div class="submitContainer">
+          <input class="submitForm" type="submit" value="ارسال" />
+        </div>
+      </form>
+      <!--End Form Section-->
+      <div class="buttons">
+        <h1 class="btTitle">
+          <span class="fa fa-angle-down"></span>این قسمت موقتی است<span
+            class="fa fa-angle-down"
+          ></span>
+        </h1>
+        <div class="btnContainer">
+          <a href="./index.html" class="btnLink">لاگین</a>
+          <a href="./ge-expert.html" class="btnLink">کارشناس جمیزدر</a>
+          <a href="./go-expert.html" class="btnLink">کارشناس گمرک</a>
+          <a href="./ir-agent.html" class="btnLink">ترخیص کار ایران</a>
+          <a href="./af-agent.html" class="btnLink">ترخیص کار افغانستان</a>
+          <a href="./af-expert.html" class="btnLink">کارشناس افغانستان</a>
+          <a href="./dashboard.html" class="btnLink">پنل داشبورد ادمین</a>
+        </div>
+      </div>
     </main>
     <script src="./JS/ir-agent.js" type="module"></script>
-  <!--End of making petro palayesh jemizdar project-->
+    <!--End of making petro palayesh jemizdar project-->
   </body>
 </html>

@@ -48,7 +48,7 @@ body {
           font-family: YekanBakh-Bold;
           padding-top: 6px;
         }
-        > .loadWeight {
+        > .tonnageCargoUnloadedInput {
           width: 100px;
           font-size: 18px;
         }
@@ -59,7 +59,7 @@ body {
         row-gap: 20px;
         > .carInfoTitle {
           font-family: YekanBakh-Bold;
-          font-size: 16px;
+          font-size: 18px;
           text-align: center;
           word-spacing: 2px;
         }
@@ -94,7 +94,8 @@ body {
               align-items: center;
               flex-direction: row-reverse;
               border-right: 1px solid lightgray;
-              > .carLicensePlate {
+              > .twoLeftDigitsInput,
+              > .threeRightDigitsInput {
                 width: 50px;
                 height: 38px;
                 border: unset;
@@ -141,9 +142,32 @@ body {
       > .secondCarInfoContainer {
         margin-bottom: 30px;
         > .inputSetup {
-          > .loadWeight {
+          > .tonnageCargoLoadedInput {
             width: 100px;
             font-size: 18px;
+          }
+          > .licenseFullContainer {
+            align-items: center;
+            height: 38px;
+            > .velayat,
+            > .extraDigit,
+            > .serialLicense,
+            > .vehicleType {
+              border: unset;
+              outline: unset;
+              font-family: YekanBakh-Regular;
+              font-size: 14px;
+              text-align: center;
+            }
+            > .velayat {
+              width: 90px;
+            }
+            > .extraDigit {
+              width: 60px;
+            }
+            > .serialLicense {
+              width: 60px;
+            }
           }
           > .form-control {
             background-color: white;
@@ -161,7 +185,6 @@ body {
             font-weight: bold;
             cursor: pointer;
           }
-
           > .uploadFileInput {
             cursor: pointer;
           }

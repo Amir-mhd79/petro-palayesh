@@ -49,7 +49,7 @@ html {
             font-family: YekanBakh-Bold;
             padding-top: 6px;
           }
-          > .loadWeight {
+          > .tonnageCargoUnloadedInput {
             width: 100px;
             font-size: 16px;
           }
@@ -95,21 +95,22 @@ html {
                 align-items: center;
                 flex-direction: row-reverse;
                 border-right: 1px solid lightgray;
-                > .carLicensePlate {
-                  width: 38px;
+                > .twoLeftDigitsInput,
+                > .threeRightDigitsInput {
+                  width: 50px;
                   height: 32px;
                   border: unset;
                   border-radius: 5px;
-                  font-size: 18px;
+                  font-size: 16px;
                   text-align: center;
                   outline: unset;
                 }
                 > .licenseAlphabetSelect {
-                  height: 38px;
+                  height: 32px;
                   font-family: YekanBakh-Regular;
                   border: unset;
                   border-radius: 5px;
-                  font-size: 18px;
+                  font-size: 16px;
                 }
               }
               > .provincialLicensePlateNumber {
@@ -142,9 +143,32 @@ html {
         > .secondCarInfoContainer {
           margin-bottom: 30px;
           > .inputSetup {
-            > .loadWeight {
+            > .tonnageCargoLoadedInput {
               width: 100px;
               font-size: 18px;
+            }
+            > .licenseFullContainer {
+              align-items: center;
+              height: 38px;
+              > .velayat,
+              > .extraDigit,
+              > .serialLicense,
+              > .vehicleType {
+                border: unset;
+                outline: unset;
+                font-family: YekanBakh-Regular;
+                font-size: 14px;
+                text-align: center;
+              }
+              > .velayat {
+                width: 90px;
+              }
+              > .extraDigit {
+                width: 60px;
+              }
+              > .serialLicense {
+                width: 60px;
+              }
             }
             > .form-control {
               width: 180px;

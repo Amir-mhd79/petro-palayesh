@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پترو پالایش جمیزدر</title>
+    <link rel="shortcut icon" href="./images/logo.jpg" />
+    <link rel="stylesheet" href="./CSS/Ge-expert/Ge-expert.css" />
+  </head>
+  <body>
+  <!--Start making petro palayesh jemizdar project-->
+    <main class="container">
+        <!--Start header of form-->
+        <div class="header">
+          <img src="./Images/logo.png" alt="petro palayesh jemizdar logo" class="logo">
+          <h1 class="title">کارشناس پترو پالایش جمیزدر</h1>
+        </div>
+        <!--End header of form-->
+        <!--Start Form Section-->
+        <form action="#" method="post" enctype="multipart/form-data" class="form">
+            <div class="driverNameInfo inputSetup">
+                <label for="driverName" class="driverName labelSetup">نام و نام خانوادگی راننده:</label> 
+                <input id="driverName" type="text" name="Driver Name" class="driverInfoInput inputValueSetup" required>
+            </div>
+            <div class="driverNationalIdInfo inputSetup">
+                <label for="driverNationalId" class="driverNationalId labelSetup">کد ملی راننده:</label> 
+                <input id="driverNationalId" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="Driver National Id" class="driverNationalIdInput inputValueSetup" maxlength="10" required>
+            </div>
+            <div class="carPlateNumberInfo inputSetup">
+                <label class="licensePlate labelSetup">شماره پلاک خودرو:</label> 
+                <!--شروع قالب پلاک-->
+                <div class="licenseFullContainer">
+                  <div class="licensePlateLeftContainer">
+                    <!--شروع دو رقم سمت چپ پلاک-->
+                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate First Number" class="carLicensePlate" placeholder="- -" maxlength="2" required>
+                    <!--پایان دو رقم سمت چپ پلاک-->
+                    <!--شروع حرف پلاک-->
+                    <select name="حرف پلاک" class="licenseAlphabetSelect">
+                      <option value="ب">ب</option>
+                      <option value="ج">ج</option>
+                      <option value="د">د</option>
+                      <option value="س">س</option>
+                      <option value="ص">ص</option>
+                      <option value="ط">ط</option>
+                      <option value="ق">ق</option>
+                      <option value="ل">ل</option>
+                      <option value="م">م</option>
+                      <option value="ن">ن</option>
+                      <option value="و">و</option>
+                      <option value="ه">ه</option>
+                      <option value="ی">ی</option>
+                      <option value="الف">الف</option>
+                      <option value="پ">پ</option>
+                      <option value="ت">ت</option>
+                      <option value="ث">ث</option>
+                      <option value="ز">ز</option>
+                      <option value="ژ">ژ</option>
+                      <option value="ش">ش</option>
+                      <option value="ع">ع</option>
+                      <option value="ف">ف</option>
+                      <option value="ک">ک</option>
+                      <option value="گ">گ</option>
+                    </select>
+                    <!--پایان حرف پلاک-->
+                    <!--شروع 3 عدد بعد از حرف پلاک-->
+                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate Second Number" class="carLicensePlate" placeholder="- - -" maxlength="3" required>
+                    <!--پایان 3 عدد بعد از حرف پلاک-->
+                  </div>
+                  <!--شروع دو رقم استانی پلاک-->
+                  <div class="provincialLicensePlateNumber">
+                    <span class="iran">ایران</span>
+                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="License Plate Third Number" class="provincialNumber" placeholder="- -" maxlength="2" required>
+                  </div>
+                  <!--پایان دو رقم استانی پلاک-->
+                </div>
+                <!--پایان قالب پلاک-->
+            </div>
+            <div class="carModelInfo inputSetup">
+                <label for="carInfo" class="carModelLabel labelSetup">مشخصات خودرو:</label> 
+                <input id="carInfo" type="text" name="Car Model" class="carModelInput inputValueSetup" required>
+            </div>
+            <div class="carLoadWeightInfo inputSetup">
+                <label for="carWeight" class="carLoadWeight labelSetup">وزن بار (تناژ):</label>
+                <input id="carWeight" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="Car Load Weight" class="loadWeight inputValueSetup" placeholder="- - - -" required>
+            </div>
+            <div class="carLoadTypeInfo inputSetup">
+                <label for="loadType" class="carLoadWeightType labelSetup">نوع بار:</label> 
+                <input id="loadType" type="text" name="Car Model" class="loadWeightType inputValueSetup" required>
+            </div>
+            <div class="exitDate inputSetup">
+                <label for="datePicker" class="exitDateLable labelSetup" >تاریخ خروج:</label> 
+                <input id="datePicker" type="text" name="تاریخ خروج" class="dateInput form-control" readonly required>
+            </div>
+            <div class="exitTime inputSetup">
+                <label for="exitTime" class="exitTimeLable labelSetup">ساعت خروج:</label> 
+                <input id="exitTime" type="time" name="ساعت خروج" class="timeInput" required>
+            </div>
+            <div class="uploadFile inputSetup">
+                <label for="uploadFile" class="uploadFileLable labelSetup">بارگذاری بارنامه:</label> 
+                <input id="uploadFile" type="file" name="Upload File" class="uploadFileInput inputValueSetup" multiple required>
+            </div>
+            <div class="submitContainer">
+              <input type="submit" value="ارسال" class="submitForm">
+            </div>
+        </form>
+        <!--End Form Section-->
+        <div class="buttons">
+          <h1 class="btTitle"><span class="fa fa-angle-down"></span>این قسمت موقتی است<span class="fa fa-angle-down"></span></h1>
+          <div class="btnContainer">
+            <a href="./index.html" class="btnLink">لاگین</a>
+            <a href="./ge-expert.html" class="btnLink">کارشناس جمیزدر</a>
+            <a href="./go-expert.html" class="btnLink">کارشناس گمرک</a>
+            <a href="./ir-agent.html" class="btnLink">ترخیص کار ایران</a>
+            <a href="./af-agent.html" class="btnLink">ترخیص کار افغانستان</a>
+            <a href="./af-expert.html" class="btnLink">کارشناس افغانستان</a>
+            <a href="./dashboard.html" class="btnLink">پنل داشبورد ادمین</a>
+          </div>
+        </div>
+    </main>
+    <script src="./JS/ge-expert.js" type="module"></script>
+  <!--End of making petro palayesh jemizdar project-->
+  </body>
+</html>
