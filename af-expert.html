@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پترو پالایش جمیزدر</title>
+    <link rel="shortcut icon" href="./images/logo.jpg" />
+    <link rel="stylesheet" href="./CSS/Af-expert/af-expert.css" />
+  </head>
+  <body>
+    <!--Start making petro palayesh jemizdar project-->
+    <main class="container">
+      <!--Start header of form-->
+      <div class="header">
+        <img
+          class="logo"
+          src="./Images/logo.png"
+          alt="لوگو شرکت پترو پالایش جمیزدر"
+        />
+        <h1 class="title">کارشناس افغانستان</h1>
+      </div>
+      <!--End header of form-->
+      <!--Start Form Section-->
+      <form class="form" action="#" method="post" enctype="multipart/form-data">
+        <div class="carLoadTypeInfo inputSetup">
+          <label class="cargoTypeLable labelSetup" for="cargoType"
+            >نوع بار:</label
+          >
+          <input
+            class="cargoTypeInput inputValueSetup"
+            id="cargoType"
+            type="text"
+            name="cargo_type"
+            required
+          />
+        </div>
+        <div class="cargoTonnageSection inputSetup">
+          <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
+            >تناژ بار:</label
+          >
+          <input
+            class="cargoTonnageInput inputValueSetup"
+            id="cargoTonnage"
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            name="cargo_tonnage"
+            placeholder="- - - -"
+            required
+          />
+        </div>
+        <div class="CarPlateNumberInfo inputSetup">
+          <label class="licensePlate labelSetup">شماره پلاک خودرو دوم:</label>
+          <!--شروع قالب پلاک-->
+          <div class="licenseFullContainer">
+            <!-- ولایت -->
+            <select class="velayat" name="AF_province" required>
+              <option value="">انتخاب ولایت</option>
+              <option value="kabul">کابل</option>
+              <option value="herat">هرات</option>
+              <option value="mazar">بلخ</option>
+              <option value="kandahar">قندهار</option>
+              <option value="jalalabad">ننگرهار</option>
+              <option value="ghazni">غزنی</option>
+              <option value="bamyan">بامیان</option>
+              <option value="kunduz">کندز</option>
+              <option value="baghlan">بغلان</option>
+              <option value="badakhshan">بدخشان</option>
+            </select>
+            <!--رقم اضافی-->
+            <input
+              class="extraDigit"
+              type="text"
+              name="AF_extraDigit_licensePlate"
+              placeholder="رقم اضافی"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              maxlength="1"
+            />
+            <!-- شماره سریال -->
+            <input
+              class="serialLicense"
+              type="text"
+              name="AF_serial_licensePlate"
+              placeholder="۱۲۳۴۵"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              maxlength="5"
+              required
+            />
+            <!-- نوع خودرو -->
+            <select class="vehicleType" name="AF_vehicle_type" required>
+              <option value="">نوع خودرو</option>
+              <option value="private">خصوصی</option>
+              <option value="taxi">تاکسی</option>
+              <option value="police">پولیس</option>
+              <option value="gov">دولتی</option>
+              <option value="military">نظامی</option>
+              <option value="ngo">موسسه</option>
+              <option value="diplomatic">دیپلماتیک</option>
+            </select>
+          </div>
+          <!--پایان قالب پلاک-->
+        </div>
+        <div class="uploadAFCarLicensePlate inputSetup">
+          <label
+            class="uploadAFCarLicensePlateLable labelSetup"
+            for="uploadAFCarLicensePlate"
+            >بارگذاری عکس پلاک خودرو:</label
+          >
+          <input
+            class="uploadAFCarLicensePlateInput inputValueSetup"
+            id="uploadAFCarLicensePlate"
+            type="file"
+            name="upload_AFCar_licensePlate"
+            multiple
+            required
+          />
+        </div>
+        <div class="arrivalDate inputSetup">
+          <label class="arrivalDateLable labelSetup" for="datePicker"
+            >تاریخ ورود:</label
+          >
+          <input
+            class="dateInput form-control"
+            id="datePicker"
+            type="text"
+            name="arrival_date"
+            readonly
+            required
+          />
+        </div>
+        <div class="arrivalTime inputSetup">
+          <label class="arrivalTimeLable labelSetup" for="arrivalTime"
+            >ساعت ورود:</label
+          >
+          <input
+            class="timeInput"
+            id="arrivalTime"
+            type="time"
+            name="arrival_time"
+            required
+          />
+        </div>
+        <div class="uploadFile inputSetup">
+          <label for="uploadFile" class="uploadFileLable labelSetup"
+            >بارگذاری بارنامه:</label
+          >
+          <input
+            id="uploadFile"
+            type="file"
+            name="upload_bill"
+            class="uploadFileInput inputValueSetup"
+            multiple
+            required
+          />
+        </div>
+        <div class="submitContainer">
+          <input class="submitForm" type="submit" value="ارسال" />
+        </div>
+      </form>
+      <!--End Form Section-->
+      <div class="buttons">
+        <h1 class="btTitle">
+          <span class="fa fa-angle-down"></span>این قسمت موقتی است<span
+            class="fa fa-angle-down"
+          ></span>
+        </h1>
+        <div class="btnContainer">
+          <a href="./index.html" class="btnLink">لاگین</a>
+          <a href="./ge-expert.html" class="btnLink">کارشناس جمیزدر</a>
+          <a href="./go-expert.html" class="btnLink">کارشناس گمرک</a>
+          <a href="./ir-agent.html" class="btnLink">ترخیص کار ایران</a>
+          <a href="./af-agent.html" class="btnLink">ترخیص کار افغانستان</a>
+          <a href="./af-expert.html" class="btnLink">کارشناس افغانستان</a>
+          <a href="./dashboard.html" class="btnLink">پنل داشبورد ادمین</a>
+        </div>
+      </div>
+    </main>
+    <script src="./JS/ir-agent.js" type="module"></script>
+    <!--End of making petro palayesh jemizdar project-->
+  </body>
+</html>

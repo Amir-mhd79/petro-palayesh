@@ -65,8 +65,11 @@ html {
             font-size: 16x;
             cursor: pointer;
           }
-          > .uploadFileInput {
+          > .statementInput,
+          > .sealInput {
             cursor: pointer;
+            width: 180px;
+            font-size: 12px;
           }
         }
         > .submitContainer {

@@ -130,6 +130,10 @@ html {
                 }
               }
             }
+            > .uploadFirstCarLicensePlateInput {
+              cursor: pointer;
+              width: 180px;
+            }
           }
         }
         > .firstCarInfoContainer {
@@ -190,8 +194,7 @@ html {
               font-weight: bold;
               cursor: pointer;
             }
-
-            > .uploadFileInput {
+            > .uploadSecondCarLicensePlateInput {
               cursor: pointer;
               width: 180px;
             }

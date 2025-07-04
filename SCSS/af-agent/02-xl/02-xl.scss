@@ -15,12 +15,14 @@ body {
       margin-bottom: 20px;
       padding-bottom: 20px;
       border-bottom: 2px solid lightgray;
+      word-spacing: 2px;
       > .logo {
         width: 110px;
       }
       > .title {
         font-family: YekanBakh-Bold;
         font-size: 18px;
+        word-spacing: 2px;
       }
     }
     > .form {
@@ -46,76 +48,9 @@ body {
           font-family: YekanBakh-Bold;
           padding-top: 6px;
         }
-        > .licenseFullContainer {
-          display: flex;
-          flex-direction: row-reverse;
-          background-color: white;
-          border-radius: 5px;
-          align-items: end;
-          padding: 5px;
-          > .licensePlateLeftContainer {
-            display: flex;
-            align-items: center;
-            flex-direction: row-reverse;
-            border-right: 1px solid lightgray;
-            > .carLicensePlate {
-              width: 50px;
-              height: 38px;
-              border: unset;
-              border-radius: 5px;
-              font-size: 22px;
-              text-align: center;
-              outline: unset;
-            }
-            > .licenseAlphabetSelect {
-              height: 38px;
-              font-family: YekanBakh-Regular;
-              border: unset;
-              border-radius: 5px;
-              font-size: 22px;
-            }
-          }
-          > .provincialLicensePlateNumber {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            > .iran {
-              font-size: 10px;
-              font-family: YekanBakh-Regular;
-            }
-            > .provincialNumber {
-              width: 50px;
-              height: 38px;
-              border: unset;
-              border-radius: 5px;
-              font-size: 22px;
-              text-align: center;
-              outline: unset;
-            }
-          }
-        }
-        > .loadWeight {
+        > .cargoTonnageInput {
           width: 100px;
           font-size: 18px;
-        }
-        > .form-control {
-          background-color: white;
-          font-weight: bold;
-          border-radius: 5px;
-          border: unset;
-          cursor: pointer;
-        }
-        > .timeInput {
-          border: unset;
-          border-radius: 5px;
-          height: 38px;
-          padding: 0 5px;
-          font-family: sans-serif;
-          font-weight: bold;
-          cursor: pointer;
-        }
-        > .uploadFileInput {
-          cursor: pointer;
         }
       }
       > .submitContainer {
@@ -176,22 +111,5 @@ body {
         }
       }
     }
-  }
-  [id="mpdatepicker-block"] {
-    border-radius: 5px !important;
-  }
-  .mp-clear,
-  .mp-close {
-    color: black;
-    font-family: YekanBakh-Bold !important;
-  }
-  .mp-today {
-    font-family: YekanBakh-Bold !important;
-  }
-  .mpheader {
-    font-family: YekanBakh-Regular;
-  }
-  table {
-    font-family: YekanBakh-Regular;
   }
 }

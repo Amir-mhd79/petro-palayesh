@@ -48,9 +48,62 @@ body {
           font-family: YekanBakh-Bold;
           padding-top: 6px;
         }
-        > .cargoTonnageInput {
+        > .tonnageCargoUnloadedInput {
           width: 100px;
           font-size: 18px;
+        }
+        > .tonnageCargoLoadedInput {
+          width: 100px;
+          font-size: 18px;
+        }
+        > .licenseFullContainer {
+          background-color: white;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
+          padding: 5px;
+          border-radius: 5px;
+          align-items: center;
+          height: 38px;
+          > .velayat,
+          > .extraDigit,
+          > .serialLicense,
+          > .vehicleType {
+            border: unset;
+            outline: unset;
+            font-family: YekanBakh-Regular;
+            font-size: 14px;
+            text-align: center;
+          }
+          > .velayat {
+            width: 90px;
+          }
+          > .extraDigit {
+            width: 60px;
+          }
+          > .serialLicense {
+            width: 60px;
+          }
+        }
+        > .form-control {
+          background-color: white;
+          font-weight: bold;
+          border-radius: 5px;
+          border: unset;
+          cursor: pointer;
+        }
+        > .timeInput {
+          border: unset;
+          border-radius: 5px;
+          height: 38px;
+          padding: 0 5px;
+          font-family: sans-serif;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        > .uploadFileInput {
+          cursor: pointer;
         }
       }
       > .submitContainer {
@@ -111,5 +164,22 @@ body {
         }
       }
     }
+  }
+  [id="mpdatepicker-block"] {
+    border-radius: 5px !important;
+  }
+  .mp-clear,
+  .mp-close {
+    color: black;
+    font-family: YekanBakh-Bold !important;
+  }
+  .mp-today {
+    font-family: YekanBakh-Bold !important;
+  }
+  .mpheader {
+    font-family: YekanBakh-Regular;
+  }
+  table {
+    font-family: YekanBakh-Regular;
   }
 }

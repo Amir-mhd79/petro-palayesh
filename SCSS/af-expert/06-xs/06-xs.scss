@@ -22,8 +22,7 @@ html {
         }
         > .title {
           font-family: YekanBakh-Bold;
-          font-size: 16px;
-          word-spacing: 2px;
+          font-size: 14px;
         }
       }
       > .form {
@@ -36,22 +35,81 @@ html {
           justify-content: space-between;
           > .labelSetup {
             font-family: YekanBakh-Regular;
-            font-size: 14px;
+            font-size: 12px;
             cursor: pointer;
           }
           > .inputValueSetup {
-            width: 240px;
+            width: 160px;
             height: 32px;
             border: unset;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 12px;
             padding-right: 10px;
             font-family: YekanBakh-Bold;
             padding-top: 6px;
           }
-          > .cargoTonnageInput {
+          > .tonnageCargoUnloadedInput {
             width: 100px;
-            font-size: 16px;
+            font-size: 14px;
+          }
+          > .licenseFullContainer {
+            background-color: white;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            border-radius: 5px;
+            align-items: center;
+            height: 38px;
+            align-items: center;
+            height: 38px;
+            > .velayat,
+            > .extraDigit,
+            > .serialLicense,
+            > .vehicleType {
+              border: unset;
+              outline: unset;
+              font-family: YekanBakh-Regular;
+              font-size: 12px;
+              text-align: center;
+            }
+            > .velayat {
+              width: 75px;
+            }
+            > .extraDigit {
+              width: 48px;
+              position: relative;
+              top: 2px;
+            }
+            > .serialLicense {
+              width: 40px;
+              position: relative;
+              top: 2px;
+            }
+          }
+          > .form-control {
+            width: 160px;
+            background-color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            border: unset;
+            cursor: pointer;
+          }
+          > .timeInput {
+            border: unset;
+            border-radius: 5px;
+            height: 38px;
+            padding: 0 5px;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          > .uploadFileInput,
+          > .uploadAFCarLicensePlateInput {
+            cursor: pointer;
+            width: 180px;
           }
         }
         > .submitContainer {
@@ -112,6 +170,25 @@ html {
           }
         }
       }
+    }
+    [id="mpdatepicker-block"] {
+      border-radius: 5px !important;
+      width: 300px !important;
+      padding: 5px !important;
+    }
+    .mp-clear,
+    .mp-close {
+      color: black;
+      font-family: YekanBakh-Bold !important;
+    }
+    .mp-today {
+      font-family: YekanBakh-Bold !important;
+    }
+    .mpheader {
+      font-family: YekanBakh-Regular;
+    }
+    table {
+      font-family: YekanBakh-Regular;
     }
   }
 }

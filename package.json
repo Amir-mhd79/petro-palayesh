@@ -29,7 +29,22 @@
     "ir-agent-lg": "node-sass -w SCSS/ir-agent/03-lg/03-lg.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
     "ir-agent-md": "node-sass -w SCSS/ir-agent/04-md/04-md.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
     "ir-agent-sm": "node-sass -w SCSS/ir-agent/05-sm/05-sm.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
-    "ir-agent-xs": "node-sass -w SCSS/ir-agent/06-xs/06-xs.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed"
+    "ir-agent-xs": "node-sass -w SCSS/ir-agent/06-xs/06-xs.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
+
+    "af-agent-2xl": "node-sass -w SCSS/af-agent/01-xxl/01-xxl.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
+    "af-agent-xl": "node-sass -w SCSS/af-agent/02-xl/02-xl.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
+    "af-agent-lg": "node-sass -w SCSS/af-agent/03-lg/03-lg.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
+    "af-agent-md": "node-sass -w SCSS/af-agent/04-md/04-md.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
+    "af-agent-sm": "node-sass -w SCSS/af-agent/05-sm/05-sm.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
+    "af-agent-xs": "node-sass -w SCSS/af-agent/06-xs/06-xs.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
+
+    "af-expert-2xl": "node-sass -w SCSS/af-expert/01-xxl/01-xxl.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
+    "af-expert-xl": "node-sass -w SCSS/af-expert/02-xl/02-xl.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
+    "af-expert-lg": "node-sass -w SCSS/af-expert/03-lg/03-lg.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
+    "af-expert-md": "node-sass -w SCSS/af-expert/04-md/04-md.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
+    "af-expert-sm": "node-sass -w SCSS/af-expert/05-sm/05-sm.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
+    "af-expert-xs": "node-sass -w SCSS/af-expert/06-xs/06-xs.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed"
+
   },
   "author": "Amirmohammad Akbarloo",
   "license": "ISC",
