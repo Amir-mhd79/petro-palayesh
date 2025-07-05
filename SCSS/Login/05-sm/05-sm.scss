@@ -7,7 +7,6 @@ html {
     padding: 35px 60px;
     > .container {
       width: 700px;
-      background-color: #e5e7eb;
       > .logo {
         display: flex;
         justify-content: center;
@@ -112,6 +111,7 @@ html {
             font-family: YekanBakh-Regular;
             font-size: 16px;
             border-radius: 5px;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;

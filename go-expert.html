@@ -10,7 +10,7 @@
   <body>
     <!--Start making petro palayesh jemizdar project-->
     <main class="container">
-      <!--Start header of form-->
+      <!--Start making header of form-->
       <div class="header">
         <img
           src="./Images/logo.png"
@@ -19,7 +19,61 @@
         />
         <h1 class="title">کارشناس گمرک</h1>
       </div>
-      <!--End header of form-->
+      <!--End of making header of form-->
+      <!--Start making table section-->
+      <h1 class="tableAbout">وضعیت اطلاعات ثبت شده</h1>
+      <div class="informationTable table-responsive">
+        <table
+          class="table table-bordered table-striped table-hover border-secondary"
+        >
+          <thead class="border-2">
+            <tr>
+              <th class="col-auto" scope="col">شماره ردیف</th>
+              <th class="colSetup3" scope="col">اظهار</th>
+              <th class="colSetup3" scope="col">پلمپ</th>
+              <th class="colSetup3" scope="col">کوتاژ</th>
+              <th class="colSetup2" scope="col">تاریخ ثبت</th>
+              <th class="colSetup2" scope="col">ساعت ثبت</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider border-2">
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="newForm"><i class="fa fa-plus" aria-hidden="true"></i></div>
+      <!--End of making table section-->
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
         <div class="statement inputSetup">
@@ -27,7 +81,7 @@
             >اظهار:</label
           >
           <input
-            class="statementInput inputValueSetup"
+            class="statementInput uploadFileInput inputValueSetup"
             id="statement"
             type="file"
             name="statement"
@@ -36,9 +90,9 @@
           />
         </div>
         <div class="seal inputSetup">
-          <label class="sealLabel labelSetup" for="seal" >پلمپ:</label>
+          <label class="sealLabel labelSetup" for="seal">پلمپ:</label>
           <input
-            class="sealInput inputValueSetup"
+            class="sealInput uploadFileInput inputValueSetup"
             id="seal"
             type="file"
             name="seal"
@@ -83,6 +137,11 @@
         </div>
       </form>
       <!--End Form Section-->
+      <!--Start making exit section-->
+      <a class="exitForm" href="./index.html"
+        >خروج<i class="fa fa-arrow-left" aria-hidden="true"></i
+      ></a>
+      <!--End of making exit section-->
       <div class="buttons">
         <h1 class="btTitle">
           <span class="fa fa-angle-down"></span>این قسمت موقتی است<span

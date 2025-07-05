@@ -1,3 +1,4 @@
+@import "../../bootstrap/dist/css/bootstrap.min.css";
 @import "./Media/01-xxl.css" only screen and (min-width: 1400px);
 @import "./Media/02-xl.css" only screen and (min-width: 1200px) and (max-width: 1400px);
 @import "./Media/03-lg.css" only screen and (min-width: 992px) and (max-width: 1200px);
@@ -6,4 +7,3 @@
 @import "./Media/06-xs.css" only screen and (max-width: 540px);
 @import "../setting.css";
 @import "../../font-awesome/css/font-awesome.min.css";
-@import "../../mpdatepicker/dist/jquery.mpdatepicker.min.css";

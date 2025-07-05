@@ -10,7 +10,7 @@
   <body>
     <!--Start making petro palayesh jemizdar project-->
     <main class="container">
-      <!--Start header of form-->
+      <!--Start making header of form-->
       <div class="header">
         <img
           class="logo"
@@ -19,7 +19,70 @@
         />
         <h1 class="title">کارشناس افغانستان</h1>
       </div>
-      <!--End header of form-->
+      <!--End of making header of form-->
+      <!--Start making table section-->
+      <h1 class="tableAbout">وضعیت اطلاعات ثبت شده</h1>
+      <div class="informationTable table-responsive">
+        <table
+          class="table table-bordered table-striped table-hover border-secondary"
+        >
+          <thead class="border-2">
+            <tr>
+              <th class="col-auto" scope="col">شماره ردیف</th>
+              <th class="colSetup2" scope="col">نوع بار</th>
+              <th class="colSetup2" scope="col">تناژ بار</th>
+              <th class="colSetup3" scope="col">شماره پلاک خودرو</th>
+              <th class="colSetup3" scope="col">عکس بارگذاری شده پلاک خودرو</th>
+              <th class="colSetup1" scope="col">تاریخ ورود</th>
+              <th class="colSetup1" scope="col">ساعت ورود</th>
+              <th class="colSetup3" scope="col">بارنامه بارگذاری شده</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider border-2">
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="newForm"><i class="fa fa-plus" aria-hidden="true"></i></div>
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
         <div class="carLoadTypeInfo inputSetup">
@@ -39,7 +102,7 @@
             >تناژ بار:</label
           >
           <input
-            class="cargoTonnageInput inputValueSetup"
+            class="cargoTonnageInput loadWeight inputValueSetup"
             id="cargoTonnage"
             type="text"
             oninput="this.value = this.value.replace(/[^0-9]/g, '')"
@@ -49,7 +112,7 @@
           />
         </div>
         <div class="CarPlateNumberInfo inputSetup">
-          <label class="licensePlate labelSetup">شماره پلاک خودرو دوم:</label>
+          <label class="licensePlate labelSetup">شماره پلاک خودرو:</label>
           <!--شروع قالب پلاک-->
           <div class="licenseFullContainer">
             <!-- ولایت -->
@@ -106,7 +169,7 @@
             >بارگذاری عکس پلاک خودرو:</label
           >
           <input
-            class="uploadAFCarLicensePlateInput inputValueSetup"
+            class="uploadAFCarLicensePlateInput uploadFileInput inputValueSetup"
             id="uploadAFCarLicensePlate"
             type="file"
             name="upload_AFCar_licensePlate"
@@ -157,6 +220,11 @@
         </div>
       </form>
       <!--End Form Section-->
+      <!--Start making exit section-->
+      <a class="exitForm" href="./index.html"
+        >خروج<i class="fa fa-arrow-left" aria-hidden="true"></i
+      ></a>
+      <!--End of making exit section-->
       <div class="buttons">
         <h1 class="btTitle">
           <span class="fa fa-angle-down"></span>این قسمت موقتی است<span

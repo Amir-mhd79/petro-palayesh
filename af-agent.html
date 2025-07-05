@@ -10,7 +10,7 @@
   <body>
     <!--Start making petro palayesh jemizdar project-->
     <main class="container">
-      <!--Start header of form-->
+      <!--Start making header of form-->
       <div class="header">
         <img
           class="logo"
@@ -19,7 +19,61 @@
         />
         <h1 class="title">ترخیص کار افغانستان</h1>
       </div>
-      <!--End header of form-->
+      <!--End of making header of form-->
+      <!--Start making table section-->
+      <h1 class="tableAbout">وضعیت اطلاعات ثبت شده</h1>
+      <div class="informationTable table-responsive">
+        <table
+          class="table table-bordered table-striped table-hover border-secondary"
+        >
+          <thead class="border-2">
+            <tr>
+              <th class="col-auto" scope="col">شماره ردیف</th>
+              <th class="colSetup2" scope="col">وضعیت دریافت خودرو</th>
+              <th class="colSetup2" scope="col">ارجاع به آزمایشگاه</th>
+              <th class="colSetup2" scope="col">پرداخت گمرک</th>
+              <th class="colSetup2" scope="col">خروج کالا</th>
+              <th class="colSetup2" scope="col">تناژ بار</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider border-2">
+            <tr>
+              <th scope="row">1</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="newForm"><i class="fa fa-plus" aria-hidden="true"></i></div>
+      <!--End of making table section-->
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
         <div class="vehicleReceivingStatus inputSetup">
@@ -71,13 +125,11 @@
           />
         </div>
         <div class="cargoTonnageSection inputSetup">
-          <label
-            class="cargoTonnageLable labelSetup"
-            for="cargoTonnage"
+          <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
             >تناژ بار:</label
           >
           <input
-            class="cargoTonnageInput inputValueSetup"
+            class="cargoTonnageInput loadWeight inputValueSetup"
             id="cargoTonnage"
             type="text"
             oninput="this.value = this.value.replace(/[^0-9]/g, '')"
@@ -91,6 +143,11 @@
         </div>
       </form>
       <!--End Form Section-->
+      <!--Start making exit section-->
+      <a class="exitForm" href="./index.html"
+        >خروج<i class="fa fa-arrow-left" aria-hidden="true"></i
+      ></a>
+      <!--End of making exit section-->
       <div class="buttons">
         <h1 class="btTitle">
           <span class="fa fa-angle-down"></span>این قسمت موقتی است<span
