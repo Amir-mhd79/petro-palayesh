@@ -10,7 +10,7 @@
   <body>
     <!--Start making petro palayesh jemizdar project-->
     <main class="container">
-      <!--Start header of form-->
+      <!--Start making header of form-->
       <div class="header">
         <img
           src="./Images/logo.png"
@@ -19,7 +19,91 @@
         />
         <h1 class="title">کارشناس پترو پالایش جمیزدر</h1>
       </div>
-      <!--End header of form-->
+      <!--End of making header of form-->
+      <!--Start making table section-->
+      <h1 class="tableAbout">وضعیت اطلاعات ثبت شده</h1>
+      <div class="informationTable table-responsive">
+        <table
+          class="table table-bordered table-striped table-hover border-secondary"
+        >
+          <thead class="border-2">
+            <tr>
+              <th class="col-auto" scope="col">شماره ردیف</th>
+              <th class="colSetup2" scope="col">نام و نام خانوادگی راننده</th>
+              <th class="colSetup2" scope="col">کد ملی راننده</th>
+              <th class="colSetup2" scope="col">شماره تماس راننده</th>
+              <th class="colSetup2" scope="col">شماره پلاک خودرو</th>
+              <th class="colSetup3" scope="col">عکس بارگذاری شده پلاک خودرو</th>
+              <th class="colSetup3" scope="col">مشخصات خودرو</th>
+              <th class="col-auto colSetup1" scope="col">وزن بار (تناژ)</th>
+              <th class="colSetup2" scope="col">نوع بار</th>
+              <th class="colSetup1" scope="col">تاریخ خروج</th>
+              <th class="colSetup1" scope="col">ساعت خروج</th>
+              <th class="colSetup3" scope="col">بارنامه بارگذاری شده</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider border-2">
+            <tr>
+              <th scope="row">1</th>
+              <td>امیرمحمد اکبرلو</td>
+              <td>0024050288</td>
+              <td>09109434834</td>
+              <td>55alef55555</td>
+              <td>https://sjdhfsjdhfodshiojdslichsldncljdsn/fvkhbdfhc</td>
+              <td>کامیون وانت دار پشت سقف دار</td>
+              <td>555</td>
+              <td>بنزین</td>
+              <td>1404/04/18</td>
+              <td>10:20:00</td>
+              <td>https://sjdhfsjdhfodshiojdslichsldncljdsn/fvkhbdfhc</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="newForm"><i class="fa fa-plus" aria-hidden="true"></i></div>
+      <!--End of making table section-->
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
         <div class="driverNameInfo inputSetup">
@@ -45,6 +129,21 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, '')"
             name="Driver_national_id"
             maxlength="10"
+            required
+          />
+        </div>
+        <div div class="DriverPhoneNumberInfo inputSetup">
+          <label
+            class="DriverPhoneNumberLable labelSetup"
+            for="DriverPhoneNumber"
+            >شماره تماس راننده:</label
+          >
+          <input
+            class="DriverPhoneNumberInput inputValueSetup"
+            id="DriverPhoneNumber"
+            type="text"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            name="driver_phoneNumber"
             required
           />
         </div>
@@ -123,6 +222,21 @@
           </div>
           <!--پایان قالب پلاک-->
         </div>
+        <div class="uploadCarLicensePlate inputSetup">
+          <label
+            class="uploadCarLicensePlateLable labelSetup"
+            for="uploadCarLicensePlate"
+            >بارگذاری عکس پلاک خودرو:</label
+          >
+          <input
+            class="uploadFileInput inputValueSetup"
+            id="uploadCarLicensePlate"
+            type="file"
+            name="upload_Car_licensePlate"
+            multiple
+            required
+          />
+        </div>
         <div class="carModelInfo inputSetup">
           <label class="carModelLabel labelSetup" for="carInfo"
             >مشخصات خودرو:</label
@@ -187,7 +301,7 @@
           />
         </div>
         <div class="uploadFile inputSetup">
-          <label class="uploadFileLable labelSetup" for="uploadFile" 
+          <label class="uploadFileLable labelSetup" for="uploadFile"
             >بارگذاری بارنامه:</label
           >
           <input
@@ -204,6 +318,11 @@
         </div>
       </form>
       <!--End Form Section-->
+      <!--Start making exit section-->
+      <a class="exitForm" href="./index.html" 
+        >خروج<i class="fa fa-arrow-left" aria-hidden="true"></i
+      ></a>
+      <!--End of making exit section-->
       <div class="buttons">
         <h1 class="btTitle">
           <span class="fa fa-angle-down"></span>این قسمت موقتی است<span

@@ -2,17 +2,14 @@ html,
 body {
   scroll-behavior: smooth;
   position: relative;
-  background-color: #222222;
+  background-color: #222222 !important;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  list-style-type: none;
-}
-a {
-  color: white;
+  text-decoration: none !important;
+  list-style-type: none !important;
 }
 @font-face {
   font-family: YekanBakh-Regular;
