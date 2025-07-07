@@ -9,42 +9,42 @@
     "login-md": "node-sass -w SCSS/Login/04-md/04-md.scss -o CSS/Login/Media/ --recursive --output-style compressed",
     "login-sm": "node-sass -w SCSS/Login/05-sm/05-sm.scss -o CSS/Login/Media/ --recursive --output-style compressed",
     "login-xs": "node-sass -w SCSS/Login/06-xs/06-xs.scss -o CSS/Login/Media/ --recursive --output-style compressed",
-
     "ge-expert-2xl": "node-sass -w SCSS/Ge-expert/01-xxl/01-xxl.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
     "ge-expert-xl": "node-sass -w SCSS/Ge-expert/02-xl/02-xl.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
     "ge-expert-lg": "node-sass -w SCSS/Ge-expert/03-lg/03-lg.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
     "ge-expert-md": "node-sass -w SCSS/Ge-expert/04-md/04-md.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
     "ge-expert-sm": "node-sass -w SCSS/Ge-expert/05-sm/05-sm.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
     "ge-expert-xs": "node-sass -w SCSS/Ge-expert/06-xs/06-xs.scss -o CSS/Ge-expert/Media/ --recursive --output-style compressed",
-    
     "go-expert-2xl": "node-sass -w SCSS/Go-expert/01-xxl/01-xxl.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
     "go-expert-xl": "node-sass -w SCSS/Go-expert/02-xl/02-xl.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
     "go-expert-lg": "node-sass -w SCSS/Go-expert/03-lg/03-lg.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
     "go-expert-md": "node-sass -w SCSS/Go-expert/04-md/04-md.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
     "go-expert-sm": "node-sass -w SCSS/Go-expert/05-sm/05-sm.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
     "go-expert-xs": "node-sass -w SCSS/Go-expert/06-xs/06-xs.scss -o CSS/Go-expert/Media/ --recursive --output-style compressed",
-    
     "ir-agent-2xl": "node-sass -w SCSS/ir-agent/01-xxl/01-xxl.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
     "ir-agent-xl": "node-sass -w SCSS/ir-agent/02-xl/02-xl.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
     "ir-agent-lg": "node-sass -w SCSS/ir-agent/03-lg/03-lg.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
     "ir-agent-md": "node-sass -w SCSS/ir-agent/04-md/04-md.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
     "ir-agent-sm": "node-sass -w SCSS/ir-agent/05-sm/05-sm.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
     "ir-agent-xs": "node-sass -w SCSS/ir-agent/06-xs/06-xs.scss -o CSS/ir-agent/Media/ --recursive --output-style compressed",
-
     "af-agent-2xl": "node-sass -w SCSS/af-agent/01-xxl/01-xxl.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
     "af-agent-xl": "node-sass -w SCSS/af-agent/02-xl/02-xl.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
     "af-agent-lg": "node-sass -w SCSS/af-agent/03-lg/03-lg.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
     "af-agent-md": "node-sass -w SCSS/af-agent/04-md/04-md.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
     "af-agent-sm": "node-sass -w SCSS/af-agent/05-sm/05-sm.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
     "af-agent-xs": "node-sass -w SCSS/af-agent/06-xs/06-xs.scss -o CSS/Af-agent/Media/ --recursive --output-style compressed",
-    
     "af-expert-2xl": "node-sass -w SCSS/af-expert/01-xxl/01-xxl.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
     "af-expert-xl": "node-sass -w SCSS/af-expert/02-xl/02-xl.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
     "af-expert-lg": "node-sass -w SCSS/af-expert/03-lg/03-lg.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
     "af-expert-md": "node-sass -w SCSS/af-expert/04-md/04-md.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
     "af-expert-sm": "node-sass -w SCSS/af-expert/05-sm/05-sm.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
-    "af-expert-xs": "node-sass -w SCSS/af-expert/06-xs/06-xs.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed"
-    
+    "af-expert-xs": "node-sass -w SCSS/af-expert/06-xs/06-xs.scss -o CSS/Af-expert/Media/ --recursive --output-style compressed",
+    "dashboard-2xl": "node-sass -w SCSS/dashboard/01-xxl/01-xxl.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
+    "dashboard-xl": "node-sass -w SCSS/dashboard/02-xl/02-xl.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
+    "dashboard-lg": "node-sass -w SCSS/dashboard/03-lg/03-lg.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
+    "dashboard-md": "node-sass -w SCSS/dashboard/04-md/04-md.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
+    "dashboard-sm": "node-sass -w SCSS/dashboard/05-sm/05-sm.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
+    "dashboard-xs": "node-sass -w SCSS/dashboard/06-xs/06-xs.scss -o CSS/dashboard/Media/ --recursive --output-style compressed"
   },
   "author": "Amirmohammad Akbarloo",
   "license": "ISC",
@@ -53,7 +53,6 @@
     "bootstrap": "^5.3.7",
     "jquery": "^3.7.1",
     "mpdatepicker": "^2.0.1",
-    "node-sass": "^9.0.0",
-    "swiper": "^11.2.9"
+    "node-sass": "^9.0.0"
   }
 }
