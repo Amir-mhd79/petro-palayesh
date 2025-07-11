@@ -23,16 +23,14 @@
       <!--Start making table section-->
       <h1 class="tableAbout">وضعیت اطلاعات ثبت شده</h1>
       <div class="informationTable table-responsive">
-        <table
-          class="table table-striped table-hover"
-        >
+        <table class="table table-striped table-hover">
           <thead class="">
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
               <th class="colSetup2" scope="col">نوع بار</th>
               <th class="colSetup2" scope="col">تناژ بار</th>
               <th class="colSetup3" scope="col">شماره پلاک خودرو</th>
-              <th class="colSetup3" scope="col">عکس بارگذاری شده پلاک خودرو</th>
+              <th class="colSetup3" scope="col">نام مالک بار</th>
               <th class="colSetup1" scope="col">تاریخ ورود</th>
               <th class="colSetup1" scope="col">ساعت ورود</th>
               <th class="colSetup3" scope="col">بارنامه بارگذاری شده</th>
@@ -82,100 +80,126 @@
           </tbody>
         </table>
       </div>
-      <div class="newForm"><i class="fa fa-plus" aria-hidden="true"></i></div>
+      <!--End of making table section-->
+      <!--start making add form section-->
+      <div class="formCounterWrapper">
+        <h4 class="newFormTitle">ایجاد فرم جدید</h4>
+        <div class="formCounter">
+          <label class="vehicleCountLable" for="vehicle-count"
+            >تعداد خودرو:</label
+          >
+          <input class="vehicleCountInput" type="number" id="vehicle-count" />
+        </div>
+        <div class="newForm" title="تایید">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+      <!--End of making add form section-->
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
-        <div class="carLoadTypeInfo inputSetup">
-          <label class="cargoTypeLable labelSetup" for="cargoType"
-            >نوع بار:</label
-          >
-          <input
-            class="cargoTypeInput inputValueSetup"
-            id="cargoType"
-            type="text"
-            name="cargo_type"
-            required
-          />
-        </div>
-        <div class="cargoTonnageSection inputSetup">
-          <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
-            >تناژ بار:</label
-          >
-          <input
-            class="cargoTonnageInput loadWeight inputValueSetup"
-            id="cargoTonnage"
-            type="text"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-            name="cargo_tonnage"
-            placeholder="- - - -"
-            required
-          />
-        </div>
-        <div class="CarPlateNumberInfo inputSetup">
-          <label class="licensePlate labelSetup">شماره پلاک خودرو:</label>
-          <!--شروع قالب پلاک-->
-          <div class="licenseFullContainer">
-            <!-- ولایت -->
-            <select class="velayat" name="AF_province" required>
-              <option value="">انتخاب ولایت</option>
-              <option value="kabul">کابل</option>
-              <option value="herat">هرات</option>
-              <option value="mazar">بلخ</option>
-              <option value="kandahar">قندهار</option>
-              <option value="jalalabad">ننگرهار</option>
-              <option value="ghazni">غزنی</option>
-              <option value="bamyan">بامیان</option>
-              <option value="kunduz">کندز</option>
-              <option value="baghlan">بغلان</option>
-              <option value="badakhshan">بدخشان</option>
-            </select>
-            <!--رقم اضافی-->
+        <div class="formTemplate" id="vehicles-container">
+          <div class="carLoadTypeInfo inputSetup">
+            <label class="cargoTypeLable labelSetup" for="cargoType"
+              >نوع بار:</label
+            >
             <input
-              class="extraDigit"
+              class="cargoTypeInput inputValueSetup"
+              id="cargoType"
               type="text"
-              name="AF_extraDigit_licensePlate"
-              placeholder="رقم اضافی"
-              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-              maxlength="1"
-            />
-            <!-- شماره سریال -->
-            <input
-              class="serialLicense"
-              type="text"
-              name="AF_serial_licensePlate"
-              placeholder="۱۲۳۴۵"
-              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-              maxlength="5"
+              name="cargo_type[]"
               required
             />
-            <!-- نوع خودرو -->
-            <select class="vehicleType" name="AF_vehicle_type" required>
-              <option value="">نوع خودرو</option>
-              <option value="private">خصوصی</option>
-              <option value="taxi">تاکسی</option>
-              <option value="police">پولیس</option>
-              <option value="gov">دولتی</option>
-              <option value="military">نظامی</option>
-              <option value="ngo">موسسه</option>
-              <option value="diplomatic">دیپلماتیک</option>
-            </select>
           </div>
-          <!--پایان قالب پلاک-->
-        </div>
-        <div class="uploadAFCarLicensePlate inputSetup">
-          <label
-            class="uploadAFCarLicensePlateLable labelSetup"
-            for="uploadAFCarLicensePlate"
-            >بارگذاری عکس پلاک خودرو:</label
-          >
-          <input
-            class="uploadAFCarLicensePlateInput uploadFileInput inputValueSetup"
-            id="uploadAFCarLicensePlate"
-            type="file"
-            name="upload_AFCar_licensePlate"
-            multiple
-            required
-          />
+          <div class="cargoTonnageSection inputSetup">
+            <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
+              >تناژ بار:</label
+            >
+            <input
+              class="cargoTonnageInput loadWeight inputValueSetup"
+              id="cargoTonnage"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="cargo_tonnage[]"
+              placeholder="- - - -"
+              required
+            />
+          </div>
+          <div class="CarPlateNumberInfo inputSetup">
+            <label class="licensePlate labelSetup">شماره پلاک خودرو:</label>
+            <!--شروع قالب پلاک-->
+            <div class="licenseFullContainer">
+              <!-- ولایت -->
+              <select class="velayat" name="AF_province[]" required>
+                <option value="">انتخاب ولایت</option>
+                <option value="kabul">کابل</option>
+                <option value="herat">هرات</option>
+                <option value="mazar">بلخ</option>
+                <option value="kandahar">قندهار</option>
+                <option value="jalalabad">ننگرهار</option>
+                <option value="ghazni">غزنی</option>
+                <option value="bamyan">بامیان</option>
+                <option value="kunduz">کندز</option>
+                <option value="baghlan">بغلان</option>
+                <option value="badakhshan">بدخشان</option>
+              </select>
+              <!--رقم اضافی-->
+              <input
+                class="extraDigit"
+                type="text"
+                name="AF_extraDigit_licensePlate[]"
+                placeholder="رقم اضافی"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                maxlength="1"
+              />
+              <!-- شماره سریال -->
+              <input
+                class="serialLicense"
+                type="text"
+                name="AF_serial_licensePlate[]"
+                placeholder="۱۲۳۴۵"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                maxlength="5"
+                required
+              />
+              <!-- نوع خودرو -->
+              <select class="vehicleType" name="AF_vehicle_type[]" required>
+                <option value="">نوع خودرو</option>
+                <option value="private">خصوصی</option>
+                <option value="taxi">تاکسی</option>
+                <option value="police">پولیس</option>
+                <option value="gov">دولتی</option>
+                <option value="military">نظامی</option>
+                <option value="ngo">موسسه</option>
+                <option value="diplomatic">دیپلماتیک</option>
+              </select>
+            </div>
+            <!--پایان قالب پلاک-->
+          </div>
+          <div class="cargoOwnerInfo inputSetup">
+            <label class="cargoOwnerLable labelSetup" for="cargoOwner"
+              >نام مالک بار:</label
+            >
+            <input
+              class="cargoOwnerInput inputValueSetup"
+              id="cargoOwner"
+              type="text"
+              name="cargo_owner[]"
+              required
+            />
+          </div>
+          <div class="uploadFile inputSetup">
+            <label for="uploadFile" class="uploadFileLable labelSetup"
+              >بارگذاری بارنامه:</label
+            >
+            <input
+              id="uploadFile"
+              type="file"
+              name="upload_bill[]"
+              class="uploadFileInput inputValueSetup"
+              multiple
+              required
+            />
+          </div>
         </div>
         <div class="arrivalDate inputSetup">
           <label class="arrivalDateLable labelSetup" for="datePicker"
@@ -199,19 +223,6 @@
             id="arrivalTime"
             type="time"
             name="arrival_time"
-            required
-          />
-        </div>
-        <div class="uploadFile inputSetup">
-          <label for="uploadFile" class="uploadFileLable labelSetup"
-            >بارگذاری بارنامه:</label
-          >
-          <input
-            id="uploadFile"
-            type="file"
-            name="upload_bill"
-            class="uploadFileInput inputValueSetup"
-            multiple
             required
           />
         </div>

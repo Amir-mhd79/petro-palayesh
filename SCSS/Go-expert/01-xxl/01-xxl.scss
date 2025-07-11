@@ -74,57 +74,59 @@ body {
         }
       }
     }
-    > .newForm {
-      width: 70px;
-      height: 70px;
-      background-color: var(--bs-primary);
+    > .formCounterWrapper {
+      width: 300px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #2b2b2b9e;
+      color: white;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      border-radius: 100%;
-      cursor: pointer;
-      transition: 300ms;
-      margin: 0 0 30px;
-      position: relative;
-      &::before {
-        content: "ثبت اطلاعات جدید";
-        position: absolute;
-        top: -55px;
-        z-index: 5;
-        width: 150px;
-        height: 40px;
-        background-color: rgb(80, 80, 80);
+      row-gap: 10px;
+      margin-bottom: 30px;
+      > .newFormTitle {
+        font-size: 18px;
+        font-family: YekanBakh-Bold;
+        word-spacing: 2px;
+        border-bottom: 1px solid lightgray;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      > .formCounter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > .vehicleCountLable {
+          font-size: 18px;
+          font-family: YekanBakh-Bold;
+          cursor: pointer;
+        }
+        > .vehicleCountInput {
+          width: 100px;
+          height: 40px;
+          padding-right: 10px;
+        }
+      }
+      > .newForm {
+        width: 50px;
+        height: 50px;
+        background-color: var(--bs-primary);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: YekanBakh-Bold;
-        color: white;
-        border-radius: 10px;
-        opacity: 0;
+        border-radius: 100%;
+        cursor: pointer;
         transition: 300ms;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        border: 10px solid transparent;
-        border-top: 10px solid rgb(80, 80, 80);
-        top: -15px;
-        opacity: 0;
-        transition: 300ms;
-      }
-      > .fa {
-        color: white;
-        font-size: 24px;
-      }
-      &:hover {
-        background-color: #133c7a;
-        &::before {
-          opacity: 1;
+        position: relative;
+        > .fa {
+          color: white;
+          font-size: 24px;
         }
-        &::after {
-          opacity: 1;
+        &:hover {
+          background-color: #133c7a;
         }
       }
     }
@@ -136,6 +138,47 @@ body {
       border: 2px solid lightgray;
       padding: 30px;
       border-radius: 10px;
+      > .formTemplate {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        > .vehicle-form-wrapper {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+          border-bottom: 2px solid lightgray;
+          padding-bottom: 30px;
+          > .formTitle {
+            font-size: 20px;
+            font-family: YekanBakh-Bold;
+            text-align: center;
+            word-spacing: 2px;
+          }
+          > .inputSetup {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            > .labelSetup {
+              font-family: YekanBakh-Regular;
+              font-size: 16px;
+              cursor: pointer;
+            }
+            > .inputValueSetup {
+              width: 250px;
+              height: 38px;
+              border: unset;
+              border-radius: 5px;
+              font-size: 16px;
+              padding-right: 10px;
+              font-family: YekanBakh-Bold;
+              padding-top: 6px;
+            }
+            > .uploadFileInput {
+              cursor: pointer;
+            }
+          }
+        }
+      }
       > .inputSetup {
         display: flex;
         align-items: center;
@@ -144,16 +187,6 @@ body {
           font-family: YekanBakh-Regular;
           font-size: 16px;
           cursor: pointer;
-        }
-        > .inputValueSetup {
-          width: 250px;
-          height: 38px;
-          border: unset;
-          border-radius: 5px;
-          font-size: 16px;
-          padding-right: 10px;
-          font-family: YekanBakh-Bold;
-          padding-top: 6px;
         }
         > .form-control {
           width: 200px;
@@ -172,9 +205,6 @@ body {
           padding: 0 5px;
           font-family: sans-serif;
           font-weight: bold;
-          cursor: pointer;
-        }
-        > .uploadFileInput {
           cursor: pointer;
         }
       }

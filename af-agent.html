@@ -23,9 +23,7 @@
       <!--Start making table section-->
       <h1 class="tableAbout">وضعیت اطلاعات ثبت شده</h1>
       <div class="informationTable table-responsive">
-        <table
-          class="table table-striped table-hover"
-        >
+        <table class="table table-striped table-hover">
           <thead class="">
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
@@ -34,11 +32,13 @@
               <th class="colSetup2" scope="col">پرداخت گمرک</th>
               <th class="colSetup2" scope="col">خروج کالا</th>
               <th class="colSetup2" scope="col">تناژ بار</th>
+              <th class="colSetup2" scope="col">نام مالک بار</th>
             </tr>
           </thead>
-          <tbody class="table-group-divider ">
+          <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -52,9 +52,11 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -68,75 +70,106 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="newForm"><i class="fa fa-plus" aria-hidden="true"></i></div>
+      <!--End of making table section-->
+      <!--start making add form section-->
+      <div class="formCounterWrapper">
+        <h4 class="newFormTitle">ایجاد فرم جدید</h4>
+        <div class="formCounter">
+          <label class="vehicleCountLable" for="vehicle-count"
+            >تعداد خودرو:</label
+          >
+          <input class="vehicleCountInput" type="number" id="vehicle-count" />
+        </div>
+        <div class="newForm" title="تایید">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+      </div>
+      <!--End of making add form section-->
       <!--End of making table section-->
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
-        <div class="vehicleReceivingStatus inputSetup">
-          <label class="vehicleReceivingLable labelSetup" for="vehicleReceiving"
-            >وضعیت دریافت خودرو:</label
-          >
-          <input
-            class="vehicleReceivingInput inputValueSetup"
-            id="vehicleReceiving"
-            type="text"
-            name="vehicle_receiving_status"
-            required
-          />
-        </div>
-        <div class="labratorySection inputSetup">
-          <label class="labratoryLable labelSetup" for="labratory"
-            >ارجاع به آزمایشگاه:</label
-          >
-          <input
-            class="labratoryInput inputValueSetup"
-            id="labratory"
-            type="text"
-            name="referral_to_laboratory"
-            required
-          />
-        </div>
-        <div class="customsPaymentSection inputSetup">
-          <label class="customsPaymentLable labelSetup" for="customsPayment"
-            >پرداخت گمرک:</label
-          >
-          <input
-            class="customsPaymentInput inputValueSetup"
-            id="customsPayment"
-            type="text"
-            name="customs_payment"
-            required
-          />
-        </div>
-        <div class="cargoDepartureSection inputSetup">
-          <label class="cargoDepartureLable labelSetup" for="cargoDeparture"
-            >خروج کالا:</label
-          >
-          <input
-            class="cargoDepartureInput inputValueSetup"
-            id="cargoDeparture"
-            type="text"
-            name="cargo_departure"
-            required
-          />
-        </div>
-        <div class="cargoTonnageSection inputSetup">
-          <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
-            >تناژ بار:</label
-          >
-          <input
-            class="cargoTonnageInput loadWeight inputValueSetup"
-            id="cargoTonnage"
-            type="text"
-            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-            name="cargo_tonnage"
-            placeholder="- - - -"
-            required
-          />
+        <div class="formTemplate" id="vehicles-container">
+          <div class="vehicleReceivingStatus inputSetup">
+            <label
+              class="vehicleReceivingLable labelSetup"
+              for="vehicleReceiving"
+              >وضعیت دریافت خودرو:</label
+            >
+            <input
+              class="vehicleReceivingInput inputValueSetup"
+              id="vehicleReceiving"
+              type="text"
+              name="vehicle_receiving_status[]"
+              required
+            />
+          </div>
+          <div class="labratorySection inputSetup">
+            <label class="labratoryLable labelSetup" for="labratory"
+              >ارجاع به آزمایشگاه:</label
+            >
+            <input
+              class="labratoryInput inputValueSetup"
+              id="labratory"
+              type="text"
+              name="referral_to_laboratory[]"
+              required
+            />
+          </div>
+          <div class="customsPaymentSection inputSetup">
+            <label class="customsPaymentLable labelSetup" for="customsPayment"
+              >پرداخت گمرک:</label
+            >
+            <input
+              class="customsPaymentInput inputValueSetup"
+              id="customsPayment"
+              type="text"
+              name="customs_payment[]"
+              required
+            />
+          </div>
+          <div class="cargoDepartureSection inputSetup">
+            <label class="cargoDepartureLable labelSetup" for="cargoDeparture"
+              >خروج کالا:</label
+            >
+            <input
+              class="cargoDepartureInput inputValueSetup"
+              id="cargoDeparture"
+              type="text"
+              name="cargo_departure[]"
+              required
+            />
+          </div>
+          <div class="cargoTonnageSection inputSetup">
+            <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
+              >تناژ بار:</label
+            >
+            <input
+              class="cargoTonnageInput loadWeight inputValueSetup"
+              id="cargoTonnage"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="cargo_tonnage[]"
+              placeholder="- - - -"
+              required
+            />
+          </div>
+          <div class="cargoOwnerInfo inputSetup">
+            <label class="cargoOwnerLable labelSetup" for="cargoOwner"
+              >نام مالک بار:</label
+            >
+            <input
+              class="cargoOwnerInput inputValueSetup"
+              id="cargoOwner"
+              type="text"
+              name="cargo_owner[]"
+              required
+            />
+          </div>
         </div>
         <div class="submitContainer">
           <input class="submitForm" type="submit" value="ارسال" />
