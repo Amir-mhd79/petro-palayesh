@@ -7,11 +7,9 @@ import "../mpdatepicker/dist/jquery.mpdatepicker.min.js";
 import "../bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // اسکریپت ساخت فرم به تعداد مورد نیاز کاربر
-document.addEventListener("DOMContentLoaded", () => {
   const vehicleCountInput = document.getElementById("vehicle-count");
   const addFormButton = document.querySelector(".newForm");
   const formTemplate = document.querySelector(".formTemplate");
-  const mainForm = document.querySelector(".form");
   const container = document.getElementById("vehicles-container");
 
   // ذخیره نسخه اولیه فرم به عنوان قالب
@@ -38,4 +36,3 @@ document.addEventListener("DOMContentLoaded", () => {
       container.appendChild(newForm);
     }
   });
-});
