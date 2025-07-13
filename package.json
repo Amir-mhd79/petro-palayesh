@@ -44,7 +44,14 @@
     "dashboard-lg": "node-sass -w SCSS/dashboard/03-lg/03-lg.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
     "dashboard-md": "node-sass -w SCSS/dashboard/04-md/04-md.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
     "dashboard-sm": "node-sass -w SCSS/dashboard/05-sm/05-sm.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
-    "dashboard-xs": "node-sass -w SCSS/dashboard/06-xs/06-xs.scss -o CSS/dashboard/Media/ --recursive --output-style compressed"
+    "dashboard-xs": "node-sass -w SCSS/dashboard/06-xs/06-xs.scss -o CSS/dashboard/Media/ --recursive --output-style compressed",
+
+    "manager-2xl": "node-sass -w SCSS/manager/01-xxl/01-xxl.scss -o CSS/manager/Media/ --recursive --output-style compressed",
+    "manager-xl": "node-sass -w SCSS/manager/02-xl/02-xl.scss -o CSS/manager/Media/ --recursive --output-style compressed",
+    "manager-lg": "node-sass -w SCSS/manager/03-lg/03-lg.scss -o CSS/manager/Media/ --recursive --output-style compressed",
+    "manager-md": "node-sass -w SCSS/manager/04-md/04-md.scss -o CSS/manager/Media/ --recursive --output-style compressed",
+    "manager-sm": "node-sass -w SCSS/manager/05-sm/05-sm.scss -o CSS/manager/Media/ --recursive --output-style compressed",
+    "manager-xs": "node-sass -w SCSS/manager/06-xs/06-xs.scss -o CSS/manager/Media/ --recursive --output-style compressed"
   },
   "author": "Amirmohammad Akbarloo",
   "license": "ISC",
