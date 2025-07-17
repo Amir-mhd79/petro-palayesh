@@ -17,7 +17,7 @@
           src="./Images/logo.png"
           alt="لوگو شرکت پترو پالایش جمیزدر"
         />
-        <h1 class="title">کارشناس افغانستان</h1>
+        <h1 class="title">مسئول مخازن افغانستان</h1>
       </div>
       <!--End of making header of form-->
       <!--Start making table section-->
@@ -27,13 +27,13 @@
           <thead class="">
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
+              <th class="colSetup3" scope="col">نام مالک بار</th>
+              <th class="colSetup3" scope="col">شماره پلاک خودرو</th>
               <th class="colSetup2" scope="col">نوع بار</th>
               <th class="colSetup2" scope="col">تناژ بار</th>
-              <th class="colSetup3" scope="col">شماره پلاک خودرو</th>
-              <th class="colSetup3" scope="col">نام مالک بار</th>
-              <th class="colSetup1" scope="col">تاریخ ورود</th>
-              <th class="colSetup1" scope="col">ساعت ورود</th>
               <th class="colSetup3" scope="col">بارنامه بارگذاری شده</th>
+              <th class="colSetup3" scope="col">نام اپراتور</th>
+              <th class="colSetup1" scope="col">تاریخ ورود</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
@@ -98,29 +98,15 @@
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
         <div class="formTemplate" id="vehicles-container">
-          <div class="carLoadTypeInfo inputSetup">
-            <label class="cargoTypeLable labelSetup" for="cargoType"
-              >نوع بار:</label
+          <div class="cargoOwnerInfo inputSetup">
+            <label class="cargoOwnerLable labelSetup" for="cargoOwner"
+              >نام مالک بار:</label
             >
             <input
-              class="cargoTypeInput inputValueSetup"
-              id="cargoType"
+              class="cargoOwnerInput inputValueSetup"
+              id="cargoOwner"
               type="text"
-              name="cargo_type[]"
-              required
-            />
-          </div>
-          <div class="cargoTonnageSection inputSetup">
-            <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
-              >تناژ بار:</label
-            >
-            <input
-              class="cargoTonnageInput loadWeight inputValueSetup"
-              id="cargoTonnage"
-              type="text"
-              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-              name="cargo_tonnage[]"
-              placeholder="- - - -"
+              name="cargo_owner[]"
               required
             />
           </div>
@@ -175,15 +161,29 @@
             </div>
             <!--پایان قالب پلاک-->
           </div>
-          <div class="cargoOwnerInfo inputSetup">
-            <label class="cargoOwnerLable labelSetup" for="cargoOwner"
-              >نام مالک بار:</label
+          <div class="carLoadTypeInfo inputSetup">
+            <label class="cargoTypeLable labelSetup" for="cargoType"
+              >نوع بار:</label
             >
             <input
-              class="cargoOwnerInput inputValueSetup"
-              id="cargoOwner"
+              class="cargoTypeInput inputValueSetup"
+              id="cargoType"
               type="text"
-              name="cargo_owner[]"
+              name="cargo_type[]"
+              required
+            />
+          </div>
+          <div class="cargoTonnageSection inputSetup">
+            <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
+              >تناژ بار:</label
+            >
+            <input
+              class="cargoTonnageInput loadWeight inputValueSetup"
+              id="cargoTonnage"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="cargo_tonnage[]"
+              placeholder="- - - -"
               required
             />
           </div>
@@ -201,6 +201,18 @@
             />
           </div>
         </div>
+        <div class="operatorNameInfo inputSetup">
+          <label class="operatorNameLable labelSetup" for="operatorName"
+            >نام اپراتور:</label
+          >
+          <input
+            class="operatorNameInput inputValueSetup"
+            id="operatorName"
+            type="text"
+            name="operator_name[]"
+            required
+          />
+        </div>
         <div class="arrivalDate inputSetup">
           <label class="arrivalDateLable labelSetup" for="datePicker"
             >تاریخ ورود:</label
@@ -211,18 +223,6 @@
             type="text"
             name="arrival_date"
             readonly
-            required
-          />
-        </div>
-        <div class="arrivalTime inputSetup">
-          <label class="arrivalTimeLable labelSetup" for="arrivalTime"
-            >ساعت ورود:</label
-          >
-          <input
-            class="timeInput"
-            id="arrivalTime"
-            type="time"
-            name="arrival_time"
             required
           />
         </div>
@@ -248,7 +248,7 @@
           <a href="./go-expert.html" class="btnLink">کارشناس گمرک</a>
           <a href="./ir-agent.html" class="btnLink">ترخیص کار ایران</a>
           <a href="./af-agent.html" class="btnLink">ترخیص کار افغانستان</a>
-          <a href="./af-expert.html" class="btnLink">کارشناس افغانستان</a>
+          <a href="./af-expert.html" class="btnLink">مسئول مخازن افغانستان</a>
           <a href="./dashboard.html" class="btnLink">پنل داشبورد ادمین</a>
           <a href="./manager.html" class="btnLink">پنل داشبورد مدیریت</a>
         </div>

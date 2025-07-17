@@ -291,6 +291,11 @@ html {
                     cursor: auto;
                   }
                 }
+                > .uploadFileInput {
+                  cursor: pointer;
+                  height: 35px;
+                  font-size: 12px;
+                }
               }
             }
           }
