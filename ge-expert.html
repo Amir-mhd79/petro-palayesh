@@ -27,27 +27,17 @@
           <thead class="">
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
-              <th class="colSetup2" scope="col">نام و نام خانوادگی راننده</th>
-              <th class="colSetup2" scope="col">کد ملی راننده</th>
-              <th class="colSetup2" scope="col">شماره تماس راننده</th>
-              <th class="colSetup2" scope="col">شماره پلاک خودرو</th>
-              <th class="colSetup3" scope="col">مشخصات خودرو</th>
-              <th class="col-auto colSetup1" scope="col">وزن بار (تناژ)</th>
-              <th class="colSetup2" scope="col">نوع بار</th>
               <th class="colSetup2" scope="col">نام مالک بار</th>
+              <th class="colSetup2" scope="col">نوع بار</th>
               <th class="colSetup1" scope="col">تاریخ خروج</th>
-              <th class="colSetup1" scope="col">ساعت خروج</th>
-              <th class="colSetup3" scope="col">بارنامه بارگذاری شده</th>
+              <th class="col-auto colSetup1" scope="col">وزن بار (تناژ)</th>
+              <th class="colSetup2" scope="col">مجموع تعداد ماشین</th>
+              <th class="colSetup2" scope="col">نام اپراتور</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -63,11 +53,6 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -77,19 +62,9 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -108,11 +83,7 @@
           <label class="vehicleCountLable" for="vehicle-count"
             >تعداد خودرو:</label
           >
-          <input
-            class="vehicleCountInput"
-            type="number"
-            id="vehicle-count"
-          />
+          <input class="vehicleCountInput" type="number" id="vehicle-count" />
         </div>
         <div class="newForm" title="تایید">
           <i class="fa fa-plus" aria-hidden="true"></i>
@@ -128,7 +99,7 @@
             >
             <input
               class="driverNameInput inputValueSetup"
-              id="driver_name"
+              id="driverName"
               type="text"
               name="driver_name[]"
               required
@@ -293,6 +264,19 @@
               required
             />
           </div>
+          <div class="scaleBill inputSetup">
+            <label class="scaleBillLable labelSetup" for="scaleBill"
+              >بارگذاری قبض باسکول خروجی:</label
+            >
+            <input
+              class="scaleBillInput inputValueSetup"
+              id="scaleBill"
+              type="file"
+              name="scale_bill[]"
+              multiple
+              required
+            />
+          </div>
           <div class="uploadFile inputSetup">
             <label class="uploadFileLable labelSetup" for="uploadFile"
               >بارگذاری بارنامه:</label
@@ -307,6 +291,18 @@
             />
           </div>
         </div>
+        <div class="operatorNameInfo inputSetup">
+          <label class="operatorNameLable labelSetup" for="operatorName"
+            >نام اپراتور:</label
+          >
+          <input
+            class="operatorNameInput inputValueSetup"
+            id="operatorName"
+            type="text"
+            name="operator_name[]"
+            required
+          />
+        </div>
         <div class="exitDate inputSetup">
           <label class="exitDateLable labelSetup" for="datePicker"
             >تاریخ خروج:</label
@@ -317,18 +313,6 @@
             type="text"
             name="departure_date[]"
             readonly
-            required
-          />
-        </div>
-        <div class="exitTime inputSetup">
-          <label class="exitTimeLable labelSetup" for="exitTime"
-            >ساعت خروج:</label
-          >
-          <input
-            class="timeInput"
-            id="exitTime"
-            type="time"
-            name="departure_time[]"
             required
           />
         </div>

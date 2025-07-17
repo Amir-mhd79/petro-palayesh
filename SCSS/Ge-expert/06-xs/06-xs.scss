@@ -244,6 +244,16 @@ html {
             font-size: 12px;
             cursor: pointer;
           }
+          > .inputValueSetup {
+            width: 180px;
+            height: 32px;
+            border: unset;
+            border-radius: 5px;
+            font-size: 14px;
+            padding-right: 10px;
+            font-family: YekanBakh-Bold;
+            padding-top: 6px;
+          }
           > .form-control {
             width: 180px;
             height: 29px;
@@ -252,15 +262,6 @@ html {
             font-weight: bold;
             border-radius: 5px;
             border: unset;
-            cursor: pointer;
-          }
-          > .timeInput {
-            border: unset;
-            border-radius: 5px;
-            height: 30px;
-            padding: 0 5px;
-            font-family: sans-serif;
-            font-weight: bold;
             cursor: pointer;
           }
         }
