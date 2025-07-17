@@ -29,25 +29,23 @@
           <thead class="">
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
-              <th class="colSetup2" scope="col">ترانشیپ</th>
-              <th class="colSetup2" scope="col">تناژ بار تخلیه شده از خودرو</th>
-              <th class="colSetup2" scope="col">ارجاع به آزمایشگاه</th>
+              <th class="colSetup2" scope="col">نام مالک بار</th>
               <th class="colSetup2" scope="col">نام و نام خانوادگی راننده</th>
               <th class="colSetup2" scope="col">کد ملی راننده</th>
               <th class="colSetup2" scope="col">شماره تماس راننده</th>
               <th class="colSetup2" scope="col">شماره پلاک خودرو</th>
               <th class="colSetup3" scope="col">مشخصات خودرو</th>
-              <th class="col-auto colSetup1" scope="col">وزن بار (تناژ)</th>
               <th class="colSetup2" scope="col">نوع بار</th>
-              <th class="colSetup2" scope="col">نام مالک بار</th>
-              <th class="colSetup1" scope="col">تاریخ ثبت</th>
-              <th class="colSetup1" scope="col">ساعت ثبت</th>
+              <th class="colSetup2" scope="col">تناژ بار تخلیه شده از خودرو</th>
+              <th class="colSetup2" scope="col">ترانشیپ</th>
+              <th class="colSetup2" scope="col">ارجاع به آزمایشگاه</th>
+              <th class="colSetup1" scope="col">تاریخ تخلیه بار</th>
+              <th class="colSetup1" scope="col">نام اپراتور</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -75,7 +73,6 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -91,11 +88,9 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -122,22 +117,24 @@
           <thead class="">
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
+              <th class="colSetup3" scope="col">نام مالک بار</th>
+              <th class="colSetup2" scope="col">نام و نام خانوادگی راننده</th>
+              <th class="colSetup2" scope="col">عکس راننده</th>
+              <th class="colSetup2" scope="col">شماره تماس راننده</th>
+              <th class="colSetup2" scope="col">شماره پلاک خودرو</th>
+              <th class="colSetup3" scope="col">عکس پلاک خودرو</th>
+              <th class="colSetup3" scope="col">مشخصات خودرو</th>
               <th class="colSetup2" scope="col">
                 تناژ بار (بارگیری شده) در خودرو
               </th>
-              <th class="colSetup2" scope="col">نام و نام خانوادگی راننده</th>
-              <th class="colSetup2" scope="col">کد ملی راننده</th>
-              <th class="colSetup2" scope="col">شماره تماس راننده</th>
-              <th class="colSetup2" scope="col">شماره پلاک خودرو</th>
-              <th class="colSetup3" scope="col">مشخصات خودرو</th>
-              <th class="colSetup3" scope="col">نام مالک بار</th>
               <th class="colSetup1" scope="col">تاریخ خروج</th>
-              <th class="colSetup1" scope="col">ساعت خروج</th>
+              <th class="colSetup1" scope="col">نام اپراتور</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -159,6 +156,7 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -171,9 +169,11 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -223,80 +223,7 @@
               required
             />
           </div>
-          <div class="tonnageCargoUnloaded inputSetup">
-            <label
-              class="tonnageCargoUnloadedLabel labelSetup"
-              for="tonnageCargo"
-              >تناژ بار تخلیه شده از خودرو:</label
-            >
-            <input
-              class="tonnageCargoUnloadedInput inputValueSetup"
-              id="tonnageCargo"
-              type="text"
-              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-              name="tonnage_cargo_unloaded[]"
-              placeholder="- - - -"
-              required
-            />
-          </div>
-          <div class="labratorySection inputSetup">
-            <label class="labratoryLable labelSetup" for="labratory"
-              >ارجاع به آزمایشگاه:</label
-            >
-            <input
-              class="labratoryInput inputValueSetup"
-              id="labratory"
-              type="text"
-              name="referral_to_laboratory[]"
-              required
-            />
-          </div>
           <div class="firstCarInfoContainer carInfoWrapper">
-            <div class="DriverNameInfo inputSetup">
-              <label
-                class="DriverNameInfoLable labelSetup"
-                for="driverName"
-                >نام و نام خانوادگی راننده:</label
-              >
-              <input
-                class="DriverInfoInput inputValueSetup"
-                id="driverName"
-                type="text"
-                name="driver_fullname[]"
-                required
-              />
-            </div>
-            <div class="DriverNationalIdInfo inputSetup">
-              <label
-                class="DriverNationalIdLable labelSetup"
-                for="driverNationalId"
-                >کد ملی راننده:</label
-              >
-              <input
-                class="DriverNationalIdInput inputValueSetup"
-                id="driverNationalId"
-                type="text"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                name="driver_national_id[]"
-                maxlength="10"
-                required
-              />
-            </div>
-            <div div class="DriverPhoneNumberInfo inputSetup">
-              <label
-                class="DriverPhoneNumberLable labelSetup"
-                for="DriverPhoneNumber"
-                >شماره تماس راننده:</label
-              >
-              <input
-                class="DriverPhoneNumberInput inputValueSetup"
-                id="DriverPhoneNumber"
-                type="text"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                name="driver_phoneNumber[]"
-                required
-              />
-            </div>
             <div class="irCarPlateNumberInfo inputSetup">
               <label class="licensePlateLable labelSetup"
                 >شماره پلاک خودرو:</label
@@ -375,30 +302,38 @@
               </div>
               <!--پایان قالب پلاک-->
             </div>
-            <div class="carModelInfo inputSetup">
-              <label class="carModelLabel labelSetup" for="carInfo"
-                >مشخصات خودرو:</label
-              >
-              <input
-                class="carModelInput inputValueSetup"
-                id="carInfo"
-                type="text"
-                name="car_model_information[]"
-                required
-              />
-            </div>
-            <div class="carLoadTypeInfo inputSetup">
-              <label class="carLoadWeightType labelSetup" for="cargoType"
-                >نوع بار:</label
-              >
-              <input
-                class="loadWeightType inputValueSetup"
-                id="cargoType"
-                type="text"
-                name="cargo_type[]"
-                required
-              />
-            </div>
+          </div>
+          <div class="tonnageCargoUnloaded inputSetup">
+            <label
+              class="tonnageCargoUnloadedLabel labelSetup"
+              for="tonnageCargo"
+              >تناژ بار تخلیه شده از خودرو:</label
+            >
+            <input
+              class="tonnageCargoUnloadedInput inputValueSetup"
+              id="tonnageCargo"
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+              name="tonnage_cargo_unloaded[]"
+              placeholder="- - - -"
+              required
+            />
+          </div>
+          <div class="labratorySection inputSetup">
+            <label class="labratoryLable labelSetup" for="labratory"
+              >ارجاع به آزمایشگاه:</label
+            >
+            <input
+              class="labratoryInput inputValueSetup"
+              id="labratory"
+              type="text"
+              name="referral_to_laboratory[]"
+              required
+            />
+          </div>
+        </div>
+        <div class="formTemplate2" id="vehicles-container2">
+          <div class="secondCarInfoContainer carInfoWrapper">
             <div class="cargoOwnerInfo inputSetup">
               <label class="cargoOwnerLable labelSetup" for="cargoOwner"
                 >نام مالک بار:</label
@@ -411,30 +346,8 @@
                 required
               />
             </div>
-          </div>
-        </div>
-        <div class="formTemplate2" id="vehicles-container2">
-          <div class="secondCarInfoContainer carInfoWrapper">
-            <div class="tonnageCargoLoaded inputSetup">
-              <label
-                class="tonnageCargoLoadedLable labelSetup"
-                for="tonnageCargoLoaded"
-                >تناژ بار (بارگیری شده) در خودرو:</label
-              >
-              <input
-                class="tonnageCargoLoadedInput inputValueSetup"
-                id="tonnageCargoLoaded"
-                type="text"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                name="tonnage_cargo_loaded[]"
-                placeholder="- - - -"
-                required
-              />
-            </div>
             <div class="DriverNameInfo inputSetup">
-              <label
-                class="DriverNameLable labelSetup"
-                for="DriverName"
+              <label class="DriverNameLable labelSetup" for="DriverName"
                 >نام و نام خانوادگی راننده:</label
               >
               <input
@@ -445,19 +358,16 @@
                 required
               />
             </div>
-            <div div class="DriverNationalIdInfo inputSetup">
-              <label
-                class="DriverNationalIdLable labelSetup"
-                for="DriverNationalId"
-                >کد ملی راننده:</label
+            <div class="driverPhoto inputSetup">
+              <label class="driverPhotoLable labelSetup" for="driverPhoto"
+                >بارگذاری تصویر راننده:</label
               >
               <input
-                class="driverNationalIdInput inputValueSetup"
-                id="DriverNationalId"
-                type="text"
-                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                name="driver_national_id[]"
-                maxlength="10"
+                class="driverPhotoInput inputValueSetup"
+                id="driverPhoto"
+                type="file"
+                name="driver_photo[]"
+                multiple
                 required
               />
             </div>
@@ -477,9 +387,7 @@
               />
             </div>
             <div class="CarPlateNumberInfo inputSetup">
-              <label class="licensePlate labelSetup"
-                >شماره پلاک خودرو دوم:</label
-              >
+              <label class="licensePlate labelSetup">شماره پلاک خودرو:</label>
               <!--شروع قالب پلاک-->
               <div class="aflicenseFullContainer">
                 <!-- ولایت -->
@@ -529,6 +437,19 @@
               </div>
               <!--پایان قالب پلاک-->
             </div>
+            <div class="afLicensePhoto inputSetup">
+              <label class="afLicensePhotoLable labelSetup" for="afLicensePhoto"
+                >بارگذاری تصویر پلاک خودرو:</label
+              >
+              <input
+                class="afLicensePhotoInput inputValueSetup"
+                id="afLicensePhoto"
+                type="file"
+                name="AF_License_photo[]"
+                multiple
+                required
+              />
+            </div>
             <div class="CarModelInfo inputSetup">
               <label class="CarModelLabel labelSetup" for="CarInfo"
                 >مشخصات خودرو:</label
@@ -541,19 +462,35 @@
                 required
               />
             </div>
-            <div class="cargoOwnerInfo inputSetup">
-              <label class="cargoOwnerLable labelSetup" for="cargoOwner"
-                >نام مالک بار:</label
+            <div class="tonnageCargoLoaded inputSetup">
+              <label
+                class="tonnageCargoLoadedLable labelSetup"
+                for="tonnageCargoLoaded"
+                >تناژ بار (بارگیری شده) در خودرو:</label
               >
               <input
-                class="cargoOwnerInput inputValueSetup"
-                id="cargoOwner"
+                class="tonnageCargoLoadedInput inputValueSetup"
+                id="tonnageCargoLoaded"
                 type="text"
-                name="cargo_owner[]"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="tonnage_cargo_loaded[]"
+                placeholder="- - - -"
                 required
               />
             </div>
           </div>
+        </div>
+        <div class="operatorNameInfo inputSetup">
+          <label class="operatorNameLable labelSetup" for="operatorName"
+            >نام اپراتور:</label
+          >
+          <input
+            class="operatorNameInput inputValueSetup"
+            id="operatorName"
+            type="text"
+            name="operator_name[]"
+            required
+          />
         </div>
         <div class="exitDate inputSetup">
           <label class="exitDateLable labelSetup" for="datePicker"
@@ -565,18 +502,6 @@
             type="text"
             name="exit_date_secondCar"
             readonly
-            required
-          />
-        </div>
-        <div class="exitTime inputSetup">
-          <label class="exitTimeLable labelSetup" for="exitTime"
-            >ساعت خروج:</label
-          >
-          <input
-            class="timeInput"
-            id="exitTime"
-            type="time"
-            name="exit_time_secondCar"
             required
           />
         </div>
