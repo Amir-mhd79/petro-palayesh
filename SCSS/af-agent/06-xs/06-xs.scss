@@ -181,6 +181,36 @@ html {
             }
           }
         }
+        > .inputSetup {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          > .labelSetup {
+            font-family: YekanBakh-Regular;
+            font-size: 12px;
+            cursor: pointer;
+          }
+          > .inputValueSetup {
+            width: 180px;
+            height: 32px;
+            border: unset;
+            border-radius: 5px;
+            font-size: 14px;
+            padding-right: 10px;
+            font-family: YekanBakh-Bold;
+            padding-top: 6px;
+          }
+          > .form-control {
+            width: 180px;
+            height: 29px;
+            background-color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: unset;
+            cursor: pointer;
+          }
+        }
         > .submitContainer {
           display: flex;
           justify-content: center;

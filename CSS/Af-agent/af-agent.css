@@ -7,3 +7,4 @@
 @import "./Media/06-xs.css" only screen and (max-width: 540px);
 @import "../setting.css";
 @import "../../font-awesome/css/font-awesome.min.css";
+@import "../../mpdatepicker/dist/jquery.mpdatepicker.min.css";

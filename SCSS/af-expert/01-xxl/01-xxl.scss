@@ -3,7 +3,8 @@ body {
   justify-content: center;
   padding: 50px;
   > .container {
-    width: 1350px;
+    min-width: 1350px;
+    max-width: 1700px;
     background-color: #e5e7eb;
     border-radius: 6px;
     padding: 30px;
