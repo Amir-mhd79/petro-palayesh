@@ -15,11 +15,11 @@ body {
         display: flex;
         flex-direction: column;
         background-color: #e5e7eb;
-        padding: 20px;
+        padding: 10px;
         border-radius: 10px;
         row-gap: 20px;
         > .btn {
-          font-size: 18px;
+          font-size: 16x;
           font-family: YekanBakh-Bold;
           text-align: center;
           transition: 300ms;
@@ -98,8 +98,8 @@ body {
           }
         }
         > .newForm {
-          width: 70px;
-          height: 70px;
+          width: 50px;
+          height: 50px;
           background-color: var(--bs-primary);
           display: flex;
           justify-content: center;

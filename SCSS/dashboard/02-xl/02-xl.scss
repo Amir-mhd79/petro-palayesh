@@ -11,11 +11,11 @@ body {
     column-gap: 20px;
     > .panel {
       > .btnContainer {
-        width: 250px;
+        width: 220px;
         display: flex;
         flex-direction: column;
         background-color: #e5e7eb;
-        padding: 20px;
+        padding: 10px;
         border-radius: 10px;
         row-gap: 20px;
         > .btn {
@@ -98,8 +98,8 @@ body {
           }
         }
         > .newForm {
-          width: 70px;
-          height: 70px;
+          width: 50px;
+          height: 50px;
           background-color: var(--bs-primary);
           display: flex;
           justify-content: center;

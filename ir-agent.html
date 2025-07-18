@@ -95,9 +95,11 @@
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
               <th class="colSetup2" scope="col">نام مالک بار</th>
+              <th class="colSetup2" scope="col">نوع بار</th>
               <th class="colSetup2" scope="col">
                 تناژ بار (بارگیری شده) در خودرو (ها)
               </th>
+              <th class="colSetup1" scope="col">مجموع تعداد ماشین</th>
               <th class="colSetup1" scope="col">تاریخ بارگیری</th>
               <th class="colSetup1" scope="col">ساعت بارگیری</th>
             </tr>
@@ -109,9 +111,13 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">2</th>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -123,9 +129,13 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -158,19 +168,6 @@
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
         <div class="formTemplate1" id="vehicles-container1">
-          <div class="transhipmentSection inputSetup">
-            <label class="transhipmentLable labelSetup" for="transhipment"
-              >ترانشیپ:</label
-            >
-            <input
-              class="transhipmentInput inputValueSetup"
-              id="transhipment"
-              type="checkbox"
-              name="transhipment[]"
-              title="عملیات ترانشیپ صورت گرفت"
-              required
-            />
-          </div>
           <div class="firstCarInfoContainer carInfoWrapper">
             <div class="irCarPlateNumberInfo inputSetup">
               <label class="licensePlateLable labelSetup"
@@ -267,12 +264,25 @@
               required
             />
           </div>
+          <div class="transhipmentSection inputSetup">
+            <label class="transhipmentLable labelSetup" for="transhipment"
+              >ترانشیپ:</label
+            >
+            <input
+              class="transhipmentInput checkBoxInput inputValueSetup"
+              id="transhipment"
+              type="checkbox"
+              name="transhipment[]"
+              title="عملیات ترانشیپ صورت گرفت"
+              required
+            />
+          </div>
           <div class="labratorySection inputSetup">
             <label class="labratoryLable labelSetup" for="labratory"
               >ارجاع به آزمایشگاه:</label
             >
             <input
-              class="labratoryInput inputValueSetup"
+              class="labratoryInput checkBoxInput inputValueSetup"
               id="labratory"
               type="checkbox"
               name="referral_to_laboratory[]"
