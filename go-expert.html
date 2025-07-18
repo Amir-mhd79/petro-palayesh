@@ -27,18 +27,16 @@
           <thead class="">
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
-              <th class="colSetup3" scope="col">نام مالک بار</th>
               <th class="colSetup3" scope="col">اظهار</th>
               <th class="colSetup3" scope="col">پلمپ</th>
               <th class="colSetup3" scope="col">کوتاژ</th>
-              <th class="colSetup2" scope="col">نام اپراتور</th>
               <th class="colSetup2" scope="col">تاریخ ثبت</th>
+              <th class="colSetup2" scope="col">ساعت ثبت</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -52,7 +50,6 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -61,11 +58,9 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -120,37 +115,14 @@
           <div class="cottage inputSetup">
             <label class="cottageLabel labelSetup" for="cottage">کوتاژ:</label>
             <input
-              class="cottageInput inputValueSetup"
+              class="cottageInput uploadFileInput inputValueSetup"
               id="cottage"
-              type="text"
+              type="file"
               name="cottage[]"
+              multiple
               required
             />
           </div>
-          <div class="cargoOwnerInfo inputSetup">
-            <label class="cargoOwnerLable labelSetup" for="cargoOwner"
-              >نام مالک بار:</label
-            >
-            <input
-              class="cargoOwnerInput inputValueSetup"
-              id="cargoOwner"
-              type="text"
-              name="cargo_owner[]"
-              required
-            />
-          </div>
-        </div>
-        <div class="operatorNameInfo inputSetup">
-          <label class="operatorNameLable labelSetup" for="operatorName"
-            >نام اپراتور:</label
-          >
-          <input
-            class="operatorNameInput inputValueSetup"
-            id="operatorName"
-            type="text"
-            name="operator_name[]"
-            required
-          />
         </div>
         <div class="datePicker inputSetup">
           <label class="datePickerLable labelSetup" for="datePicker"

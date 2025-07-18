@@ -28,19 +28,15 @@
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
               <th class="colSetup3" scope="col">نام مالک بار</th>
-              <th class="colSetup3" scope="col">شماره پلاک خودرو</th>
               <th class="colSetup2" scope="col">نوع بار</th>
-              <th class="colSetup2" scope="col">تناژ بار</th>
+              <th class="colSetup2" scope="col">تناژ بار خودرو (ها)</th>
               <th class="colSetup3" scope="col">بارنامه بارگذاری شده</th>
-              <th class="colSetup3" scope="col">نام اپراتور</th>
               <th class="colSetup1" scope="col">تاریخ ورود</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
-              <td></td>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -54,8 +50,6 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -64,13 +58,9 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
-              <td></td>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -98,18 +88,6 @@
       <!--Start Form Section-->
       <form class="form" action="#" method="post" enctype="multipart/form-data">
         <div class="formTemplate" id="vehicles-container">
-          <div class="cargoOwnerInfo inputSetup">
-            <label class="cargoOwnerLable labelSetup" for="cargoOwner"
-              >نام مالک بار:</label
-            >
-            <input
-              class="cargoOwnerInput inputValueSetup"
-              id="cargoOwner"
-              type="text"
-              name="cargo_owner[]"
-              required
-            />
-          </div>
           <div class="CarPlateNumberInfo inputSetup">
             <label class="licensePlate labelSetup">شماره پلاک خودرو:</label>
             <!--شروع قالب پلاک-->
@@ -161,18 +139,6 @@
             </div>
             <!--پایان قالب پلاک-->
           </div>
-          <div class="carLoadTypeInfo inputSetup">
-            <label class="cargoTypeLable labelSetup" for="cargoType"
-              >نوع بار:</label
-            >
-            <input
-              class="cargoTypeInput inputValueSetup"
-              id="cargoType"
-              type="text"
-              name="cargo_type[]"
-              required
-            />
-          </div>
           <div class="cargoTonnageSection inputSetup">
             <label class="cargoTonnageLable labelSetup" for="cargoTonnage"
               >تناژ بار:</label
@@ -200,18 +166,6 @@
               required
             />
           </div>
-        </div>
-        <div class="operatorNameInfo inputSetup">
-          <label class="operatorNameLable labelSetup" for="operatorName"
-            >نام اپراتور:</label
-          >
-          <input
-            class="operatorNameInput inputValueSetup"
-            id="operatorName"
-            type="text"
-            name="operator_name[]"
-            required
-          />
         </div>
         <div class="arrivalDate inputSetup">
           <label class="arrivalDateLable labelSetup" for="datePicker"

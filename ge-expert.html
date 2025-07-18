@@ -33,11 +33,13 @@
               <th class="colSetup2" scope="col">مجموع تعداد ماشین</th>
               <th class="colSetup2" scope="col">نام اپراتور</th>
               <th class="colSetup2" scope="col">تاریخ خروج</th>
+              <th class="colSetup2" scope="col">ساعت خروج</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -53,6 +55,7 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -62,9 +65,11 @@
               <td></td>
               <td></td>
               <td></td>
+              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
+              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -240,30 +245,6 @@
               required
             />
           </div>
-          <div class="carLoadTypeInfo inputSetup">
-            <label class="carLoadWeightType labelSetup" for="cargoType"
-              >نوع بار:</label
-            >
-            <input
-              id="cargoType"
-              type="text"
-              name="cargo_type[]"
-              class="loadWeightType inputValueSetup"
-              required
-            />
-          </div>
-          <div class="cargoOwnerInfo inputSetup">
-            <label class="cargoOwnerLable labelSetup" for="cargoOwner"
-              >نام مالک بار:</label
-            >
-            <input
-              class="cargoOwnerInput inputValueSetup"
-              id="cargoOwner"
-              type="text"
-              name="cargo_owner[]"
-              required
-            />
-          </div>
           <div class="scaleBill inputSetup">
             <label class="scaleBillLable labelSetup" for="scaleBill"
               >بارگذاری قبض باسکول خروجی:</label
@@ -290,6 +271,30 @@
               required
             />
           </div>
+        </div>
+        <div class="carLoadTypeInfo inputSetup">
+          <label class="carLoadWeightType labelSetup" for="cargoType"
+            >نوع بار:</label
+          >
+          <input
+            id="cargoType"
+            type="text"
+            name="cargo_type[]"
+            class="loadWeightType inputValueSetup"
+            required
+          />
+        </div>
+        <div class="cargoOwnerInfo inputSetup">
+          <label class="cargoOwnerLable labelSetup" for="cargoOwner"
+            >نام مالک بار:</label
+          >
+          <input
+            class="cargoOwnerInput inputValueSetup"
+            id="cargoOwner"
+            type="text"
+            name="cargo_owner[]"
+            required
+          />
         </div>
         <div class="operatorNameInfo inputSetup">
           <label class="operatorNameLable labelSetup" for="operatorName"

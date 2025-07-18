@@ -30,27 +30,19 @@
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
               <th class="colSetup2" scope="col">نام مالک بار</th>
-              <th class="colSetup2" scope="col">نام و نام خانوادگی راننده</th>
-              <th class="colSetup2" scope="col">کد ملی راننده</th>
-              <th class="colSetup2" scope="col">شماره تماس راننده</th>
-              <th class="colSetup2" scope="col">شماره پلاک خودرو</th>
-              <th class="colSetup3" scope="col">مشخصات خودرو</th>
               <th class="colSetup2" scope="col">نوع بار</th>
-              <th class="colSetup2" scope="col">تناژ بار تخلیه شده از خودرو</th>
+              <th class="colSetup2" scope="col">
+                تناژ بار تخلیه شده از خودرو (ها)
+              </th>
               <th class="colSetup2" scope="col">ترانشیپ</th>
               <th class="colSetup2" scope="col">ارجاع به آزمایشگاه</th>
-              <th class="colSetup1" scope="col">نام اپراتور</th>
               <th class="colSetup1" scope="col">تاریخ تخلیه بار</th>
+              <th class="colSetup1" scope="col">ساعت تخلیه بار</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -68,11 +60,6 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -83,19 +70,9 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -117,29 +94,17 @@
           <thead class="">
             <tr>
               <th class="col-auto" scope="col">شماره ردیف</th>
-              <th class="colSetup3" scope="col">نام مالک بار</th>
-              <th class="colSetup2" scope="col">نام و نام خانوادگی راننده</th>
-              <th class="colSetup2" scope="col">عکس راننده</th>
-              <th class="colSetup2" scope="col">شماره تماس راننده</th>
-              <th class="colSetup2" scope="col">شماره پلاک خودرو</th>
-              <th class="colSetup3" scope="col">عکس پلاک خودرو</th>
-              <th class="colSetup3" scope="col">مشخصات خودرو</th>
+              <th class="colSetup2" scope="col">نام مالک بار</th>
               <th class="colSetup2" scope="col">
-                تناژ بار (بارگیری شده) در خودرو
+                تناژ بار (بارگیری شده) در خودرو (ها)
               </th>
-              <th class="colSetup1" scope="col">نام اپراتور</th>
-              <th class="colSetup1" scope="col">تاریخ خروج</th>
+              <th class="colSetup1" scope="col">تاریخ بارگیری</th>
+              <th class="colSetup1" scope="col">ساعت بارگیری</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
             <tr>
               <th scope="row">1</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -151,12 +116,6 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">3</th>
@@ -164,21 +123,9 @@
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
             </tr>
             <tr>
               <th scope="row">4</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>
@@ -218,8 +165,9 @@
             <input
               class="transhipmentInput inputValueSetup"
               id="transhipment"
-              type="text"
+              type="checkbox"
               name="transhipment[]"
+              title="عملیات ترانشیپ صورت گرفت"
               required
             />
           </div>
@@ -326,26 +274,15 @@
             <input
               class="labratoryInput inputValueSetup"
               id="labratory"
-              type="text"
+              type="checkbox"
               name="referral_to_laboratory[]"
+              title="ارجاع گردید"
               required
             />
           </div>
         </div>
         <div class="formTemplate2" id="vehicles-container2">
           <div class="secondCarInfoContainer carInfoWrapper">
-            <div class="cargoOwnerInfo inputSetup">
-              <label class="cargoOwnerLable labelSetup" for="cargoOwner"
-                >نام مالک بار:</label
-              >
-              <input
-                class="cargoOwnerInput inputValueSetup"
-                id="cargoOwner"
-                type="text"
-                name="cargo_owner[]"
-                required
-              />
-            </div>
             <div class="DriverNameInfo inputSetup">
               <label class="DriverNameLable labelSetup" for="DriverName"
                 >نام و نام خانوادگی راننده:</label
@@ -355,19 +292,6 @@
                 id="DriverName"
                 type="text"
                 name="driver_fullname[]"
-                required
-              />
-            </div>
-            <div class="driverPhoto inputSetup">
-              <label class="driverPhotoLable labelSetup" for="driverPhoto"
-                >بارگذاری تصویر راننده:</label
-              >
-              <input
-                class="driverPhotoInput uploadFileInput inputValueSetup"
-                id="driverPhoto"
-                type="file"
-                name="driver_photo[]"
-                multiple
                 required
               />
             </div>
@@ -439,7 +363,7 @@
             </div>
             <div class="afLicensePhoto inputSetup">
               <label class="afLicensePhotoLable labelSetup" for="afLicensePhoto"
-                >بارگذاری تصویر پلاک خودرو:</label
+                >بارگذاری تصویر راننده به همراه پلاک خودرو:</label
               >
               <input
                 class="afLicensePhotoInput uploadFileInput inputValueSetup"
@@ -480,21 +404,9 @@
             </div>
           </div>
         </div>
-        <div class="operatorNameInfo inputSetup">
-          <label class="operatorNameLable labelSetup" for="operatorName"
-            >نام اپراتور:</label
-          >
-          <input
-            class="operatorNameInput inputValueSetup"
-            id="operatorName"
-            type="text"
-            name="operator_name[]"
-            required
-          />
-        </div>
         <div class="exitDate inputSetup">
           <label class="exitDateLable labelSetup" for="datePicker"
-            >تاریخ خروج:</label
+            >تاریخ بارگیری:</label
           >
           <input
             class="dateInput form-control"

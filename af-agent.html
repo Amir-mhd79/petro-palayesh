@@ -34,7 +34,7 @@
               <th class="colSetup2" scope="col">پرداخت گمرک</th>
               <th class="colSetup2" scope="col">خروج کالا</th>
               <th class="colSetup2" scope="col">تاریخ ثبت</th>
-              <th class="colSetup2" scope="col">نام اپراتور</th>
+              <th class="colSetup2" scope="col">ساعت ثبت</th>
             </tr>
           </thead>
           <tbody class="table-group-divider">
@@ -125,20 +125,22 @@
             <input
               class="labratoryInput inputValueSetup"
               id="labratory"
-              type="text"
+              type="checkbox"
               name="referral_to_laboratory[]"
+              title="ارجاع گردید"
               required
             />
           </div>
           <div class="customsPaymentSection inputSetup">
             <label class="customsPaymentLable labelSetup" for="customsPayment"
-              >پرداخت گمرک:</label
+              >پرداخت گمرک (آپلود فیش واریزی):</label
             >
             <input
-              class="customsPaymentInput inputValueSetup"
-              id="customsPayment"
-              type="text"
-              name="customs_payment[]"
+              class="uploadFileInput inputValueSetup"
+              id="uploadFile"
+              type="file"
+              name="upload_bill[]"
+              multiple
               required
             />
           </div>
@@ -149,8 +151,9 @@
             <input
               class="cargoDepartureInput inputValueSetup"
               id="cargoDeparture"
-              type="text"
+              type="checkbox"
               name="cargo_departure[]"
+              title="کالا خارج شد"
               required
             />
           </div>
@@ -168,30 +171,6 @@
               required
             />
           </div>
-          <div class="cargoOwnerInfo inputSetup">
-            <label class="cargoOwnerLable labelSetup" for="cargoOwner"
-              >نام مالک بار:</label
-            >
-            <input
-              class="cargoOwnerInput inputValueSetup"
-              id="cargoOwner"
-              type="text"
-              name="cargo_owner[]"
-              required
-            />
-          </div>
-        </div>
-        <div class="operatorNameInfo inputSetup">
-          <label class="operatorNameLable labelSetup" for="operatorName"
-            >نام اپراتور:</label
-          >
-          <input
-            class="operatorNameInput inputValueSetup"
-            id="operatorName"
-            type="text"
-            name="operator_name[]"
-            required
-          />
         </div>
         <div class="date inputSetup">
           <label class="dateLable labelSetup" for="datePicker"
