@@ -1,12 +1,15 @@
 html {
   background-color: #e5e7eb !important;
+  height: 100vh;
   body {
+    height: inherit;
     background-color: #e5e7eb;
     display: flex;
+    align-items: center;
     justify-content: center;
     padding: 35px;
     > .container {
-      width: 700px;
+      width: 100%;
       background-color: #e5e7eb;
       > .logo {
         display: flex;
