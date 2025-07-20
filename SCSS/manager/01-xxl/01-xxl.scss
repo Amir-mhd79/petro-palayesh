@@ -2,12 +2,95 @@ body {
   display: flex;
   justify-content: center;
   padding: 50px;
+  padding-top: 100px;
   > .container {
-    min-width: 1300px;
-    max-width: 1800px;
+    width: 1320x;
+    height: 750px;
     margin: unset;
-    display: flex;
     position: relative;
+    background-image: url(../../../Images/manager-page-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    > .vehicle-status {
+      width: 220px;
+      height: 270px;
+      position: absolute;
+      cursor: pointer;
+    }
+    > .gemizdar-expert-status {
+      left: 10px;
+      top: 80px;
+    }
+    > .gomrok-expert-status {
+      left: 280px;
+      bottom: 85px;
+    }
+    > .iran-clearance-status {
+      left: 550px;
+      top: 80px;
+    }
+    > .barchelan-status {
+      right: 230px;
+      bottom: 85px;
+    }
+    > .afghanestan-stock-status {
+      right: 10px;
+      top: 80px;
+    }
+    > .modal {
+      justify-content: center;
+      > .modal-dialog {
+        min-width: 1000px;
+        > .modal-content {
+          > .modal-header {
+            justify-content: space-between;
+            > .modal-title {
+              font-family: YekanBakh-Bold;
+              font-size: 20px;
+            }
+            button {
+              margin: unset;
+            }
+          }
+          > .modal-body {
+            > .table {
+              thead {
+                tr {
+                  th {
+                    vertical-align: middle;
+                    text-align: center;
+                    font-size: 14px;
+                    word-spacing: 1px;
+                  }
+                  > .colSetup1 {
+                    min-width: 85px;
+                  }
+                  > .colSetup2 {
+                    min-width: 100px;
+                  }
+                  > .colSetup3 {
+                    min-width: 120px;
+                  }
+                }
+              }
+              tbody {
+                tr {
+                  th {
+                    vertical-align: middle;
+                    text-align: center;
+                  }
+                  td {
+                    vertical-align: middle;
+                    text-align: center;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 .show_info {
