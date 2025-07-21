@@ -88,18 +88,11 @@ body {
               }
             }
           }
+          button {
+            font-family: YekanBakh-Bold;
+          }
         }
       }
     }
   }
-}
-.show_info {
-  display: flex !important;
-}
-.active_btn {
-  background-color: rgb(165, 165, 165);
-  color: white;
-}
-.show {
-  display: flex !important;
 }

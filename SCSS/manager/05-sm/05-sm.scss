@@ -1,23 +1,101 @@
-body {
-  display: flex;
-  padding: 10px;
-  > .container {
-    max-width: 100%;
-    margin: unset;
+html {
+  background-color: #e5e7eb !important;
+  body {
+    background-color: #e5e7eb;
     display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    position: relative;
-
+    justify-content: center;
+    padding: 20px;
+    > .container {
+      width: 487px;
+      height: 1000px;
+      margin: unset;
+      position: relative;
+      background-image: url(../../../Images/manager-page-mobile.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      > .vehicle-status {
+        width: 280px;
+        height: 120px;
+        position: absolute;
+        cursor: pointer;
+      }
+      > .gemizdar-expert-status {
+        left: 70px;
+        top: 30px;
+      }
+      > .gomrok-expert-status {
+        right: 100px;
+        top: 230px;
+      }
+      > .iran-clearance-status {
+        left: 90px;
+        top: 400px;
+      }
+      > .barchelan-status {
+        right: 50px;
+        bottom: 340px;
+      }
+      > .afghanestan-stock-status {
+        left: 0;
+        bottom: 100px;
+      }
+      > .modal {
+        justify-content: center;
+        > .modal-dialog {
+          > .modal-content {
+            > .modal-header {
+              justify-content: space-between;
+              > .modal-title {
+                font-family: YekanBakh-Bold;
+                font-size: 14px;
+              }
+              button {
+                margin: unset;
+              }
+            }
+            > .modal-body {
+              > .table {
+                thead {
+                  tr {
+                    th {
+                      vertical-align: middle;
+                      text-align: center;
+                      font-size: 12px;
+                      word-spacing: 1px;
+                    }
+                    > .colSetup1 {
+                      min-width: 60px;
+                    }
+                    > .colSetup2 {
+                      min-width: 100px;
+                    }
+                    > .colSetup3 {
+                      min-width: 120px;
+                    }
+                  }
+                }
+                tbody {
+                  tr {
+                    th {
+                      vertical-align: middle;
+                      text-align: center;
+                    }
+                    td {
+                      vertical-align: middle;
+                      text-align: center;
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+            button {
+              font-family: YekanBakh-Bold;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
   }
-}
-.show_info {
-  display: flex !important;
-}
-.active_btn {
-  background-color: rgb(165, 165, 165);
-  color: white;
-}
-.show {
-  display: flex !important;
 }
