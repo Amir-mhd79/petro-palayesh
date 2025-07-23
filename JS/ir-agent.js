@@ -3,6 +3,8 @@ datePicker();
 import "../jquery/dist/jquery.min.js";
 import "../mpdatepicker/dist/jquery.mpdatepicker.min.js";
 import "../bootstrap/dist/js/bootstrap.bundle.min.js";
+import alert from "./alert.js";
+alert();
 
 try {
   // اسکریپت نمایش و پنهان کردن فرم
@@ -36,6 +38,8 @@ try {
   addFormButton.addEventListener("click", () => {
     const count1 = parseInt(document.getElementById("vehicle-count1").value); //ورودی تعداد خودرو ایرانی
     const count2 = parseInt(document.getElementById("vehicle-count2").value); //ورودی تعداد خودرو افغانی
+    
+    //اعتبار سنجی ورودی ها
     if (
       (!count1 || count1 < 1 || count1 > 20) ||
       (!count2 || count2 < 1 || count2 > 20)
