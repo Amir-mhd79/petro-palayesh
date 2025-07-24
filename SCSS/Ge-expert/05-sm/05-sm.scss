@@ -76,6 +76,22 @@ html {
           }
         }
       }
+      > .pagination-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0 20px;
+        height: 32px;
+        > .pagination {
+          > .page-item {
+            > .page-link {
+              font-size: 12px;
+            }
+            >.btn-page{
+              padding: 6px;
+            }
+          }
+        }
+      }
       > .formCounterWrapper {
         width: 250px;
         padding: 20px;

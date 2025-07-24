@@ -76,6 +76,18 @@ body {
         }
       }
     }
+    > .pagination-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      > .pagination {
+        > .page-item {
+          > .page-link {
+            font-size: 14px;
+          }
+        }
+      }
+    }
     > .formCounterWrapper {
       width: 300px;
       padding: 20px;
@@ -349,9 +361,9 @@ body {
   }
   .swal2-actions {
     margin-top: 10px;
-      button {
-        font-family: YekanBakh-Bold;
-        font-size: 16px;
-      }
+    button {
+      font-family: YekanBakh-Bold;
+      font-size: 16px;
+    }
   }
 }

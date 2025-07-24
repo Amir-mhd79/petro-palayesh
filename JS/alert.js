@@ -27,6 +27,12 @@ function alert() {
   } else if (path.endsWith("/af-expert.html")) {
     exitAlert();
     FormAlerts();
+  } else if (path.endsWith("/dashboard.html")) {
+    exitAlert();
+    FormAlerts();
+    deleteAlert();
+  } else if (path.endsWith("/manager.html")) {
+    exitAlert();
   }
   function exitAlert() {
     //هشدار خروج از صفحه
@@ -82,6 +88,49 @@ function alert() {
         timer: 4000,
         timerProgressBar: true,
         position: "top",
+      });
+    });
+  }
+  function deleteAlert() {
+    const deleteBtns = document.querySelectorAll('button[title="حذف"]');
+
+    deleteBtns.forEach((elem) => {
+      elem.addEventListener("click", () => {
+        Swal.fire({
+          title: "آیا ردیف انتخاب شده پاک شود؟",
+          text: "بعد از پاک کردن قادر به بازگردانی آن نیستید.",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#d33",
+          cancelButtonColor: "#3085d6",
+          confirmButtonText: "بله حذف کن",
+          cancelButtonText: "برگشت",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "با موفقیت حذف شد",
+              icon: "success",
+            });
+            //اگر مشکلی در حذف اطلاعات در دیتابیس پیش آمد
+            Swal.fire({
+              icon: "error",
+              title: "خطا در حذف",
+              text: "مشکلی در حذف اطلاعات  پیش آمد",
+              timer: 4000,
+              timerProgressBar: true,
+              position: "top",
+            });
+            //اگر مشکلی در اتصال یا سرور پیش آمد
+            Swal.fire({
+              icon: "error",
+              title: "خطای شبکه",
+              text: "ارتباط با سرور برقرار نشد",
+              timer: 4000,
+              timerProgressBar: true,
+              position: "top",
+            });
+          }
+        });
       });
     });
   }

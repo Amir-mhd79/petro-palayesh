@@ -173,6 +173,259 @@
               </tbody>
             </table>
           </div>
+          <!--start making pagination section-->
+          <nav class="pagination-wrapper" aria-label="..." dir="ltr">
+            <ul class="pagination">
+              <li class="page-item">
+                <a href="#" class="page-link btn-page">صفحه قبل</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-current="page">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link btn-page" href="#">صفحه بعد</a>
+              </li>
+            </ul>
+          </nav>
+          <!--end of making pagination section-->
+          <!--Start making form for edit Section-->
+          <form
+            class="form editForm"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="cargoOwnerInfo inputSetup">
+              <label class="cargoOwnerLable labelSetup" for="cargoOwner"
+                >نام مالک بار:</label
+              >
+              <input
+                class="cargoOwnerInput inputValueSetup"
+                id="cargoOwner"
+                type="text"
+                name="cargo_owner[]"
+                required
+              />
+            </div>
+            <div class="carLoadTypeInfo inputSetup">
+              <label class="carLoadWeightType labelSetup" for="cargoType"
+                >نوع بار:</label
+              >
+              <input
+                id="cargoType"
+                type="text"
+                name="cargo_type[]"
+                class="loadWeightType inputValueSetup"
+                required
+              />
+            </div>
+            <div class="driverNameInfo inputSetup">
+              <label class="driverNameLable labelSetup" for="driverName"
+                >نام و نام خانوادگی راننده:</label
+              >
+              <input
+                class="driverNameInput inputValueSetup"
+                id="driverName"
+                type="text"
+                name="driver_name[]"
+                required
+              />
+            </div>
+            <div class="driverNationalIdInfo inputSetup">
+              <label
+                class="driverNationalIdLable labelSetup"
+                for="driverNationalId"
+                >کد ملی راننده:</label
+              >
+              <input
+                class="driverNationalIdInput inputValueSetup"
+                id="driverNationalId"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="Driver_national_id[]"
+                maxlength="10"
+                required
+              />
+            </div>
+            <div div class="DriverPhoneNumberInfo inputSetup">
+              <label
+                class="DriverPhoneNumberLable labelSetup"
+                for="DriverPhoneNumber"
+                >شماره تماس راننده:</label
+              >
+              <input
+                class="DriverPhoneNumberInput inputValueSetup"
+                id="DriverPhoneNumber"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="driver_phoneNumber[]"
+                required
+              />
+            </div>
+            <div class="irCarPlateNumberInfo inputSetup">
+              <label class="licensePlateLable labelSetup"
+                >شماره پلاک خودرو:</label
+              >
+              <!--شروع قالب پلاک-->
+              <div class="licenseFullContainer">
+                <div class="licensePlateLeftContainer">
+                  <!--شروع دو رقم سمت چپ پلاک-->
+                  <input
+                    class="twoLeftDigitsInput"
+                    type="text"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    name="two_left_digits_irLicencePlate[]"
+                    placeholder="- -"
+                    maxlength="2"
+                    required
+                  />
+                  <!--پایان دو رقم سمت چپ پلاک-->
+                  <!--شروع حرف پلاک-->
+                  <select
+                    class="licenseAlphabetSelect"
+                    name="license_plate-letter[]"
+                  >
+                    <option value="alef">الف</option>
+                    <option value="be">ب</option>
+                    <option value="pe">پ</option>
+                    <option value="te">ت</option>
+                    <option value="se">ث</option>
+                    <option value="jim">ج</option>
+                    <option value="dal">د</option>
+                    <option value="ze">ز</option>
+                    <option value="zhe">ژ</option>
+                    <option value="sin">س</option>
+                    <option value="shin">ش</option>
+                    <option value="sad">ص</option>
+                    <option value="ta">ط</option>
+                    <option value="ain">ع</option>
+                    <option value="fe">ف</option>
+                    <option value="ghaf">ق</option>
+                    <option value="kaf">ک</option>
+                    <option value="gaf">گ</option>
+                    <option value="lam">ل</option>
+                    <option value="mim">م</option>
+                    <option value="noon">ن</option>
+                    <option value="vav">و</option>
+                    <option value="he">ه</option>
+                    <option value="ye">ی</option>
+                  </select>
+                  <!--پایان حرف پلاک-->
+                  <!--شروع 3 عدد بعد از حرف پلاک-->
+                  <input
+                    class="threeRightDigitsInput"
+                    type="text"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    name="three_right_digits_irLicencePlate[]"
+                    placeholder="- - -"
+                    maxlength="3"
+                    required
+                  />
+                  <!--پایان 3 عدد بعد از حرف پلاک-->
+                </div>
+                <!--شروع دو رقم استانی پلاک-->
+                <div class="provincialLicensePlateNumber">
+                  <span class="iran">ایران</span>
+                  <input
+                    class="provincialNumber"
+                    type="text"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    name="provincial_licensePlate_number[]"
+                    placeholder="- -"
+                    maxlength="2"
+                    required
+                  />
+                </div>
+                <!--پایان دو رقم استانی پلاک-->
+              </div>
+              <!--پایان قالب پلاک-->
+            </div>
+            <div class="carModelInfo inputSetup">
+              <label class="carModelLabel labelSetup" for="carInfo"
+                >مشخصات خودرو:</label
+              >
+              <input
+                class="carModelInput inputValueSetup"
+                id="carInfo"
+                type="text"
+                name="car_model[]"
+                required
+              />
+            </div>
+            <div class="carLoadWeightInfo inputSetup">
+              <label class="carLoadWeight labelSetup" for="cargoWeight"
+                >وزن بار (تناژ):</label
+              >
+              <input
+                class="loadWeight inputValueSetup"
+                id="cargoWeight"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="cargo_weight[]"
+                placeholder="- - - -"
+                required
+              />
+            </div>
+            <div class="scaleBill inputSetup">
+              <label class="scaleBillLable labelSetup" for="scaleBill"
+                >بارگذاری قبض باسکول خروجی:</label
+              >
+              <input
+                class="scaleBillInput uploadFileInput inputValueSetup"
+                id="scaleBill"
+                type="file"
+                name="scale_bill[]"
+                multiple
+                required
+              />
+            </div>
+            <div class="uploadFile inputSetup">
+              <label class="uploadFileLable labelSetup" for="uploadFile"
+                >بارگذاری بارنامه:</label
+              >
+              <input
+                class="uploadFileInput inputValueSetup"
+                id="uploadFile"
+                type="file"
+                name="upload_bill[]"
+                multiple
+                required
+              />
+            </div>
+            <div class="operatorNameInfo inputSetup">
+              <label class="operatorNameLable labelSetup" for="operatorName"
+                >نام اپراتور:</label
+              >
+              <input
+                class="operatorNameInput inputValueSetup"
+                id="operatorName"
+                type="text"
+                name="operator_name[]"
+                required
+              />
+            </div>
+            <div class="exitDate inputSetup">
+              <label class="exitDateLable labelSetup" for="datePicker"
+                >تاریخ خروج:</label
+              >
+              <input
+                class="dateInput datePicker form-control"
+                id="datePicker"
+                type="text"
+                name="departure_date[]"
+                readonly
+                required
+              />
+            </div>
+            <div class="submitContainer">
+              <input class="submitForm" type="submit" value="ذخیره تغییرات" />
+            </div>
+          </form>
+          <!--End of making form for edit Section-->
         </div>
         <!--***************صفحه اطلاعات ثبت شده توسط کارشناس گمرک*******************-->
         <div class="leftSection go_expert_mainInfo">
@@ -279,6 +532,98 @@
               </tbody>
             </table>
           </div>
+          <!--start making pagination section-->
+          <nav class="pagination-wrapper" aria-label="..." dir="ltr">
+            <ul class="pagination">
+              <li class="page-item">
+                <a href="#" class="page-link btn-page">صفحه قبل</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-current="page">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link btn-page" href="#">صفحه بعد</a>
+              </li>
+            </ul>
+          </nav>
+          <!--end of making pagination section-->
+          <!--Start making form for edit Section-->
+          <form
+            class="form editForm"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="cargoOwnerInfo inputSetup">
+              <label class="cargoOwnerLable labelSetup" for="cargoOwner2"
+                >نام مالک بار:</label
+              >
+              <input
+                class="cargoOwnerInput inputValueSetup"
+                id="cargoOwner2"
+                type="text"
+                name="cargo_owner[]"
+                required
+              />
+            </div>
+            <div class="statement inputSetup">
+              <label class="statementLabel labelSetup" for="statement2"
+                >اظهار:</label
+              >
+              <input
+                class="statementInput uploadFileInput inputValueSetup"
+                id="statement2"
+                type="file"
+                name="statement[]"
+                multiple
+                required
+              />
+            </div>
+            <div class="seal inputSetup">
+              <label class="sealLabel labelSetup" for="seal2">پلمپ:</label>
+              <input
+                class="sealInput uploadFileInput inputValueSetup"
+                id="seal2"
+                type="file"
+                name="seal[]"
+                multiple
+                required
+              />
+            </div>
+            <div class="cottage inputSetup">
+              <label class="cottageLabel labelSetup" for="cottage2"
+                >کوتاژ:</label
+              >
+              <input
+                class="cottageInput uploadFileInput inputValueSetup"
+                id="cottage2"
+                type="file"
+                name="cottage[]"
+                multiple
+                required
+              />
+            </div>
+            <div class="dateSection inputSetup">
+              <label class="datePickerLable labelSetup" for="datePicker2"
+                >تاریخ ثبت:</label
+              >
+              <input
+                class="dateTime datePicker form-control"
+                id="datePicker2"
+                type="text"
+                name="registration_date"
+                required
+              />
+            </div>
+            <div class="submitContainer">
+              <input class="submitForm" type="submit" value="ذخیره تغییرات" />
+            </div>
+          </form>
+          <!--End of making form for edit Section-->
         </div>
         <!--***************صفحه اطلاعات ثبت شده توسط ترخیص کار ایران*******************-->
         <div class="leftSection ir_agent_mainInfo">
@@ -397,7 +742,25 @@
               </tbody>
             </table>
           </div>
-
+          <!--start making pagination section-->
+          <nav class="pagination-wrapper" aria-label="..." dir="ltr">
+            <ul class="pagination">
+              <li class="page-item">
+                <a href="#" class="page-link btn-page">صفحه قبل</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-current="page">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link btn-page" href="#">صفحه بعد</a>
+              </li>
+            </ul>
+          </nav>
+          <!--end of making pagination section-->
           <h1 class="tableAbout">
             اطلاعات ثبت شده از خودرو (های) دوم - افغانستان
           </h1>
@@ -441,13 +804,13 @@
                   <td>
                     <button
                       type="button"
-                      class="btn btn-sm btn-danger fa fa-times deleteBtn"
+                      class="btn btn-sm btn-danger fa fa-times"
                       title="حذف"
                     ></button>
                     <button
                       type="button"
                       class="btn btn-sm btn-warning fa fa-edit editBtn"
-                      title="ویرایش"
+                      title="ویرایش سطر"
                     ></button>
                   </td>
                 </tr>
@@ -466,13 +829,13 @@
                   <td>
                     <button
                       type="button"
-                      class="btn btn-sm btn-danger fa fa-times deleteBtn"
+                      class="btn btn-sm btn-danger fa fa-times"
                       title="حذف"
                     ></button>
                     <button
                       type="button"
                       class="btn btn-sm btn-warning fa fa-edit editBtn"
-                      title="ویرایش"
+                      title="ویرایش سطر"
                     ></button>
                   </td>
                 </tr>
@@ -491,13 +854,13 @@
                   <td>
                     <button
                       type="button"
-                      class="btn btn-sm btn-danger fa fa-times deleteBtn"
+                      class="btn btn-sm btn-danger fa fa-times"
                       title="حذف"
                     ></button>
                     <button
                       type="button"
                       class="btn btn-sm btn-warning fa fa-edit editBtn"
-                      title="ویرایش"
+                      title="ویرایش سطر"
                     ></button>
                   </td>
                 </tr>
@@ -516,19 +879,377 @@
                   <td>
                     <button
                       type="button"
-                      class="btn btn-sm btn-danger fa fa-times deleteBtn"
+                      class="btn btn-sm btn-danger fa fa-times"
                       title="حذف"
                     ></button>
                     <button
                       type="button"
                       class="btn btn-sm btn-warning fa fa-edit editBtn"
-                      title="ویرایش"
+                      title="ویرایش سطر"
                     ></button>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <!--start making pagination section-->
+          <nav class="pagination-wrapper" aria-label="..." dir="ltr">
+            <ul class="pagination">
+              <li class="page-item">
+                <a href="#" class="page-link btn-page">صفحه قبل</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-current="page">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link btn-page" href="#">صفحه بعد</a>
+              </li>
+            </ul>
+          </nav>
+          <!--end of making pagination section-->
+          <!--Start making form for IR edit Section-->
+          <form
+            class="form editForm"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="cargoOwnerInfo inputSetup">
+              <label class="cargoOwnerLable labelSetup" for="cargoOwner3"
+                >نام مالک بار:</label
+              >
+              <input
+                class="cargoOwnerInput inputValueSetup"
+                id="cargoOwner3"
+                type="text"
+                name="cargo_owner[]"
+                required
+              />
+            </div>
+            <div class="carLoadTypeInfo inputSetup">
+              <label class="carLoadWeightType labelSetup" for="cargoType3"
+                >نوع بار:</label
+              >
+              <input
+                id="cargoType3"
+                type="text"
+                name="cargo_type[]"
+                class="loadWeightType inputValueSetup"
+                required
+              />
+            </div>
+            <div class="irCarPlateNumberInfo inputSetup">
+              <label class="licensePlateLable labelSetup"
+                >شماره پلاک خودرو:</label
+              >
+              <!--شروع قالب پلاک-->
+              <div class="licenseFullContainer">
+                <div class="licensePlateLeftContainer">
+                  <!--شروع دو رقم سمت چپ پلاک-->
+                  <input
+                    class="twoLeftDigitsInput"
+                    type="text"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    name="two_left_digits_irLicencePlate[]"
+                    placeholder="- -"
+                    maxlength="2"
+                    required
+                  />
+                  <!--پایان دو رقم سمت چپ پلاک-->
+                  <!--شروع حرف پلاک-->
+                  <select
+                    class="licenseAlphabetSelect"
+                    name="license_plate-letter[]"
+                  >
+                    <option value="alef">الف</option>
+                    <option value="be">ب</option>
+                    <option value="pe">پ</option>
+                    <option value="te">ت</option>
+                    <option value="se">ث</option>
+                    <option value="jim">ج</option>
+                    <option value="dal">د</option>
+                    <option value="ze">ز</option>
+                    <option value="zhe">ژ</option>
+                    <option value="sin">س</option>
+                    <option value="shin">ش</option>
+                    <option value="sad">ص</option>
+                    <option value="ta">ط</option>
+                    <option value="ain">ع</option>
+                    <option value="fe">ف</option>
+                    <option value="ghaf">ق</option>
+                    <option value="kaf">ک</option>
+                    <option value="gaf">گ</option>
+                    <option value="lam">ل</option>
+                    <option value="mim">م</option>
+                    <option value="noon">ن</option>
+                    <option value="vav">و</option>
+                    <option value="he">ه</option>
+                    <option value="ye">ی</option>
+                  </select>
+                  <!--پایان حرف پلاک-->
+                  <!--شروع 3 عدد بعد از حرف پلاک-->
+                  <input
+                    class="threeRightDigitsInput"
+                    type="text"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    name="three_right_digits_irLicencePlate[]"
+                    placeholder="- - -"
+                    maxlength="3"
+                    required
+                  />
+                  <!--پایان 3 عدد بعد از حرف پلاک-->
+                </div>
+                <!--شروع دو رقم استانی پلاک-->
+                <div class="provincialLicensePlateNumber">
+                  <span class="iran">ایران</span>
+                  <input
+                    class="provincialNumber"
+                    type="text"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    name="provincial_licensePlate_number[]"
+                    placeholder="- -"
+                    maxlength="2"
+                    required
+                  />
+                </div>
+                <!--پایان دو رقم استانی پلاک-->
+              </div>
+              <!--پایان قالب پلاک-->
+            </div>
+            <div class="tonnageCargoUnloaded inputSetup">
+              <label
+                class="tonnageCargoUnloadedLabel labelSetup"
+                for="tonnageCargo3"
+                >تناژ بار تخلیه شده از خودرو:</label
+              >
+              <input
+                class="tonnageCargoUnloadedInput inputValueSetup"
+                id="tonnageCargo3"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="tonnage_cargo_unloaded[]"
+                placeholder="- - - -"
+                required
+              />
+            </div>
+            <div class="transhipmentSection inputSetup">
+              <label class="transhipmentLable labelSetup" for="transhipment3"
+                >ترانشیپ:</label
+              >
+              <input
+                class="transhipmentInput checkBoxInput inputValueSetup"
+                id="transhipment3"
+                type="checkbox"
+                name="transhipment[]"
+                title="عملیات ترانشیپ صورت گرفت"
+                required
+              />
+            </div>
+            <div class="labratorySection inputSetup">
+              <label class="labratoryLable labelSetup" for="labratory3"
+                >ارجاع به آزمایشگاه:</label
+              >
+              <input
+                class="labratoryInput checkBoxInput inputValueSetup"
+                id="labratory3"
+                type="checkbox"
+                name="referral_to_laboratory[]"
+                title="ارجاع گردید"
+                required
+              />
+            </div>
+            <div class="exitDate inputSetup">
+              <label class="exitDateLable labelSetup" for="datePicker3"
+                >تاریخ تخلیه:</label
+              >
+              <input
+                class="dateInput datePicker form-control"
+                id="datePicker3"
+                type="text"
+                name="exit_date_secondCar"
+                readonly
+                required
+              />
+            </div>
+            <div class="submitContainer">
+              <input class="submitForm" type="submit" value="ذخیره تغییرات" />
+            </div>
+          </form>
+          <!--End of making form for IR edit Section-->
+          <!--Start making form for AF edit Section-->
+          <form
+            class="form secondIrForm"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="cargoOwnerInfo inputSetup">
+              <label class="cargoOwnerLable labelSetup" for="cargoOwner4"
+                >نام مالک بار:</label
+              >
+              <input
+                class="cargoOwnerInput inputValueSetup"
+                id="cargoOwner4"
+                type="text"
+                name="cargo_owner[]"
+                required
+              />
+            </div>
+            <div class="carLoadTypeInfo inputSetup">
+              <label class="carLoadWeightType labelSetup" for="cargoType4"
+                >نوع بار:</label
+              >
+              <input
+                id="cargoType4"
+                type="text"
+                name="cargo_type[]"
+                class="loadWeightType inputValueSetup"
+                required
+              />
+            </div>
+            <div class="tonnageCargoLoaded inputSetup">
+              <label
+                class="tonnageCargoLoadedLable labelSetup"
+                for="tonnageCargoLoaded4"
+                >تناژ بار (بارگیری شده) در خودرو:</label
+              >
+              <input
+                class="tonnageCargoLoadedInput inputValueSetup"
+                id="tonnageCargoLoaded4"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="tonnage_cargo_loaded[]"
+                placeholder="- - - -"
+                required
+              />
+            </div>
+            <div class="DriverNameInfo inputSetup">
+              <label class="DriverNameLable labelSetup" for="DriverName4"
+                >نام و نام خانوادگی راننده:</label
+              >
+              <input
+                class="DriverInfoInput inputValueSetup"
+                id="DriverName4"
+                type="text"
+                name="driver_fullname[]"
+                required
+              />
+            </div>
+            <div div class="DriverPhoneNumberInfo inputSetup">
+              <label
+                class="DriverPhoneNumberLable labelSetup"
+                for="DriverPhoneNumber4"
+                >شماره تماس راننده:</label
+              >
+              <input
+                class="DriverPhoneNumberInput inputValueSetup"
+                id="DriverPhoneNumber4"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="driver_phoneNumber[]"
+                required
+              />
+            </div>
+            <div class="CarPlateNumberInfo inputSetup">
+              <label class="licensePlate labelSetup">شماره پلاک خودرو:</label>
+              <!--شروع قالب پلاک-->
+              <div class="aflicenseFullContainer">
+                <!-- ولایت -->
+                <select class="velayat" name="AF_province[]" required>
+                  <option value="">انتخاب ولایت</option>
+                  <option value="kabul">کابل</option>
+                  <option value="herat">هرات</option>
+                  <option value="mazar">بلخ</option>
+                  <option value="kandahar">قندهار</option>
+                  <option value="jalalabad">ننگرهار</option>
+                  <option value="ghazni">غزنی</option>
+                  <option value="bamyan">بامیان</option>
+                  <option value="kunduz">کندز</option>
+                  <option value="baghlan">بغلان</option>
+                  <option value="badakhshan">بدخشان</option>
+                </select>
+                <!--رقم اضافی-->
+                <input
+                  class="extraDigit"
+                  type="text"
+                  name="AF_extraDigit_licensePlate[]"
+                  placeholder="رقم اضافی"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  maxlength="1"
+                />
+                <!-- شماره سریال -->
+                <input
+                  class="serialLicense"
+                  type="text"
+                  name="AF_serial_licensePlate[]"
+                  placeholder="۱۲۳۴۵"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  maxlength="5"
+                  required
+                />
+                <!-- نوع خودرو -->
+                <select class="vehicleType" name="AF_vehicle_type[]" required>
+                  <option value="">نوع خودرو</option>
+                  <option value="private">خصوصی</option>
+                  <option value="taxi">تاکسی</option>
+                  <option value="police">پولیس</option>
+                  <option value="gov">دولتی</option>
+                  <option value="military">نظامی</option>
+                  <option value="ngo">موسسه</option>
+                  <option value="diplomatic">دیپلماتیک</option>
+                </select>
+              </div>
+              <!--پایان قالب پلاک-->
+            </div>
+            <div class="afLicensePhoto inputSetup">
+              <label
+                class="afLicensePhotoLable labelSetup"
+                for="afLicensePhoto4"
+                >بارگذاری تصویر راننده به همراه پلاک خودرو:</label
+              >
+              <input
+                class="afLicensePhotoInput uploadFileInput inputValueSetup"
+                id="afLicensePhoto4"
+                type="file"
+                name="AF_License_photo[]"
+                multiple
+                required
+              />
+            </div>
+            <div class="CarModelInfo inputSetup">
+              <label class="CarModelLabel labelSetup" for="CarInfo4"
+                >مشخصات خودرو:</label
+              >
+              <input
+                class="CarModelInput inputValueSetup"
+                id="CarInfo4"
+                type="text"
+                name="car_model_information[]"
+                required
+              />
+            </div>
+            <div class="exitDate inputSetup">
+              <label class="exitDateLable labelSetup" for="datePicker4"
+                >تاریخ بارگیری:</label
+              >
+              <input
+                class="dateInput datePicker form-control"
+                id="datePicker4"
+                type="text"
+                name="exit_date_secondCar"
+                readonly
+                required
+              />
+            </div>
+            <div class="submitContainer">
+              <input class="submitForm" type="submit" value="ذخیره تغییرات" />
+            </div>
+          </form>
+          <!--End of making form for AF edit Section-->
         </div>
         <!--***************صفحه اطلاعات ثبت شده توسط ترخیص کار افغانستان*******************-->
         <div class="leftSection af_agent_mainInfo">
@@ -655,6 +1376,196 @@
               </tbody>
             </table>
           </div>
+          <!--start making pagination section-->
+          <nav class="pagination-wrapper" aria-label="..." dir="ltr">
+            <ul class="pagination">
+              <li class="page-item">
+                <a href="#" class="page-link btn-page">صفحه قبل</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-current="page">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link btn-page" href="#">صفحه بعد</a>
+              </li>
+            </ul>
+          </nav>
+          <!--end of making pagination section-->
+          <!--Start making form for edit Section-->
+          <form
+            class="form editForm"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="cargoOwnerInfo inputSetup">
+              <label class="cargoOwnerLable labelSetup" for="cargoOwner5"
+                >نام مالک بار:</label
+              >
+              <input
+                class="cargoOwnerInput inputValueSetup"
+                id="cargoOwner5"
+                type="text"
+                name="cargo_owner[]"
+                required
+              />
+            </div>
+            <div class="carLoadTypeInfo inputSetup">
+              <label class="carLoadWeightType labelSetup" for="cargoType5"
+                >نوع بار:</label
+              >
+              <input
+                id="cargoType5"
+                type="text"
+                name="cargo_type[]"
+                class="loadWeightType inputValueSetup"
+                required
+              />
+            </div>
+            <div class="CarPlateNumberInfo inputSetup">
+              <label class="licensePlate labelSetup">شماره پلاک خودرو:</label>
+              <!--شروع قالب پلاک-->
+              <div class="aflicenseFullContainer">
+                <!-- ولایت -->
+                <select class="velayat" name="AF_province[]" required>
+                  <option value="">انتخاب ولایت</option>
+                  <option value="kabul">کابل</option>
+                  <option value="herat">هرات</option>
+                  <option value="mazar">بلخ</option>
+                  <option value="kandahar">قندهار</option>
+                  <option value="jalalabad">ننگرهار</option>
+                  <option value="ghazni">غزنی</option>
+                  <option value="bamyan">بامیان</option>
+                  <option value="kunduz">کندز</option>
+                  <option value="baghlan">بغلان</option>
+                  <option value="badakhshan">بدخشان</option>
+                </select>
+                <!--رقم اضافی-->
+                <input
+                  class="extraDigit"
+                  type="text"
+                  name="AF_extraDigit_licensePlate[]"
+                  placeholder="رقم اضافی"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  maxlength="1"
+                />
+                <!-- شماره سریال -->
+                <input
+                  class="serialLicense"
+                  type="text"
+                  name="AF_serial_licensePlate[]"
+                  placeholder="۱۲۳۴۵"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  maxlength="5"
+                  required
+                />
+                <!-- نوع خودرو -->
+                <select class="vehicleType" name="AF_vehicle_type[]" required>
+                  <option value="">نوع خودرو</option>
+                  <option value="private">خصوصی</option>
+                  <option value="taxi">تاکسی</option>
+                  <option value="police">پولیس</option>
+                  <option value="gov">دولتی</option>
+                  <option value="military">نظامی</option>
+                  <option value="ngo">موسسه</option>
+                  <option value="diplomatic">دیپلماتیک</option>
+                </select>
+              </div>
+              <!--پایان قالب پلاک-->
+            </div>
+            <div class="vehicleReceivingStatus inputSetup">
+              <label
+                class="vehicleReceivingLable labelSetup"
+                for="vehicleReceiving5"
+                >وضعیت دریافت خودرو:</label
+              >
+              <input
+                class="vehicleReceivingInput inputValueSetup"
+                id="vehicleReceiving5"
+                type="text"
+                name="vehicle_receiving_status[]"
+                required
+              />
+            </div>
+            <div class="cargoTonnageSection inputSetup">
+              <label class="cargoTonnageLable labelSetup" for="cargoTonnage5"
+                >تناژ بار:</label
+              >
+              <input
+                class="cargoTonnageInput loadWeight inputValueSetup"
+                id="cargoTonnage5"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="cargo_tonnage[]"
+                placeholder="- - - -"
+                required
+              />
+            </div>
+            <div class="labratorySection inputSetup">
+              <label class="labratoryLable labelSetup" for="labratory5"
+                >ارجاع به آزمایشگاه:</label
+              >
+              <input
+                class="labratoryInput checkBoxInput inputValueSetup"
+                id="labratory5"
+                type="checkbox"
+                name="referral_to_laboratory[]"
+                title="ارجاع گردید"
+                required
+              />
+            </div>
+            <div class="customsPaymentSection inputSetup">
+              <label
+                class="customsPaymentLable labelSetup"
+                for="customsPayment5"
+                >پرداخت گمرک (آپلود فیش واریزی):</label
+              >
+              <input
+                class="uploadFileInput inputValueSetup"
+                id="uploadFile5"
+                type="file"
+                name="upload_bill[]"
+                multiple
+                required
+              />
+            </div>
+            <div class="cargoDepartureSection inputSetup">
+              <label
+                class="cargoDepartureLable labelSetup"
+                for="cargoDeparture5"
+                >خروج کالا:</label
+              >
+              <input
+                class="cargoDepartureInput checkBoxInput inputValueSetup"
+                id="cargoDeparture5"
+                type="checkbox"
+                name="cargo_departure[]"
+                title="کالا خارج شد"
+                required
+              />
+            </div>
+            <div class="date inputSetup">
+              <label class="dateLable labelSetup" for="datePicker5"
+                >تاریخ ثبت:</label
+              >
+              <input
+                class="dateInput datePicker form-control"
+                id="datePicker5"
+                type="text"
+                name="registration_date"
+                readonly
+                required
+              />
+            </div>
+            <div class="submitContainer">
+              <input class="submitForm" type="submit" value="ذخیره تغییرات" />
+            </div>
+          </form>
+          <!--End of making form for edit Section-->
         </div>
         <!--***************صفحه اطلاعات ثبت شده توسط مسئول مخازن افغانستان*******************-->
         <div class="leftSection af_expert_mainInfo">
@@ -766,6 +1677,152 @@
               </tbody>
             </table>
           </div>
+          <!--start making pagination section-->
+          <nav class="pagination-wrapper" aria-label="..." dir="ltr">
+            <ul class="pagination">
+              <li class="page-item">
+                <a href="#" class="page-link btn-page">صفحه قبل</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-current="page">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link btn-page" href="#">صفحه بعد</a>
+              </li>
+            </ul>
+          </nav>
+          <!--end of making pagination section-->
+          <!--Start making form for edit Section-->
+          <form
+            class="form editForm"
+            action="#"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="cargoOwnerInfo inputSetup">
+              <label class="cargoOwnerLable labelSetup" for="cargoOwner6"
+                >نام مالک بار:</label
+              >
+              <input
+                class="cargoOwnerInput inputValueSetup"
+                id="cargoOwner6"
+                type="text"
+                name="cargo_owner[]"
+                required
+              />
+            </div>
+            <div class="carLoadTypeInfo inputSetup">
+              <label class="carLoadWeightType labelSetup" for="cargoType6"
+                >نوع بار:</label
+              >
+              <input
+                id="cargoType6"
+                type="text"
+                name="cargo_type[]"
+                class="loadWeightType inputValueSetup"
+                required
+              />
+            </div>
+            <div class="CarPlateNumberInfo inputSetup">
+              <label class="licensePlate labelSetup">شماره پلاک خودرو:</label>
+              <!--شروع قالب پلاک-->
+              <div class="aflicenseFullContainer">
+                <!-- ولایت -->
+                <select class="velayat" name="AF_province[]" required>
+                  <option value="">انتخاب ولایت</option>
+                  <option value="kabul">کابل</option>
+                  <option value="herat">هرات</option>
+                  <option value="mazar">بلخ</option>
+                  <option value="kandahar">قندهار</option>
+                  <option value="jalalabad">ننگرهار</option>
+                  <option value="ghazni">غزنی</option>
+                  <option value="bamyan">بامیان</option>
+                  <option value="kunduz">کندز</option>
+                  <option value="baghlan">بغلان</option>
+                  <option value="badakhshan">بدخشان</option>
+                </select>
+                <!--رقم اضافی-->
+                <input
+                  class="extraDigit"
+                  type="text"
+                  name="AF_extraDigit_licensePlate[]"
+                  placeholder="رقم اضافی"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  maxlength="1"
+                />
+                <!-- شماره سریال -->
+                <input
+                  class="serialLicense"
+                  type="text"
+                  name="AF_serial_licensePlate[]"
+                  placeholder="۱۲۳۴۵"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                  maxlength="5"
+                  required
+                />
+                <!-- نوع خودرو -->
+                <select class="vehicleType" name="AF_vehicle_type[]" required>
+                  <option value="">نوع خودرو</option>
+                  <option value="private">خصوصی</option>
+                  <option value="taxi">تاکسی</option>
+                  <option value="police">پولیس</option>
+                  <option value="gov">دولتی</option>
+                  <option value="military">نظامی</option>
+                  <option value="ngo">موسسه</option>
+                  <option value="diplomatic">دیپلماتیک</option>
+                </select>
+              </div>
+              <!--پایان قالب پلاک-->
+            </div>
+            <div class="cargoTonnageSection inputSetup">
+              <label class="cargoTonnageLable labelSetup" for="cargoTonnage6"
+                >تناژ بار:</label
+              >
+              <input
+                class="cargoTonnageInput loadWeight inputValueSetup"
+                id="cargoTonnage6"
+                type="text"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                name="cargo_tonnage[]"
+                placeholder="- - - -"
+                required
+              />
+            </div>
+            <div class="uploadFile inputSetup">
+              <label for="uploadFile6" class="uploadFileLable labelSetup"
+                >بارگذاری بارنامه:</label
+              >
+              <input
+                id="uploadFile6"
+                type="file"
+                name="upload_bill[]"
+                class="uploadFileInput inputValueSetup"
+                multiple
+                required
+              />
+            </div>
+            <div class="arrivalDate inputSetup">
+              <label class="arrivalDateLable labelSetup" for="datePicker6"
+                >تاریخ ورود:</label
+              >
+              <input
+                class="dateInput datePicker form-control"
+                id="datePicker6"
+                type="text"
+                name="arrival_date"
+                readonly
+                required
+              />
+            </div>
+            <div class="submitContainer">
+              <input class="submitForm" type="submit" value="ذخیره تغییرات" />
+            </div>
+          </form>
+          <!--End of making form for edit Section-->
         </div>
         <!--***************صفحه مربوط به بخش کاربران*******************-->
         <div class="leftSection manage_users">
@@ -862,11 +1919,107 @@
               </tbody>
             </table>
           </div>
+          <!--start making pagination section-->
+          <nav class="pagination-wrapper" aria-label="..." dir="ltr">
+            <ul class="pagination">
+              <li class="page-item">
+                <a href="#" class="page-link btn-page">صفحه قبل</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-current="page">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link btn-page" href="#">صفحه بعد</a>
+              </li>
+            </ul>
+          </nav>
+          <!--end of making pagination section-->
           <div class="newForm">
             <i class="fa fa-plus" aria-hidden="true"></i>
           </div>
+          <!--Start making edit Form items Section-->
+          <form class="editForm form" action="#" method="post">
+            <div class="firstname inputSetup">
+              <label class="firstnameLable labelSetup" for="firstname7"
+                >نام:</label
+              >
+              <input
+                class="firstnameInput inputValueSetup"
+                id="firstname7"
+                type="text"
+                name="firstname"
+                required
+              />
+            </div>
+            <div class="lastname inputSetup">
+              <label class="lastnameLable labelSetup" for="lastname7"
+                >نام خانوادگی:</label
+              >
+              <input
+                class="lastnameInput inputValueSetup"
+                id="lastname7"
+                type="text"
+                name="lastname"
+                required
+              />
+            </div>
+            <div div class="username inputSetup">
+              <label class="usernameLable labelSetup" for="username7"
+                >نام کاربری:</label
+              >
+              <input
+                class="usernameInput inputValueSetup"
+                id="username7"
+                type="text"
+                name="username"
+                required
+              />
+            </div>
+            <div div class="password inputSetup">
+              <label class="passwordLable labelSetup" for="password7"
+                >رمز عبور:</label
+              >
+              <div class="passwordSection">
+                <input
+                  class="passwordInput inputSetup"
+                  id="password7"
+                  name="password"
+                  type="password"
+                  required
+                />
+                <span class="fa fa-eye eyePass"></span>
+              </div>
+            </div>
+            <div div class="sectionSelect inputSetup">
+              <label class="sectionSelectLable labelSetup" for="sectionSelect7"
+                >الگوی دسترسی:</label
+              >
+              <select
+                class="sectionSelectInput inputValueSetup"
+                name="section_select"
+                id="sectionSelect7"
+                required
+              >
+                <option value="ge_expert">کارشناس جمیزدر</option>
+                <option value="go_expert">کارشناس گمرک</option>
+                <option value="ir_agent">ترخیص کار ایران</option>
+                <option value="af_agent">ترخیص کار افغانستان</option>
+                <option value="af_expert">مسئول مخازن افغانستان</option>
+                <option value="af_expert">ادمین</option>
+                <option value="af_expert">مدیریت</option>
+              </select>
+            </div>
+            <div class="submitContainer">
+              <input class="submitForm" type="submit" value="ذخیره تغییرات" />
+            </div>
+          </form>
+          <!--End of making edit Form items Section-->
           <!--Start Form Section-->
-          <form class="form" action="#" method="post">
+          <form class="UsersForm form" action="#" method="post">
             <div class="firstname inputSetup">
               <label class="firstnameLable labelSetup" for="firstname"
                 >نام:</label
@@ -938,7 +2091,7 @@
               </select>
             </div>
             <div class="submitContainer">
-              <input class="submitForm" type="submit" value="ارسال" />
+              <input class="submitForm" type="submit" value="ثبت کاربر جدید" />
             </div>
           </form>
           <!--End Form Section-->

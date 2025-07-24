@@ -1,9 +1,10 @@
 import "../jquery/dist/jquery.min.js";
+import "../mpdatepicker/dist/jquery.mpdatepicker.min.js";
 import "../bootstrap/dist/js/bootstrap.bundle.min.js";
-import formCreator from "./formCreator.js";
 import eyePass from "./eyePass.js";
-formCreator();
+import alert from "./alert.js";
 eyePass();
+alert();
 try {
   let bottons = [...document.querySelectorAll(".btn")];
   let ge_expert_btn = document.querySelector(".ge_expert_btn");
@@ -176,6 +177,57 @@ try {
     users_btn,
     manage_users
   );
+
+  //datePicker JS
+  $(function () {
+    $(".datePicker").mpdatepicker({
+      timePicker: false,
+      timeChangeSensitivity: 5,
+      gSpliter: "/",
+      modal_bg: "rgba(0,0,0,0.3)",
+    });
+  });
+
+  // اسکریپت نمایش و پنهان کردن فرم
+  let plusBtn = document.querySelector("div.newForm");
+  let form = document.querySelector("form.UsersForm");
+  plusBtn.addEventListener("click", () => {
+    if (form.classList.contains("show")) {
+      form.classList.remove("show");
+    } else {
+      form.classList.add("show");
+    }
+  });
+
+  // اسکریپت ویرایش آیتم های جدول
+  let editButtons = document.querySelectorAll('button[title="ویرایش"]');
+  editButtons.forEach((elem) => {
+    elem.addEventListener("click", () => {
+      // پیدا کردن بخش پدر مربوط به این دکمه (یعنی .leftSection فعال)
+      let currentSection = elem.closest(".leftSection");
+
+      // بستن همه فرم‌های موجود در صفحه
+      let allForms = document.querySelectorAll(".leftSection form.editForm");
+      allForms.forEach((form) => {
+        form.classList.remove("show");
+      });
+
+      // پیدا کردن فرم داخل همین بخش و نمایش آن
+      let sectionForm = currentSection.querySelector("form.editForm");
+      sectionForm.classList.add("show");
+    });
+  });
+
+  // اسکریپت ویرایش آیتم های دومین جدول ترخیص کار ایران
+  let secondEditButtons = document.querySelectorAll(
+    'button[title="ویرایش سطر"]'
+  );
+  let secondForm = document.querySelector("form.secondIrForm");
+  secondEditButtons.forEach((elem) => {
+    elem.addEventListener("click", () => {
+      secondForm.classList.add("show");
+    });
+  });
 } catch (error) {
   console.log(error.message);
 }

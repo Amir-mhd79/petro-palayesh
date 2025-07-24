@@ -93,10 +93,26 @@ body {
                   vertical-align: middle;
                   text-align: center;
                   font-size: 10px;
-                  >.btn{
+                  > .btn {
                     margin-bottom: 5px;
                   }
                 }
+              }
+            }
+          }
+        }
+        > .pagination-wrapper {
+          display: flex;
+          justify-content: center;
+          margin: 20px 0;
+          height: 32px;
+          > .pagination {
+            > .page-item {
+              > .page-link {
+                font-size: 10px;
+              }
+              > .btn-page {
+                padding: 6px;
               }
             }
           }
@@ -162,8 +178,9 @@ body {
           flex-direction: column;
           row-gap: 20px;
           border: 2px solid lightgray;
-          padding: 30px;
+          padding: 30px 15px;
           border-radius: 10px;
+          margin-bottom: 20px;
           > .inputSetup {
             display: flex;
             align-items: center;
@@ -174,18 +191,18 @@ body {
               cursor: pointer;
             }
             > .inputValueSetup {
-              width: 200px;
+              width: 180px;
               height: 32px;
               border: unset;
               border-radius: 5px;
-              font-size: 12px;
+              font-size: 14px;
               padding-right: 10px;
               font-family: YekanBakh-Bold;
               padding-top: 6px;
             }
             > .passwordSection {
-              width: 200px;
-              height: 38px;
+              width: 180px;
+              height: 32px;
               background-color: white;
               border-radius: 5px;
               display: flex;
@@ -193,10 +210,10 @@ body {
               align-items: center;
               > .inputSetup {
                 width: 100%;
-                height: 38px;
+                height: 32px;
                 border: unset;
                 border-radius: 5px;
-                font-size: 16px;
+                font-size: 14px;
                 padding-left: 10px;
                 text-align: end;
                 outline: unset;
@@ -206,12 +223,119 @@ body {
                 cursor: pointer;
               }
             }
+            > .licenseFullContainer {
+              display: flex;
+              flex-direction: row-reverse;
+              background-color: white;
+              border-radius: 5px;
+              align-items: end;
+              padding: 5px;
+              > .licensePlateLeftContainer {
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                border-right: 1px solid lightgray;
+                > .twoLeftDigitsInput,
+                > .threeRightDigitsInput {
+                  width: 40px;
+                  height: 32px;
+                  border: unset;
+                  border-radius: 5px;
+                  font-size: 14px;
+                  text-align: center;
+                  outline: unset;
+                }
+                > .licenseAlphabetSelect {
+                  height: 32px;
+                  font-family: YekanBakh-Regular;
+                  border: unset;
+                  border-radius: 5px;
+                  font-size: 14px;
+                }
+              }
+              > .provincialLicensePlateNumber {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                > .iran {
+                  font-size: 10px;
+                  font-family: YekanBakh-Regular;
+                }
+                > .provincialNumber {
+                  width: 40px;
+                  height: 32px;
+                  border: unset;
+                  border-radius: 5px;
+                  font-size: 14px;
+                  text-align: center;
+                  outline: unset;
+                }
+              }
+            }
+            > .aflicenseFullContainer {
+              background-color: white;
+              display: flex;
+              flex-direction: row-reverse;
+              justify-content: center;
+              align-items: center;
+              padding: 5px;
+              border-radius: 5px;
+              align-items: center;
+              height: 38px;
+              align-items: center;
+              height: 38px;
+              > .velayat,
+              > .extraDigit,
+              > .serialLicense,
+              > .vehicleType {
+                border: unset;
+                outline: unset;
+                font-family: YekanBakh-Regular;
+                font-size: 12px;
+                text-align: center;
+                cursor: pointer;
+              }
+              > .velayat {
+                width: 75px;
+              }
+              > .extraDigit {
+                width: 48px;
+                position: relative;
+                top: 2px;
+                cursor: auto;
+              }
+              > .serialLicense {
+                width: 40px;
+                position: relative;
+                top: 2px;
+                cursor: auto;
+              }
+            }
+            > .form-control {
+              width: 200px;
+              height: 29px;
+              background-color: white;
+              font-size: 14px;
+              font-weight: bold;
+              border-radius: 5px;
+              border: unset;
+              cursor: pointer;
+            }
+            > .checkBoxInput {
+              width: 20px;
+              cursor: pointer;
+            }
+            > .uploadFileInput {
+              cursor: pointer;
+              height: 35px;
+              font-size: 12px;
+            }
           }
           > .submitContainer {
             display: flex;
             justify-content: center;
             > .submitForm {
-              width: 90px;
+              width: 120px;
               height: 40px;
               border: unset;
               border-radius: 5px;
@@ -219,7 +343,7 @@ body {
               font-family: YekanBakh-Regular;
               background-color: var(--background-color2);
               color: white;
-              font-size: 14px;
+              font-size: 16px;
               transition: 300ms;
               &:hover {
                 background-color: green;
@@ -234,6 +358,30 @@ body {
       }
     }
   }
+  [id="mpdatepicker-modal"] {
+    font-size: 16px !important;
+  }
+  [id="mpdatepicker-block"] {
+    border-radius: 5px !important;
+    width: 300px !important;
+  }
+  [id="mpdatepicker-block"] table {
+    border-collapse: unset !important;
+  }
+  .mp-clear,
+  .mp-close {
+    color: black;
+    font-family: YekanBakh-Bold !important;
+  }
+  .mp-today {
+    font-family: YekanBakh-Bold !important;
+  }
+  .mpheader {
+    font-family: YekanBakh-Regular;
+  }
+  table {
+    font-family: YekanBakh-Regular;
+  }
 }
 .show_info {
   display: flex !important;
@@ -244,4 +392,24 @@ body {
 }
 .show {
   display: flex !important;
+}
+.swal2-popup {
+  width: 400px;
+  height: auto;
+  .swal2-icon {
+    margin-top: 10px;
+  }
+  .swal2-title {
+    padding-top: 10px;
+    font-family: YekanBakh-Regular;
+    font-size: 18px;
+    word-spacing: 3px;
+  }
+  .swal2-actions {
+    margin-top: 10px;
+    button {
+      font-family: YekanBakh-Bold;
+      font-size: 16px;
+    }
+  }
 }
